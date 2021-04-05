@@ -1,0 +1,69 @@
+.my-login-content.right-bg {
+  background-image: url("../../../../Zytcode Assets/Assets/Clip.png");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  overflow: hidden;
+  h1 {
+    font-size: 48px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin: 0.67em 0;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.22;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  p.log-back {
+    border: solid 1px #707070;
+    background: #ffffff1f;
+    margin: auto;
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 0 30px;
+  }
+  .login-text-strip {
+    height: 4px;
+    background: #ffffff;
+    width: 50px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 29px;
+    margin-bottom: 29px;
+  }
+  .my-button {
+    a {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
+      border: 0;
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #b8a046, #876f18);
+      padding: 10px 70px;
+      margin-top: 50px;
+      transition: 0.3s;
+      display: inline-block;
+      &:hover {
+        text-decoration: none;
+        transform: translateY(5px);
+        background-image: linear-gradient(to top, #876f18, #b8a046);
+      }
+    }
+  }
+}

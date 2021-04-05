@@ -1,0 +1,30 @@
+.rootApp {
+  margin: 6%;
+  width: 96%;
+  height: auto;
+  padding: 0%;
+}
+.mainGrid {
+  justify-content: space-around;
+  padding: 2%;
+}
+.breadCrumbs {
+}
+.date {
+  color: black;
+  font-size: 1.25rem;
+}
+.time {
+  color: black;
+  font-size: 0.875rem;
+}
+.buttons {
+  color: #007aae;
+}
+.timeDateButton {
+  display: flex;
+  flex-basis: 41.66%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}

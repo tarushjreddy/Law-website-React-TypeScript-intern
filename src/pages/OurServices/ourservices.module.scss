@@ -1,0 +1,63 @@
+.clip-image-container {
+  // padding: 0px 6vw;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.clip-image {
+  width: 100%;
+  height: 78vh;
+  position: relative;
+  overflow: hidden;
+}
+.clip-image-content {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  overflow: hidden;
+  width: 90%;
+}
+.clip-image-content2 {
+  position: absolute;
+  //top: 45%;
+  top: 60%;
+  //left: 0;
+  overflow: hidden;
+  width: 90%;
+}
+.line {
+  display: inline-block;
+  background: white;
+  width: 10vw;
+  height: 0.5vh;
+}
+.container2 {
+  display: flex;
+  flex-direction: row;
+  padding: 0 8vh 10vh 8vh;
+  justify-content: space-between;
+}
+.image {
+  width: 100%;
+}
+.listItem {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.list-child-cotainer {
+  background: lightblue;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  line-height: 10vh;
+  border-radius: 10px;
+}
+.underline:hover {
+  text-decoration: underline;
+}
+.underline {
+  cursor: pointer;
+}

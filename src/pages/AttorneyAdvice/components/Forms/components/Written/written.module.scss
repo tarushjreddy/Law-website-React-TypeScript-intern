@@ -1,0 +1,41 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "stepper stepper"
+    "leftPane rightPane";
+  gap: 5px;
+  padding: 3% 5%;
+  grid-template-rows: 1fr 9fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+  .stepper {
+    grid-area: stepper;
+  }
+
+  .leftPane {
+    grid-area: leftPane;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rightPane {
+    grid-area: rightPane;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.paneContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #eee;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}

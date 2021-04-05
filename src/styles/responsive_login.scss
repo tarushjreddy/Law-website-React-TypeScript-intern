@@ -1,0 +1,73 @@
+/* Medium layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .login-con a img {
+    max-width: 370px;
+  }
+
+  form {
+    width: 400px;
+  }
+
+  .my-login-content.right-bg h1 {
+    font-size: 30px;
+  }
+}
+
+/* Tablet layout:768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .login-con a img {
+    width: 300px;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  .my-login-content.right-bg h1 {
+    font-size: 28px;
+  }
+
+  .my-login-content.right-bg p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile layout:320px. */
+@media only screen and (max-width: 767px) {
+  .login-con a img {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .my-login-content.right-bg h1 {
+    font-size: 22px;
+  }
+
+  .login-text-spacer {
+    height: 5px;
+  }
+
+  .my-login-content.right-bg p {
+    font-size: 16px;
+    padding: 0 10px;
+    line-height: 23px;
+  }
+
+  .sign-up-btn {
+    margin-bottom: 50px;
+  }
+}
+
+/* Wide Mobile layout:320px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/*
+	=== Coding ===
+	Tarik Hasan
+	(+880) 1756-44 58 80
+	tarikhasan.info@gmail.com
+*/

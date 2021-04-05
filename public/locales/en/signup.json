@@ -1,0 +1,41 @@
+{
+  "title": {
+    "part1": "S.A. Legal Help for Businesses",
+    "part2": "and Families in KSA"
+  },
+  "description": {
+    "part1": "We've helped over 2 million people get the help they need",
+    "part2": "Already you have an account?"
+  },
+  "loginButtonText": "Login",
+  "signUpFormHeading": "Sign Up",
+  "signUpFormFields": {
+    "email": {
+      "label": "Email address",
+      "placeholder": "email@email.com",
+      "errMessage": "Please provide a valid Email."
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Password",
+      "errMessage": "Required!!"
+    },
+    "confirmPassword": {
+      "label": "Confirm Password",
+      "placeholder": "Confirm your password"
+    }
+  },
+  "text": {
+    "remember": "Remember",
+    "forgetPassword": "Forget password?",
+    "policy": "Policy Statement",
+    "termAndCondition": "Term & Condition",
+    "signUpWith": "Sign up with",
+    "or": "OR"
+  },
+  "singUpButtonText": "Sign Up",
+  "loginLink": {
+    "part1": "Don't have an account?",
+    "part2": "Sign up now"
+  }
+}

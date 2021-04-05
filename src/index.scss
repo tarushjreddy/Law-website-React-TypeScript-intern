@@ -1,0 +1,33 @@
+// @import "styles/normalize";
+@import "styles/main"; // Image
+//@import "styles/login"; // Image
+// @import "styles/responsive"; // Image
+// @import "styles/responsive_login";
+// @import "styles/tabbed_button";
+// @import "styles/mini_loader";
+//@import "styles/services";
+
+.btn-custom {
+  background-color: #b8a046;
+  color: white;
+  box-shadow: none !important;
+  &:hover {
+    background-color: #a79040;
+    color: white;
+  }
+}
+
+.btn-outline-custom {
+  color: #b8a046;
+  background-color: white;
+  border-color: #b8a046;
+  box-shadow: none !important;
+  &:hover {
+    background-color: #a79040;
+    color: white;
+  }
+}
+
+.text-custom {
+  color: #b8a046;
+}

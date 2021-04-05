@@ -1,0 +1,536 @@
+/* Medium layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 0 2px;
+    margin-top: 12px;
+  }
+
+  .header-logo img {
+    padding: 10px 10px;
+    width: 65px;
+    margin-top: 22px;
+  }
+
+  .header-logo {
+  }
+
+  .header-logo-text h2 {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .header-logo-text h3 {
+    margin-left: 10px;
+  }
+
+  i.material-icons.my-search-func {
+    font-size: 25px;
+    margin-top: 12px;
+  }
+
+  element.style {
+  }
+  .whoweare-bd {
+    background-image: url("../Zytcode\ Assets/media/images/who-we-are-bg.png");
+    background-size: 525px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+  }
+  .search-box {
+    margin-right: 143px;
+  }
+
+  .add-con-img {
+    margin-left: 20px;
+    height: 70px;
+    width: 70px;
+  }
+
+  .add-content p {
+    font-size: 14px;
+  }
+
+  .add-con-img img {
+    width: 30px;
+    margin-top: 17px;
+  }
+
+  .footer-link-section.social-lnk a {
+    margin: 0px 6px;
+  }
+
+  .my-copy-right {
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+}
+
+/* Tablet layout:768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-logo img {
+    margin-top: -29px;
+  }
+
+  .header-logo-text {
+    margin-top: -8px;
+  }
+
+  button.navbar-toggler {
+    margin-top: -41px;
+  }
+
+  div#navbarTogglerDemo02 {
+    background: #ffffff;
+    z-index: 999000;
+    padding: 7px 16px;
+    text-align: right;
+    margin: -34px -15px;
+    padding-bottom: 30px;
+  }
+
+  li.nav-item.my-tel {
+    align-self: unset;
+    display: block;
+    width: 100%;
+    background: none;
+    text-align: right !important;
+  }
+
+  li.nav-item.my-tel a {
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #b8a046, #876f18);
+    width: 160px;
+    text-align: center;
+    float: right;
+  }
+  .hbc-icon-img.hbc-ico-1 {
+    margin: 20px;
+  }
+
+  .hbc-icon-img img {
+    width: 50px;
+  }
+
+  .chbc-icon-text h4,
+  .chbc-icon-text h2 {
+    margin: 0;
+  }
+
+  .chbc-icon-text {
+    margin-top: 14px;
+  }
+
+  .col-sm-4.col-xs-12.hbc-col {
+    padding: 0;
+    height: 99px;
+  }
+
+  .chbc-icon-text h2 {
+    font-size: 20px;
+  }
+
+  .hbc-icon-img {
+    margin: 20px;
+  }
+  .spacer-120 {
+    height: 50px;
+  }
+
+  .whoweare-bd {
+    background-image: url("../Zytcode\ Assets/media/images/who-we-are-bg.png");
+    background-position: right;
+    background-size: 467px;
+  }
+
+  .haader-car-content {
+    padding-bottom: 170px;
+  }
+
+  .hwr-bc-discription p {
+    font-size: 14px;
+  }
+  .hwr-bc-discription p {
+    width: 241px;
+    font-size: 13px;
+  }
+
+  .hwr-bc-head h2 {
+    font-size: 18px;
+  }
+
+  .scc-relative h4 {
+    font-size: 14px;
+    width: 90%;
+    margin-left: 6px;
+    margin-top: -13px;
+  }
+
+  .service-col-text img {
+    height: 200px;
+  }
+
+  p {
+  }
+
+  .service-col-text p {
+    font-size: 16px;
+  }
+
+  .counter-spacer {
+    height: 100px;
+  }
+
+  .counter-content:before {
+    height: 221px;
+  }
+
+  .add-content {
+    clear: both;
+    text-align: center;
+  }
+
+  .add-con-img {
+    float: none;
+    margin: 0;
+  }
+
+  .add-content p {
+    float: none;
+    margin: 0;
+    width: unset;
+  }
+
+  .advertisement-sec .col-sm-12.col-md-4 {
+    padding: 25px 0;
+  }
+
+  .my-add-body {
+    font-size: 14px;
+  }
+
+  .my-address-content {
+    padding: 10px 20px;
+  }
+
+  .footer-link-section.social-lnk a {
+    margin: 0;
+  }
+
+  .my-copy-right {
+    padding: 10px 0;
+    margin-top: 24px;
+  }
+}
+
+/* Mobile layout:320px. */
+@media only screen and (max-width: 767px) {
+  .header-logo img {
+    margin-top: -30px;
+    padding: 10px 10px;
+    width: 60px;
+    height: 70px;
+  }
+
+  .header-logo-text {
+    margin-top: -8px;
+  }
+
+  button.navbar-toggler {
+    margin-top: -41px;
+  }
+
+  div#navbarTogglerDemo02 {
+    background: #ffffff;
+    z-index: 999000;
+    padding: 7px 16px;
+    text-align: right;
+    margin: -13px -15px;
+    padding-bottom: 30px;
+  }
+
+  li.nav-item.my-tel {
+    align-self: unset;
+    display: block;
+    width: 100%;
+    background: none;
+    text-align: right !important;
+  }
+
+  li.nav-item.my-tel a {
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #b8a046, #876f18);
+    width: 160px;
+    text-align: center;
+    float: right;
+  }
+
+  .header-logo-text {
+    margin-top: -42px;
+    display: none;
+  }
+
+  .header-logo-text h2 {
+    font-size: 14px;
+  }
+
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.my-almuehi-logo {
+    height: 50px;
+  }
+
+  img {
+  }
+
+  .header-logo img {
+    margin-top: -24px;
+  }
+
+  button.navbar-toggler {
+    margin-top: -18px;
+  }
+
+  .top-nav-info-left {
+    float: none;
+    text-align: center;
+  }
+
+  .top-nav-info-left p {
+    margin-bottom: 0;
+    margin-top: -1px;
+  }
+
+  .top-nav-info-right p {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .top-nav-info-left.right {
+    float: none;
+    margin-bottom: 16px;
+  }
+
+  .top-nav-info.container-fluid {
+    margin-top: 7px;
+  }
+  .hcc-maincon h1 {
+    font-size: 30px;
+  }
+
+  .hbc-icon-img.hbc-ico-1 {
+    margin: 15px;
+    margin-left: 30px;
+  }
+
+  .chbc-icon-text {
+    margin-top: 16px;
+  }
+
+  .hbc-icon-img {
+    margin: 15px;
+  }
+
+  .col-sm-4.col-xs-12.hbc-col {
+    height: 100px;
+  }
+
+  .haader-car-content.container {
+    padding-top: 154px;
+    padding-bottom: 365px;
+  }
+
+  .my-hwr-row h1 {
+    font-size: 26px;
+  }
+
+  .my-hwr-row p {
+    font-size: 14px;
+  }
+
+  .my-hwr-row p {
+  }
+
+  .bc-dis-img {
+    margin-top: -13px;
+  }
+
+  .hwr-bc-discription.bc-right .bc-dis-img {
+    margin-top: -9px;
+  }
+
+  .my-whoweare {
+  }
+
+  .whoweare-bd {
+    background: none;
+  }
+  .hcc-maincon h1 {
+    font-size: 30px;
+  }
+
+  .hbc-icon-img.hbc-ico-1 {
+    margin: 15px;
+    margin-left: 30px;
+  }
+
+  .chbc-icon-text {
+    margin-top: 16px;
+  }
+
+  .hbc-icon-img {
+    margin: 15px;
+  }
+
+  .col-sm-4.col-xs-12.hbc-col {
+    height: 100px;
+  }
+
+  .haader-car-content.container {
+    padding-top: 154px;
+    padding-bottom: 365px;
+  }
+
+  .my-hwr-row h1 {
+    font-size: 26px;
+  }
+
+  .my-hwr-row p {
+    font-size: 14px;
+  }
+
+  .my-hwr-row p {
+  }
+
+  .bc-dis-img {
+    margin-top: -13px;
+  }
+
+  .hwr-bc-discription.bc-right .bc-dis-img {
+    margin-top: -9px;
+  }
+
+  .my-whoweare {
+  }
+
+  .whoweare-bd {
+    background: none;
+  }
+
+  .quality-topup {
+    width: 100%;
+    margin-top: -158px;
+  }
+
+  .my-quality-content {
+    padding-top: 68px;
+  }
+
+  .service-col-text h1 {
+    font-size: 30px;
+  }
+
+  .service-col-text img {
+    height: 150px;
+  }
+
+  .service-col-text p {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 32px;
+  }
+
+  .counter-spacer {
+    height: 40px;
+  }
+
+  .counter-content:before {
+    height: 210px;
+  }
+
+  .add-con-img {
+    float: none;
+    margin: 0;
+  }
+
+  .add-content p {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .add-content {
+    text-align: center;
+  }
+
+  .advertisement-sec .col-sm-12.col-md-4 {
+    padding: 20px 19px;
+  }
+
+  .portfolio-slider p {
+    margin-left: 32px;
+  }
+
+  span.pw-name {
+  }
+
+  .contact-text {
+    text-align: center;
+  }
+
+  .contact-text p {
+    margin-bottom: 11px;
+  }
+
+  .contact-input form {
+    padding: 11px 10px;
+  }
+
+  .contact-input form button {
+    margin-top: -18px;
+    margin-right: 9px;
+  }
+
+  i.material-icons.con-send {
+    padding: 5px 0;
+  }
+
+  .my-address-content .row .col-sm-12.my-add-mid {
+    border-top: 1px solid #b8a0466b;
+    border-bottom: 1px solid #b8a0466b;
+    border-left: none;
+    border-right: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px 0px;
+  }
+
+  .my-address {
+    margin-top: -197px;
+  }
+
+  .my-footer {
+    margin-top: 113px;
+  }
+
+  footer {
+    margin-top: 238px;
+  }
+
+  .my-copy-right {
+    padding: 13px 0;
+    margin-top: 20px;
+  }
+}
+
+/* Wide Mobile layout:320px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/*
+	=== Coding ===
+	Tarik Hasan
+	(+880) 1756-44 58 80
+	tari
+khasan.info@gmail.com
+*/

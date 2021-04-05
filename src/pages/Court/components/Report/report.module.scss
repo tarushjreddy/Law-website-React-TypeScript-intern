@@ -1,0 +1,34 @@
+.bigContainer {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+    .header {
+      display: flex;
+      justify-content: center;
+    }
+
+    .subElement {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .headerFlex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .subheader {
+      padding: 0 2%;
+      padding-right: 0;
+    }
+
+    .flexElement {
+      display: flex;
+      justify-content: space-between;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

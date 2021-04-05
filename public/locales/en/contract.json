@@ -1,0 +1,40 @@
+{
+  "title": "Contracts/Agreements",
+  "introduction": {
+    "heading": "Choose a Category",
+    "text": "DUMMY : Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam provident quia quam maxime perspiciatis velit, aspernatur vel porro delectus obcaecati amet error quod repellendus ipsam voluptates iste nam dicta."
+  },
+  "subIntroduction": {
+    "heading": "Sub heading",
+    "text": "DUMMY : Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam provident quia quam maxime perspiciatis velit, aspernatur vel porro delectus obcaecati amet error quod repellendus ipsam voluptates iste nam dicta."
+  },
+  "categoryForm": {
+    "confirmCreate": {
+      "heading": "Create a Employer contract",
+      "text": "DUMMY : Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam provident quia quam maxime perspiciatis velit, aspernatur vel porro delectus obcaecati amet error quod repellendus ipsam voluptates iste nam dicta.",
+      "confirmButton": "Create Contract"
+    },
+    "selectMode": {
+      "aiEngine": {
+        "heading": "Create contract using AI Engine",
+        "text": "DUMMY : Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "button": "By AI"
+      },
+      "muehiExpert": {
+        "heading": "Create contract by AI Muehi Experts",
+        "text": "DUMMY : Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "button": "By AI Muehi"
+      }
+    },
+    "datePick": {
+      "heading": "Contract Date"
+    },
+    "firstPartyDetail": {
+      "heading": "First Party Detail"
+    },
+    "text": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  }
+}

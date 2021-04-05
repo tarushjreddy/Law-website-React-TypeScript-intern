@@ -1,0 +1,27 @@
+.clip-image-container {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.clip-image {
+  width: 100%;
+  height: 78vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.clip-image-content2 {
+  position: absolute;
+  top: 16em;
+  //left: 0;
+  overflow: hidden;
+  width: 90%;
+}
+
+.line {
+  display: inline-block;
+  background: white;
+  width: 10vw;
+  height: 0.5vh;
+}

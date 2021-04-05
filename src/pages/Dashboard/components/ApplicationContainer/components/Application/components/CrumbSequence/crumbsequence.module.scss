@@ -1,0 +1,16 @@
+.crumbs {
+  position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  ol {
+    background: inherit;
+  }
+  li {
+    color: grey;
+    font-size: 1rem;
+  }
+}

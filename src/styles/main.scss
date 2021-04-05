@@ -1,0 +1,1709 @@
+/*
+  main.css file
+  Aapka Template
+  By Tarik Hasan | 2018
+*/
+/*===============================================
+
+  Table of Contents
+
+01 Font Setup
+02 Common Styles
+03 Preloader
+04 Menu Bar
+05 Header Content
+06 About Section
+07 Feature section
+08 Pricing Section
+09 Review Section
+10 Service Section
+11 Contact Section
+12 copyRight section
+
+
+====================================================
+/*
+
+
+
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+===============================================
+02 Common Styles
+===============================================
+*/
+
+body {
+  font-family: "Tajawal", sans-serif;
+  position: relative;
+}
+a:hover {
+  text-decoration: none;
+}
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+.navbar {
+  position: fixed;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px;
+}
+
+/*
+==============================================
+03 Preloader
+==============================================
+*/
+
+/*
+==============================================
+04 Manu Bar
+==============================================
+*/
+
+.top-nav-info.container-fluid {
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding-bottom: 60px;
+  /*! color: #ffffff; */
+}
+.top-nav-info-left.right {
+  float: right;
+}
+.top-nav-info-left {
+  float: left;
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light.my-almuehi-logo {
+  clear: both;
+  background: none !important;
+}
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 5vh;
+  left: 0;
+}
+.top-nav-info-left p {
+  margin: 0;
+}
+.top-nav-info-left p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.my-nav-section {
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+}
+
+.header-logo img {
+  width: 100px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  margin-top: 17px;
+}
+.top-nav-info-left,
+.top-nav-info-left p a {
+  color: #fff;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light.my-almuehi-logo {
+  height: 60px;
+  /*
+  background-image: linear-gradient(to top, #f0e7c6, #e4e3e2) !important;
+  */
+  transition: 0.3s;
+}
+.header-logo-text h2 {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+  margin-bottom: 0;
+}
+.header-logo-text h3 {
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #dedede;
+  margin-bottom: 38px;
+  /*padding-bottom: 34px;*/
+}
+.header-logo {
+  float: left;
+}
+
+.header-logo-text {
+  float: left;
+  margin-top: 38px;
+}
+li.nav-item.my-tel {
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #b8a046, #876f18);
+  width: 120px;
+  height: 42px;
+  text-align: center;
+  transition-delay: 0.3s;
+  align-self: center;
+}
+li.nav-item.my-tel:hover {
+  background-image: linear-gradient(to top, #876f18, #b8a046);
+}
+.my-tel a.nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff !important;
+  padding: 10px 34px;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #dedede;
+  margin: 0 5px;
+}
+i.material-icons.my-search-func {
+  font-size: 32px;
+  margin-top: 6px;
+  margin-left: 5px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+i.material-icons.my-search-func {
+  color: #dededede;
+}
+
+.header-bottom-con {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: 99;
+}
+
+.my-header-section {
+  position: relative;
+  overflow: hidden;
+}
+li.nav-item.active a.nav-link {
+  color: #b8a046 !important;
+}
+.active {
+  color: #b8a046 !important;
+}
+button:focus {
+  outline: none !important;
+  outline-offset: none !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(206, 206, 206, 0.7);
+}
+
+/*Search Sectin CSS*/
+.search-box {
+  background: #e8e8e4;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 350px;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid #b8a046;
+  display: none;
+  //margin-right: 164px;
+}
+
+.search-box:before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 13px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid #b8a046;
+}
+
+.search-box input[type="text"] {
+  width: 200px;
+  padding: 5px 10px;
+  margin-left: 23px;
+  border: 1px solid #b8a046;
+  outline: none;
+}
+
+.search-box input[type="button"] {
+  width: 80px;
+  padding: 5px 0;
+  background: #b8a046;
+  color: #fff;
+  margin-left: -6px;
+  border: 1px solid #b8a046;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .top-nav-info.container-fluid {
+    padding-bottom: 0px;
+    /*! color: #ffffff; */
+  }
+}
+
+/*
+================================================
+05 Header Content
+================================================
+*/
+
+.hc-1,
+.hc-2,
+.hc-3 {
+  background-position: center;
+  background-size: cover;
+}
+.hc-1 {
+  background-image: url("../Zytcode\ Assets/media/images/slider-1.jpg");
+}
+.hc-2 {
+  background-image: url("../Zytcode\ Assets/media/images/slider-2.jpg");
+}
+.hc-3 {
+  background-image: url("../Zytcode\ Assets/media/images/slider-3.jpg");
+}
+
+.hbc-icon-img img {
+  width: 65px;
+}
+
+.hbc-icon-img {
+  float: left;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.hbc-icon-img.hbc-ico-1 {
+  margin-left: 60px;
+}
+
+.hbc-content-ele h4 {
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+.chbc-icon-text {
+  float: left;
+  margin-top: 36px;
+}
+
+.chbc-icon-text h2 {
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+.chbc-icon-text h4 {
+  font-size: 18px;
+}
+.col-sm-4.col-xs-12.hbc-col {
+  clear: both;
+  // width: 100%;
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  height: 170px;
+}
+.hcc-subcon-text {
+  text-shadow: 0 0 8px #000000;
+  font-family: Tajawal;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.hcc-maincon h1 {
+  font-size: 56px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.haader-car-content {
+  padding-top: 180px;
+  padding-bottom: 260px;
+}
+
+.my-button {
+  a,
+  button {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #b8a046, #876f18);
+    padding: 10px 30px;
+    transition: 0.3s;
+    display: inline-block;
+  }
+  .my-button a:hover,
+  button:hover {
+    text-decoration: none;
+    transform: translateY(5px);
+    background-image: linear-gradient(to top, #876f18, #b8a046);
+  }
+}
+.hbc-col.hbc-col-r {
+  padding-right: 0;
+}
+.hbc-col.hbc-col-l {
+  padding-left: 0;
+}
+.owl-dots {
+  position: absolute;
+  z-index: 999999;
+  top: 50%;
+  left: 50%;
+  margin-top: 232px;
+  margin-left: -65px;
+}
+
+button.owl-dot {
+  background: #ffffff !important;
+  width: 30px;
+  height: 2px;
+  margin: 0 8px;
+  opacity: 0.5;
+}
+button.owl-dot.active {
+  background: #fff;
+  width: 30px;
+  height: 4px;
+  opacity: 100%;
+}
+.hcc-subcon {
+  position: relative;
+}
+
+.hcc-subcon-line {
+  position: absolute;
+  height: 2xp;
+  content: "";
+  width: 300px;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0.5;
+  top: 50%;
+  left: 0;
+  margin-left: -315px;
+  margin-top: -1px;
+}
+.header-carousel {
+  overflow: hidden;
+}
+
+/*
+================================================
+06 Who we are section
+================================================
+*/
+.spacer-120 {
+  height: 120px;
+  width: 100%;
+}
+
+.my-hwr-row h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+  margin-bottom: 30px;
+}
+
+.my-hwr-row p {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #727272;
+}
+.my-hwr-row h1 {
+  font-size: 38px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #161922;
+}
+.hwr-bc-head h2 {
+  font-size: 26px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+}
+
+.hwr-bc-discription p {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  color: #4d4d4d;
+}
+.bc-dis-img {
+  float: left;
+  margin-right: 15px;
+}
+
+.hwr-bc-head h2 {
+  margin-left: 72px;
+  margin-bottom: 20px;
+}
+
+.whoweare-bd {
+  // background-image: url("/media/images/who-we-are-bg.png");
+  background-size: contain;
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
+/*
+================================================
+07 Quality section
+================================================
+*/
+.my-quality {
+  background: #b8a046;
+}
+.quality-topup {
+  background: #ffffff;
+  padding: 17px;
+}
+.qtopuo-head h1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: #161922;
+  float: left;
+  margin: 0;
+}
+
+.qtopuo-head img {
+  display: block;
+  float: left;
+  margin-top: 12px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+}
+
+.qtopup-body {
+  clear: both;
+}
+
+.qtopup-body p {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: #727272;
+}
+
+.qtopup-body h4 {
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4d4d4d;
+}
+.my-quality-content {
+  position: relative;
+}
+
+.quality-topup {
+  position: absolute;
+  box-shadow: 0px 10px 74px rgba(0, 0, 0, 0.26);
+  border-radius: 20px;
+  width: 50%;
+  padding: 25px 25px;
+  top: 0;
+  margin-top: -100px;
+}
+.quality-content-element {
+  text-align: center;
+}
+
+.quality-content-element h1 {
+  font-size: 30px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.quality-content-element h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: #fff2c2;
+}
+
+i.material-icons.quality-start {
+  color: #fff2c2;
+  font-size: 20px;
+}
+
+.quality-inner-spacer {
+  height: 40px;
+}
+
+.quality-spacer {
+  height: 150px;
+}
+
+/*
+================================================
+08 Service Section
+================================================
+*/
+.my-service-content {
+  margin-top: 50px;
+}
+
+.service-col-text h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+}
+
+.service-col-text img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.service-col-text p {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #727272;
+  margin-bottom: 60px;
+}
+.scc-relative {
+  position: relative;
+}
+
+.scc-relative img {
+  width: 100%;
+}
+
+.scc-relative h4 {
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /* margin-left: -65px; */
+  /* text-align: center; */
+  margin-top: -18px;
+  right: 0;
+}
+
+.scc-relative {
+  text-align: center;
+}
+.spacer-circle {
+  height: 100px;
+}
+
+.scc-relative {
+  margin: 36px 0;
+  transition: 0.3s;
+  box-shadow: 0px 15px 29px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+.circle-1 {
+  animation: shake1-animation 4s ease-In infinite;
+  transform-origin: 50% 50%;
+}
+.circle-2 {
+  animation: shake2-animation 4s ease-Out infinite;
+  transform-origin: 50% 50%;
+}
+.circle-3 {
+  animation: shake3-animation 4s ease-In infinite;
+  transform-origin: 50% 50%;
+}
+.circle-4 {
+  animation: shake4-animation 4s ease-Out infinite;
+  transform-origin: 50% 50%;
+}
+.circle-5 {
+  animation: shake5-animation 4s ease-In infinite;
+  transform-origin: 50% 50%;
+}
+.circle-6 {
+  animation: shake6-animation 4s ease-Out infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes shake1-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes shake2-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes shake3-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes shake4-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes shake5-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes shake6-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.scc-relative h4 {
+  background: #00000085;
+  margin-right: 25px;
+  margin-left: 25px;
+  padding: 5px;
+}
+.scc-relative:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: translateY(10px);
+  box-shadow: none;
+}
+.service-col-text img {
+  height: 313px;
+}
+
+/*
+================================================
+09 counter Section
+================================================
+*/
+.my-counter-bg {
+  background-image: url("../Zytcode\ Assets/media/images/counter-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.counter-con-element h1 {
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0;
+}
+
+.counter-con-element p {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: -10px;
+}
+
+.counter-con-element {
+  text-align: center;
+}
+
+.counter-spacer {
+  height: 245px;
+}
+
+.my-counter {
+  margin-top: 100px;
+}
+.counter-content:after {
+  content: "";
+  width: 550px;
+  height: 1px;
+  background: #ffffff;
+  z-index: 99999;
+  position: absolute;
+  opacity: 0.5;
+  top: 50%;
+  margin-top: 6px;
+}
+
+.counter-content {
+  position: relative;
+}
+
+.counter-content:before {
+  content: "";
+  width: 1px;
+  height: 380px;
+  background: #ffffff;
+  z-index: 99999;
+  position: absolute;
+  opacity: 0.5;
+  left: 50%;
+  margin-left: 12px;
+}
+.add-content p {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4d4d4d;
+  float: left;
+}
+
+/*
+================================================
+10 addvertisement section
+================================================
+*/
+
+.add-con-img {
+  border: 2px solid #b8a046;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.add-con-img img {
+  margin-top: 23px;
+}
+.add-content p {
+  float: left;
+  width: 215px;
+  margin-top: 14px;
+}
+
+.add-con-img {
+  float: left;
+  margin-right: 10px;
+}
+.add-content.add-content-2line p {
+  margin-top: 29px;
+}
+
+.advertisement-sec {
+  background: #f8f5ec;
+  /* padding: 50px 0px; */
+}
+
+.add-con-img {
+  margin-left: 50px;
+}
+
+.advertisement-sec .col-sm-12.col-md-4 {
+  border-right: 1px solid #1619221f;
+  padding: 25px 0;
+}
+
+/*
+================================================
+11 callus section
+================================================
+*/
+.callus-section {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.callus-section img {
+  margin-bottom: 30px;
+}
+
+.callus-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4d4d4d;
+}
+
+.callus-content a.callus-tel {
+  font-size: 35px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4d4d4d;
+}
+
+.callus-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4d4d4d;
+  margin-bottom: 29px;
+}
+
+/*
+================================================
+12 my-portfolio Section
+================================================
+*/
+.my-portfolio .container {
+  // background-image: url("/media/images/portfolio-bg.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+.my-portfolio {
+  background: #050306;
+}
+
+.portfolio-slider h1 {
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+}
+
+.portfolio-slider p {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-left: 70px;
+  position: relative;
+}
+.my-portfolio-con {
+  position: relative;
+}
+
+.psh-line {
+  position: absolute;
+  width: 300px;
+  height: 2px;
+  background: #b8a046;
+  margin-left: -325px;
+  opacity: 0.5;
+  top: 0;
+  margin-top: 63px;
+}
+.portfolio-slider i.fa.fa-quote-left {
+  color: #b8a046;
+  font-size: 30px;
+  transform: rotateX(163deg);
+}
+
+.port-writter img {
+  height: 60px;
+  width: 60px !important;
+  border-radius: 50%;
+  float: left;
+}
+
+span.pw-name {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b8a046;
+  float: left;
+  margin-top: 17px;
+  margin-left: 67px;
+  position: relative;
+}
+
+span.pw-name:after {
+  content: "";
+  height: 2px;
+  width: 30px;
+  background: #b8a046;
+  position: absolute;
+  left: 50ri;
+  left: 0;
+  top: 50%;
+  margin-left: -42px;
+}
+.my-portfolio-con {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+/*
+================================================
+13 contact
+================================================
+*/
+.my-contact-content {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.contact-text h1 {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  margin: 0;
+}
+
+.contact-text p {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  margin: 0;
+}
+
+.contact-text {
+  text-align: right;
+}
+
+.contact-input form {
+  border: 1px solid rgba(184, 160, 70, 0.33);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.contact-input form input {
+  align-items: center;
+  border: none;
+}
+
+.contact-input form button {
+  background: #b8a046;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  width: 35px !important;
+  height: 35px !important;
+  position: absolute;
+  //right: 0;
+  top: 50%;
+  margin-top: -17px;
+  margin-right: 19px;
+  transition: 0.3s;
+}
+i.material-icons.con-send {
+  padding: 7px 0;
+}
+.contact-input form {
+  height: 50px;
+  padding: 12px 31px;
+}
+//
+//.contact-input form button {}
+
+.contact-input {
+  position: relative;
+}
+
+.contact-input form button:hover {
+  transform: translateX(5px);
+}
+
+.contact-input form i.fa.fa-envelope {
+  color: #b8a046;
+  margin-right: 27px;
+}
+
+.contact-input form input {
+  font-size: 18px;
+}
+
+.contact-input form input:active {
+  border: none;
+}
+
+.contact-input form input:focus {
+  border: 0px;
+  outline: none;
+}
+
+input.con-email:active {
+  border: none !important;
+}
+.advertisement-sec {
+  overflow: hidden;
+}
+
+/*
+================================================
+14 address
+================================================
+*/
+.my-address-content {
+  background: #fbf9f1;
+  border-radius: 10px;
+  padding: 30px 25px;
+}
+
+.my-add-head {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #161922;
+}
+
+.my-add-head img {
+  margin-right: 15px;
+}
+
+.contact-input img {
+  margin-right: 12px;
+  margin-top: -5px;
+}
+
+.my-add-body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #727272;
+  margin-top: 20px;
+}
+
+.my-add-body a {
+  color: #727272;
+}
+
+.my-address-content .row .col-sm-12.my-add-mid {
+  border-right: 1px solid #b8a0466b;
+  border-left: 1px solid #b8a0466b;
+  padding: 0 25px;
+}
+footer {
+  background: #292727;
+  color: #ffffff;
+  padding-top: 80px;
+  margin-top: -30px;
+}
+
+.my-address {
+  z-index: 9999 !important;
+}
+
+.my-address {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin-top: -84px;
+}
+
+footer {
+  position: relative;
+}
+
+/*
+================================================
+15 footer
+================================================
+*/
+
+footer {
+  margin-top: 147px;
+}
+
+ul.footer-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.footer-ul li a {
+  color: #bbbbbb;
+  padding: 0px;
+}
+
+ul.footer-ul li {
+  padding: 3px 0;
+}
+.footer-link-section h1 {
+  font-size: 23px;
+}
+
+.footer-link-section p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #bbb;
+}
+
+ul.footer-ul li a:hover {
+  color: #ffffff;
+}
+
+/*
+================================================
+0
+================================================
+*/
+.footer-link-section.social-lnk a {
+  color: #fff;
+  border: 1px solid;
+  padding: 5px 12px;
+  border-radius: 6px;
+  opacity: 0.5;
+  margin: 0 10px;
+}
+.my-copy-right {
+  text-align: center;
+  border-top: 1px solid #424242;
+  padding: 25px 0;
+  margin: 0;
+}
+
+.my-copy-right p {
+  margin: 0;
+  opacity: 0.5;
+}
+
+/*
+================================================
+0 Extra
+================================================
+*/
+
+.hwr-bc-discription.bc-right .bc-dis-img {
+  margin-top: 4px;
+}
+
+.hwr-bc-discription p {
+  text-align: justify;
+  padding-right: 20px;
+}
+
+.circle-1:hover {
+  transform: none;
+  transition: none;
+  zoom: inherit;
+}
+
+.scc-relative:hover {
+  transition: 0.3s !important;
+  animation: none;
+  transform: scale(01.1);
+}
+.sec-relative {
+  transition: transform 0.2s;
+}
+
+.scc-relative {
+  transition-duration: 1s !important;
+}
+
+.scc-relative:hover {
+  transition: transform 0.2s;
+}
+
+.service-col-circle {
+  transition: transform 0.2s;
+}
+
+.scc-relative img {
+  transition: transform 0.2s;
+}
+
+.scc-relative:hover {
+  transition: transform 1s;
+  z-index: 999;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light.my-almuehi-logo.my-shring {
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  transition: 0.3s;
+  background: #161922e0 !important;
+  height: 100px;
+}
+.my-counter {
+  overflow: hidden;
+}
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/*
+================================================
+0
+================================================
+*/
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+  display: none !important;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*
+    === Coding ===
+    Tarik Hasan
+    (+880) 1724-78 66 59
+    tarikhasan.info@gmail.com
+*/

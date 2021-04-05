@@ -1,0 +1,68 @@
+.signUpContainer {
+  form {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    text-align: center;
+    color: #909090;
+    margin-bottom: 20px;
+  }
+}
+.form-control {
+  width: 350px;
+}
+.invalid-feedback {
+  width: 150px;
+}
+.login-btn button {
+  padding: 10px 30px 5px 30px;
+}
+.alert {
+  width: 350px;
+  margin-left: 25%;
+}
+
+.form-check.my-check a {
+  float: right;
+  text-decoration: underline;
+  color: #707070;
+}
+
+.form-check.my-check a:hover {
+  text-decoration: none;
+}
+
+.login-btn {
+  text-align: center;
+  margin-top: 20px;
+  button {
+    padding: 10px 80px;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #b8a046, #876f18);
+    padding: 10px 30px;
+    transition: 0.3s;
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+      transform: translateY(5px);
+      background-image: linear-gradient(to top, #876f18, #b8a046);
+    }
+  }
+}

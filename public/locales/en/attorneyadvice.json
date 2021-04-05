@@ -1,0 +1,13 @@
+{
+  "title": "Attorney Advice",
+  "text": {
+    "25Years": "25 Years of Experience In This Field",
+    "contactUsNow": "Contact Us now",
+    "otherServices": "OTHER SERVICES",
+    "legalAdvice": "Legal Advice",
+    "description": "DUMMY : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero labore assumenda hic ipsam quis dignissimos expedita, ullam est ad ex fugit laborum perferendis? Ea quia atque provident eligendi repudiandae qui! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero labore assumenda hic ipsam quis dignissimos expedita, ullam est ad ex fugit laborum perferendis? Ea quia atque provident eligendi repudiandae qui!",
+    "written": "Written",
+    "verbal": "Verbal"
+  },
+  "services": ["Business Law"]
+}

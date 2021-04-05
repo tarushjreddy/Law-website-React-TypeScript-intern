@@ -1,0 +1,24 @@
+{
+  "title": "Contact Us",
+  "lawOfficeCard": {
+    "headOffice": "HEAD OFFICE",
+    "phone": "PHONE",
+    "ourBranches": "OUR BRANCHES",
+    "email": "EMAIL"
+  },
+  "description": {
+    "heading": "For a faster response, you can use our Legal Advice service",
+    "text": "DUMMY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "contactUsForm": {
+    "heading": "Contact Us",
+    "text": "With extensive experience we advise top national  international companies",
+    "fields": {
+      "nameLabel": "Your Name (Required)",
+      "emailLabel": "Your Email (Required)",
+      "subjectLabel": "Subject",
+      "messageLabel": "Your Message"
+    },
+    "sendButton": "Send"
+  }
+}
