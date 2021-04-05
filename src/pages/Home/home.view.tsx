@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../../components/Header";
 import AboutUs from "./components/AboutUs";
 import Quality from "./components/Quality";
+import AddonView from "./components/Additional";
 import Advertisement from "./components/Advertisement";
 import Services from "./components/Services";
 import Counter from "./components/Counter";
@@ -27,6 +28,7 @@ const HomeView = () => {
       <Portfolio />
       <ContactUs />
       <Footer />
+      <AddonView />
     </div>
   );
 };
