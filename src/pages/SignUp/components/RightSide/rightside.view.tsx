@@ -6,12 +6,16 @@ import SignUpForm from "./components/SignUpForm";
 
 const RightSideView = () => {
   return (
-    <div className="col-sm-12 col-md-6">
-      <div className="container text-center">
-        <div style={{ height: "20px" }} />
+    <div>
+      <div>
+        <div />
         <Link to="/">
           <img
-            style={{ margin: "20px 0" }}
+            style={{
+              display: "flex",
+              width: "100%",
+              height: "auto",
+            }}
             src="media/images/Logo.png"
             alt="logo"
           />

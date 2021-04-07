@@ -5,10 +5,16 @@ import RightSide from "./components/RightSide";
 
 const LoginView = () => {
   return (
-    <div className="container-fluid h-100 d-flex flex-column">
-      <div className="row h-100">
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+      }}
+    >
+      <div>
         <LeftSide />
-        <RightSide />
       </div>
     </div>
   );

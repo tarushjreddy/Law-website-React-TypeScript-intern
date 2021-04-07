@@ -5,10 +5,10 @@ import offlineImage from "../../../../../../Zytcode Assets/PNG files/Offline con
 const OfflineSplash = () => {
   return (
     <div className={styles["container"]}>
-      <div className={styles["ring"]}>
+      {/* <div className={styles["ring"]}>
         <img src={offlineImage} alt="offlineImage" />
-      </div>
-      <h1>Where would you like to meet us?</h1>
+      </div> */}
+      <h1 style={{ fontSize: "1.2rem" }}>Where would you like to meet us?</h1>
     </div>
   );
 };

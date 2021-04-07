@@ -51,11 +51,20 @@ const OfficePicker: React.FC<OfficePickerProps> = ({
   });
 
   return (
-    <div className={styles["container"]}>
+    <div className={styles["containerr"]}>
       <img src={offlineImage} alt="offline" />
       <div className={styles["entity"]}>
         <Dropdown onSelect={selectFunction} className={styles["dropdown"]}>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+          <Dropdown.Toggle
+            variant="secondary"
+            style={{
+              backgroundColor: "#4a226e",
+              border: "none",
+              margin: "40px",
+              color: "#fff",
+            }}
+            id="dropdown-basic"
+          >
             {text}
           </Dropdown.Toggle>
           <Dropdown.Menu>{dropDownItemsCode}</Dropdown.Menu>
@@ -65,9 +74,10 @@ const OfficePicker: React.FC<OfficePickerProps> = ({
         <Button
           variant="secondary"
           style={{
-            backgroundColor: "#151A44",
-            borderRadius: "4px",
-            marginRight: "4px",
+            backgroundColor: "#4a226e",
+            color: "#fff",
+            border: "none",
+            margin: "10px",
           }}
           onClick={backFunction}
         >
@@ -76,9 +86,10 @@ const OfficePicker: React.FC<OfficePickerProps> = ({
         <Button
           variant="secondary"
           style={{
-            backgroundColor: "#151A44",
-            borderRadius: "4px",
-            marginLeft: "4px",
+            backgroundColor: "#4a226e",
+            border: "none",
+            margin: "10px",
+            color: "#fff",
           }}
           disabled={disabled}
           onClick={nextFunction}

@@ -4,11 +4,11 @@ import consultationImage from "../../../../../../Zytcode Assets/PNG files/Mode o
 
 const ConsultationSplash = () => {
   return (
-    <div className={styles["container"]}>
-      <div className={styles["ring"]}>
+    <div className={styles["containerr"]}>
+      {/* <div className={styles["ring"]}>
         <img src={consultationImage} alt="consultationMode" />
-      </div>
-      <h1 style={{ textAlign: "center", padding: "5px" }}>
+      </div> */}
+      <h1 style={{ textAlign: "center", padding: "5px", fontSize: "1.2rem" }}>
         Which mode of consultation would you prefer ?
       </h1>
     </div>

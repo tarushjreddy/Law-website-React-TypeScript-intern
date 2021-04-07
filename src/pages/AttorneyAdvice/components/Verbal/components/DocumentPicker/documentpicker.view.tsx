@@ -112,7 +112,8 @@ const DocumentPicker: React.FC<DocumentPickerProps> = ({
           <Button
             variant="secondary"
             style={{
-              backgroundColor: "#151A44",
+              backgroundColor: "#242f40",
+              color: "#fff",
               borderRadius: "4px",
               marginRight: "4px",
             }}
@@ -133,9 +134,10 @@ const DocumentPicker: React.FC<DocumentPickerProps> = ({
           <Button
             variant="secondary"
             style={{
-              backgroundColor: "#151A44",
+              backgroundColor: "#242f40",
+              color: "#fff",
               borderRadius: "4px",
-              marginLeft: "4px",
+              marginRight: "4px",
             }}
             onClick={() => {
               setUploadFilesInParent(uploadFiles);

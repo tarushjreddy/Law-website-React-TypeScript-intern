@@ -65,11 +65,14 @@ const EntityForm: React.FC<EntityFormProps> = ({
   };
 
   return (
-    <div className={styles["container"]}>
+    <div className={styles["containerr"]}>
       <div className={styles["entity"]}>
-        <p>I am </p>
+        <p style={{ textAlign: "center" }}>I am </p>
         <Dropdown className={styles["dropdown"]}>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+          <Dropdown.Toggle
+            style={{ backgroundColor: "#242f40", border: "none" }}
+            id="dropdown-basic"
+          >
             {formValues.entity ? formValues.entity : "Choose from the options"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -89,7 +92,6 @@ const EntityForm: React.FC<EntityFormProps> = ({
         <div className={styles["individualForm"]}>
           <Form
             style={{
-              display: "flex",
               flexDirection: "column",
               alignContent: "center",
             }}
@@ -159,10 +161,7 @@ const EntityForm: React.FC<EntityFormProps> = ({
               <Button
                 variant="secondary"
                 type="submit"
-                style={{
-                  backgroundColor: "#151A44",
-                  borderRadius: "4px",
-                }}
+                style={{ backgroundColor: "#242F40", border: "none" }}
               >
                 Next
               </Button>

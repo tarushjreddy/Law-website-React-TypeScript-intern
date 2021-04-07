@@ -6,23 +6,34 @@ import clsx from "clsx";
 
 const useColorLibStepIconStyles = makeStyles({
   root: {
-    backgroundColor: "#ccc",
+    backgroundColor: "#fff",
     zIndex: 0,
-    color: "#fff",
+    color: "#BEC9DA",
+    padding: "10px",
     width: 60,
     height: 60,
+    border: "2px solid #BEC9DA",
     display: "flex",
     borderRadius: "50%",
     justifyContent: "center",
     alignItems: "center",
   },
   active: {
-    border: "5px solid rgb(255, 214, 69)",
-    backgroundColor: "#151A44",
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: "10px",
+    alignItems: "center",
+    textAlign: "center",
+    border: "2px solid #242f40",
+    backgroundColor: "#fff",
+    color: "#242f40",
   },
   completed: {
-    border: "5px solid rgb(255, 214, 69)",
-    backgroundColor: "#151A44",
+    alignItems: "center",
+    paddingTop: "10px",
+    border: "2px solid #242f40",
+    backgroundColor: "#242f40",
+    color: "#fff",
   },
 });
 

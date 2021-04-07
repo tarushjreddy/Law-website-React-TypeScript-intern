@@ -4,17 +4,17 @@ import timeImage from "../../../../../../../../Zytcode Assets/PNG files/Time Sch
 
 const TimeDateSplash = () => {
   return (
-    <div className={styles["container"]}>
-      <div className={styles["ring"]}>
+    <div className={styles["containerr"]}>
+      {/* <div className={styles["ring"]}>
         <div className={styles["outer_circle"]}>
           <div className={styles["inner_circle"]}></div>
           <img src={timeImage} alt="welcome" />
         </div>
-      </div>
-      <h1 style={{ textAlign: "center", padding: "5px", fontSize: "x-large" }}>
+      </div> */}
+      <h1 style={{ textAlign: "center", padding: "5px", fontSize: "1.3rem" }}>
         Please choose the time and date to continue
       </h1>
-      <h4 style={{ textAlign: "center" }}>Thank you</h4>
+      <p>Thank you</p>
     </div>
   );
 };

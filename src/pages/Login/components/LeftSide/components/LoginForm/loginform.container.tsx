@@ -18,6 +18,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
   const [loginValue, setLoginValue] = useState<LoginValues>({
     email: "",
     password: "",
+    mobile: "",
   });
   const [response, setResponse] = useState<LoginResponseStatus>({
     status: "",

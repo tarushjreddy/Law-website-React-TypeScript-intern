@@ -515,7 +515,7 @@ const VerbalView = () => {
         onHide={hideModal}
         popupFunction={popupFunction}
       />
-      {panes}
+      <div>{panes}</div>
     </div>
   );
 };

@@ -28,7 +28,6 @@ const HomeView = () => {
       <Portfolio />
       <ContactUs />
       <Footer />
-      <AddonView />
     </div>
   );
 };

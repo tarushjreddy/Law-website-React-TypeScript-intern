@@ -21,17 +21,18 @@ const ColorLibConnector = withStyles({
   },
   active: {
     "& $line": {
-      borderColor: "#FFD645",
+      borderColor: "#242f40",
+      backgroundColor: "#fff",
     },
   },
   completed: {
     "& $line": {
-      borderColor: "#FFD645",
+      borderColor: "#242f40",
     },
   },
   line: {
-    borderColor: "#eaeaf0",
-    borderTopWidth: 5,
+    borderColor: "#BEC9DA",
+    borderTopWidth: 2,
   },
 })(StepConnector);
 

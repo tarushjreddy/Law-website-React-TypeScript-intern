@@ -91,7 +91,13 @@ const WrittenReport: React.FC<WrittenReportProps> = ({
             <Button
               variant="secondary"
               onClick={backFunction}
-              style={{ paddingRight: "28px", paddingLeft: "28px" }}
+              style={{
+                backgroundColor: "#242f40",
+                borderRadius: "4px",
+                marginRight: "4px",
+                paddingRight: "28px",
+                paddingLeft: "28px",
+              }}
             >
               BACK
             </Button>
@@ -103,7 +109,15 @@ const WrittenReport: React.FC<WrittenReportProps> = ({
               marginLeft: "4px",
             }}
           >
-            <Button variant="secondary" onClick={confirmHandler}>
+            <Button
+              variant="secondary"
+              style={{
+                backgroundColor: "#242f40",
+                borderRadius: "4px",
+                marginRight: "4px",
+              }}
+              onClick={confirmHandler}
+            >
               CONFIRM
             </Button>
           </div>

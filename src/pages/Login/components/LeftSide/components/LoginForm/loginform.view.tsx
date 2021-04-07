@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Alert } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import CustomInputField from "../../../../../../components/CustomInputField";
 import { LoginResponseStatus, LoginValues } from "../../../../login.model";
 
@@ -27,6 +28,10 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
   response,
 }) => {
   const { t } = useTranslation("login");
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <div className={styles["loginContainer"]}>
@@ -66,6 +71,16 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           onChange={handleChange}
           errMess={t("loginFormFields.password.errorMessage")}
         />
+        <CustomInputField
+          label={t("loginFormFields.mobile.label")}
+          name="mobile"
+          type="tel"
+          placeholder={t("loginFormFields.mobile.placeholder")}
+          classNameInput={styles["form-control"]}
+          classNameInvalid={styles["invalid-feedback"]}
+          onChange={handleChange}
+          errMess={t("loginFormFields.mobile.errorMessage")}
+        />
 
         <div
           className={`${styles["form-check"]} ${styles["my-check"]}`}
@@ -91,6 +106,32 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           <button type="submit">{t("loginButtonText")}</button>
         </div>
       </Form>
+      <Button variant="primary" onClick={handleShow}>
+        Verify OTP
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>One Time Password Verification</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CustomInputField
+            label={t("loginFormFields.otp.label")}
+            name="mobile"
+            type="tel"
+            placeholder={t("loginFormFields.otp.placeholder")}
+            classNameInput={styles["form-control"]}
+            classNameInvalid={styles["invalid-feedback"]}
+            onChange={handleChange}
+            errMess={t("loginFormFields.otp.errorMessage")}
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Verify
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

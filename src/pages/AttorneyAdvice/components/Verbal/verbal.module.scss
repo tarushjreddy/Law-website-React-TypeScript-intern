@@ -1,5 +1,5 @@
 .container {
-  display: grid;
+  display: flex;
   grid-template-areas:
     "stepper stepper"
     "leftPane rightPane";
@@ -7,8 +7,9 @@
   padding: 3% 5%;
   grid-template-rows: 1fr 9fr;
   grid-template-columns: 1fr 1fr;
-  width: 80vw;
+  width: 100%;
   height: 100vh;
+  flex-direction: column;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 

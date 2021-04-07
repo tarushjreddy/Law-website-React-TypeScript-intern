@@ -62,7 +62,11 @@ const VerbalReport: React.FC<VerbalReportProps> = ({
   };
 
   let buttonCode = (
-    <Button variant="secondary" onClick={confirmHandler}>
+    <Button
+      style={{ backgroundColor: "#242f40", color: "#fff", border: "none" }}
+      variant="secondary"
+      onClick={confirmHandler}
+    >
       CONFIRM
     </Button>
   );
@@ -71,7 +75,13 @@ const VerbalReport: React.FC<VerbalReportProps> = ({
     <Button
       variant="secondary"
       onClick={() => setVerbalReport()}
-      style={{ paddingRight: "28px", paddingLeft: "28px" }}
+      style={{
+        backgroundColor: "#242f40",
+        color: "#fff",
+        border: "none",
+        paddingRight: "28px",
+        paddingLeft: "28px",
+      }}
     >
       BACK
     </Button>

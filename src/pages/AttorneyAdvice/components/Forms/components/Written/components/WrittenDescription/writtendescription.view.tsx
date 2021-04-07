@@ -61,11 +61,14 @@ const WrittenDescription: React.FC<WrittenDescriptionProps> = ({
   };
 
   return (
-    <div className={styles["container"]}>
+    <div className={styles["containerr"]}>
+      <p style={{ textAlign: "center" }}>Need legal advice in </p>
       <div className={styles["selector"]}>
-        <h3>Need legal advice in </h3>
         <Dropdown className={styles["dropdown;"]}>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+          <Dropdown.Toggle
+            style={{ backgroundColor: "#242f40", border: "none" }}
+            id="dropdown-basic"
+          >
             {formValues.sector ? formValues.sector : "Choose from the options"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -128,7 +131,10 @@ const WrittenDescription: React.FC<WrittenDescriptionProps> = ({
                     marginRight: "4px",
                   }}
                 >
-                  <Button variant="secondary" onClick={backFunction}>
+                  <Button
+                    style={{ backgroundColor: "#242f40", border: "none" }}
+                    onClick={backFunction}
+                  >
                     Back
                   </Button>
                 </div>
@@ -139,7 +145,10 @@ const WrittenDescription: React.FC<WrittenDescriptionProps> = ({
                     marginLeft: "4px",
                   }}
                 >
-                  <Button variant="secondary" type="submit">
+                  <Button
+                    style={{ backgroundColor: "#242f40", border: "none" }}
+                    type="submit"
+                  >
                     Next
                   </Button>
                 </div>

@@ -1,29 +1,32 @@
-.container {
+.containerr {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 0.01%, #f5f5f5 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  align-items: center;
+  height: 120%;
 
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  // background: linear-gradient(180deg, #fff 10%, #4a226e 0.01%, #4a226e 100%);
+  background-color: #242f40;
+  color: white;
+
+  align-items: center;
   .ring {
     border-radius: 50%;
+    margin-right: 19px;
     border: 15px solid;
-    width: 15vw;
-    height: 15vw;
+    margin-left: 10px;
+    width: 10vw;
+    height: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(
       180deg,
-      #151a44 -47.65%,
+      #242f40 -47.65%,
       rgba(21, 26, 68, 0) 209.8%
     );
     //border-image: linear-gradient(rgba(21,26,28,1), rgba(21,26,28,0));
-
     img {
       border-radius: 50%;
       width: 12vw;

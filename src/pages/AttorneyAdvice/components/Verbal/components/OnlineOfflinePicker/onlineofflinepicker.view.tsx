@@ -14,7 +14,7 @@ const OnlineOfflinePicker: React.FC<OnlineOfflinePickerProps> = ({
   backFunction,
 }) => {
   return (
-    <div className={styles["container"]}>
+    <div className={styles["containerr"]}>
       <div>
         <ul>
           <li
@@ -37,7 +37,7 @@ const OnlineOfflinePicker: React.FC<OnlineOfflinePickerProps> = ({
         <Button
           variant="secondary"
           onClick={backFunction}
-          style={{ paddingRight: "28px", paddingLeft: "28px" }}
+          style={{ backgroundColor: "#4a226e", border: "none", color: "#fff" }}
         >
           Back
         </Button>

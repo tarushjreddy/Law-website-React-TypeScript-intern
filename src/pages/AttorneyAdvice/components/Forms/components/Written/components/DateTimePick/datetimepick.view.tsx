@@ -127,9 +127,9 @@ const DateTimePick: React.FC<DateTimePickProps> = ({
             <Button
               variant="secondary"
               style={{
-                backgroundColor: "#151A44",
-                borderRadius: "4px",
-                marginRight: "4px",
+                backgroundColor: "#242f40",
+                border: "none",
+                margin: "4px",
               }}
               onClick={handleBack}
             >
@@ -146,9 +146,9 @@ const DateTimePick: React.FC<DateTimePickProps> = ({
               variant="secondary"
               type="submit"
               style={{
-                backgroundColor: "#151A44",
-                borderRadius: "4px",
-                marginLeft: "4px",
+                margin: "4px",
+                backgroundColor: "#242f40",
+                border: "none",
               }}
             >
               Next

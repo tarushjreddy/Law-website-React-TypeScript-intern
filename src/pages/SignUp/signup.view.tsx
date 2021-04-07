@@ -5,9 +5,15 @@ import RightSide from "./components/RightSide";
 
 const SignUpView = () => {
   return (
-    <div className="container-fluid h-100 d-flex flex-column">
-      <div className="row h-100">
-        <LeftSide />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: "20px",
+      }}
+    >
+      <div>
         <RightSide />
       </div>
     </div>

@@ -15,7 +15,7 @@ const PlatformPicker: React.FC<PlatformPickerProps> = ({
   clearOnlineOffline,
 }) => {
   return (
-    <div className={styles["container"]}>
+    <div className={styles["containerr"]}>
       <img src={onlineIcon} alt="onlineIcon" />
       <h1>Online</h1>
       <div>
@@ -41,7 +41,7 @@ const PlatformPicker: React.FC<PlatformPickerProps> = ({
         <Button
           variant="secondary"
           onClick={clearOnlineOffline}
-          style={{ paddingRight: "28px", paddingLeft: "28px" }}
+          style={{ backgroundColor: "#4a226e", border: "none", color: "#fff" }}
         >
           Back
         </Button>

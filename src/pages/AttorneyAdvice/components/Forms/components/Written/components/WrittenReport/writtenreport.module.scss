@@ -1,9 +1,10 @@
 .bigContainer {
   box-sizing: border-box;
-  padding: 1.5%;
+
   background-color: #eee;
   height: 100%;
   width: 100%;
+  margin-right: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +12,7 @@
 
   .container {
     height: 60vh;
-    width: 100%;
+    width: 100vw;
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 0.5% 2%;

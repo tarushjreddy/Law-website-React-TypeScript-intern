@@ -8,7 +8,7 @@ const OfficeSplash = () => {
       <div className={styles["ring"]}>
         <img src={branchImage} alt="branchImage" />
       </div>
-      <h1>Select one of the Branch Offices</h1>
+      <h1 style={{ fontSize: "1.2rem" }}>Select one of the Branch Offices</h1>
     </div>
   );
 };

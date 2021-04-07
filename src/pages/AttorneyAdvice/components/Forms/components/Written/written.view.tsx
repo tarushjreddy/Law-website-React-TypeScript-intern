@@ -332,7 +332,7 @@ const WrittenView = () => {
   }
 
   return (
-    <div className={containerClass}>
+    <div className="container">
       <div className={styles["stepper"]}>
         <Stepper
           show={showStepper}
@@ -346,7 +346,7 @@ const WrittenView = () => {
         onHide={hideModal}
         popupFunction={popupFunction}
       />
-      {panes}
+      <div>{panes}</div>
     </div>
   );
 };

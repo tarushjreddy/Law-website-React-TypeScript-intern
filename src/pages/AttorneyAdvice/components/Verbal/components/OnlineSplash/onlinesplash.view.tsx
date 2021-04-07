@@ -4,12 +4,13 @@ import onlineImage from "../../../../../../Zytcode Assets/PNG files/Online consu
 
 const OnlineSplash = () => {
   return (
-    <div className={styles["container"]}>
-      <div className={styles["ring"]}>
+    <div className={styles["containerr"]}>
+      {/* <div className={styles["ring"]}>
         <img src={onlineImage} alt="onlineImage" />
-      </div>
-      <h1 style={{ textAlign: "center", padding: "5px" }}>
-        Please choose a platform of your preference for the consultation
+      </div> */}
+      <h1 style={{ textAlign: "center", padding: "5px", fontSize: "1.2rem" }}>
+        Please choose a platform of your preference
+        <br /> for the consultation
       </h1>
     </div>
   );

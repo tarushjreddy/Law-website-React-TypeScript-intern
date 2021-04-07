@@ -176,7 +176,7 @@ const AudioContainerView: React.FC<AudioContainerViewProps> = ({
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerr}>
       <h2 className="text-center">Record Audios</h2>
 
       <div className="row p-2">
@@ -251,6 +251,7 @@ const AudioContainerView: React.FC<AudioContainerViewProps> = ({
         className={styles["button"]}
         style={{
           textAlign: "center",
+          marginTop: "20px",
         }}
       >
         <div
@@ -262,7 +263,7 @@ const AudioContainerView: React.FC<AudioContainerViewProps> = ({
           <Button
             variant="secondary"
             style={{
-              backgroundColor: "#151A44",
+              backgroundColor: "#242f40",
               borderRadius: "4px",
               marginRight: "4px",
             }}
@@ -283,7 +284,7 @@ const AudioContainerView: React.FC<AudioContainerViewProps> = ({
           <Button
             variant="secondary"
             style={{
-              backgroundColor: "#151A44",
+              backgroundColor: "#242f40",
               borderRadius: "4px",
               marginLeft: "4px",
             }}

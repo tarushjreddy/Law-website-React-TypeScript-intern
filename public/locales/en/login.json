@@ -15,6 +15,16 @@
       "placeholder": "email@email.com",
       "errMessage": "Please provide a valid Email."
     },
+     "mobile": {
+      "label": "Mobile No",
+      "placeholder": "Mobile Number",
+      "errMessage": "Please provide a valid Email."
+    },
+     "otp": {
+      "label": "One Time Password",
+      "placeholder": "Please enter the OTP",
+      "errMessage": "Please enter the correct OTP"
+    },
     "password": {
       "label": "Password",
       "placeholder": "Password",
