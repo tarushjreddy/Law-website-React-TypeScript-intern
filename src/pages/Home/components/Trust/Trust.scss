@@ -1,0 +1,15 @@
+.image_holder {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  margin-right: 10px;
+
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  color: red;
+}

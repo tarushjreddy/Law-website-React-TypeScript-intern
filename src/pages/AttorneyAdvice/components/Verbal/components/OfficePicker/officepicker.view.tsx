@@ -58,7 +58,7 @@ const OfficePicker: React.FC<OfficePickerProps> = ({
           <Dropdown.Toggle
             variant="secondary"
             style={{
-              backgroundColor: "#4a226e",
+              backgroundColor: "#242f40",
               border: "none",
               margin: "40px",
               color: "#fff",
@@ -74,7 +74,7 @@ const OfficePicker: React.FC<OfficePickerProps> = ({
         <Button
           variant="secondary"
           style={{
-            backgroundColor: "#4a226e",
+            backgroundColor: "#242f40",
             color: "#fff",
             border: "none",
             margin: "10px",
@@ -86,7 +86,7 @@ const OfficePicker: React.FC<OfficePickerProps> = ({
         <Button
           variant="secondary"
           style={{
-            backgroundColor: "#4a226e",
+            backgroundColor: "#242f40",
             border: "none",
             margin: "10px",
             color: "#fff",

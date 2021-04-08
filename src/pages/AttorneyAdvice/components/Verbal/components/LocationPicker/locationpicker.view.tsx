@@ -70,15 +70,13 @@ const LocationPicker: React.FC<LocationPickerProps> = ({
         }}
       >
         <Button
-          variant="secondary"
-          style={{ marginRight: "4px" }}
+          style={{ marginLeft: "4px", backgroundColor: "#242f40" }}
           onClick={backFunction}
         >
           Back
         </Button>
         <Button
-          variant="secondary"
-          style={{ marginLeft: "4px" }}
+          style={{ marginLeft: "4px", backgroundColor: "#242f40" }}
           onClick={submitHandler}
         >
           Next

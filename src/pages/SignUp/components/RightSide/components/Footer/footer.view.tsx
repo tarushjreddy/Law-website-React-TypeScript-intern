@@ -10,8 +10,8 @@ const FooterView = () => {
     <>
       <div className={styles["social-signup"]}>
         <h4>{t("text.or")}</h4>
-        <p>{t("text.signUpWith")}</p>
-        <div className={styles["ss-link"]}>
+
+        <div style={{ display: "none" }}>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#" className={styles["fb-icon"]}>
             <i className="fa fa-facebook" />

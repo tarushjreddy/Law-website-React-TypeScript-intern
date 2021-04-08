@@ -68,7 +68,7 @@
   },
   "singUpButtonText": "Sign Up",
   "loginLink": {
-    "part1": "Don't have an account?",
-    "part2": "Sign up now"
+    "part1": "Already have an account?",
+    "part2": "Login in now"
   }
 }

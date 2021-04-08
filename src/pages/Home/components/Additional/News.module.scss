@@ -1,0 +1,48 @@
+.News_portal {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  padding: 10px;
+  font-family: "Tajawal", sans-serif;
+  color: black;
+  background-color: white;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  width: 10%;
+
+  background-color: #b8a046;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.secod_header {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: gray;
+}
+.news_body {
+  margin-top: 40px;
+  width: "100%";
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.news_body1 {
+  min-width: "500px" !important;
+  min-height: "500px";
+  background-color: red;
+}
+Card {
+  margin: 0px;
+}

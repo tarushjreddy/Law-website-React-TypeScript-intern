@@ -118,6 +118,13 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           placeholder={t("signUpFormFields.mobile.placeholder")}
           errMess={t("signUpFormFields.mobile.errMessage")}
         />
+        <Form.Group controlId="exampleForm.ControlSelect1">
+          <Form.Label>Type of User</Form.Label>
+          <Form.Control as="select">
+            <option>Lawer</option>
+            <option>Client</option>
+          </Form.Control>
+        </Form.Group>
         <div className={styles["login-btn"]}>
           <div>
             <button type="submit">{t("singUpButtonText")}</button>
