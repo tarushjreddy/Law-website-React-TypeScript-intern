@@ -52,7 +52,11 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
       </Alert>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <CustomInputField
-          label={t("loginFormFields.email.label")}
+          label={
+            t("loginFormFields.email.label") +
+            "or" +
+            t("loginFormFields.mobile.label")
+          }
           name="email"
           type="email"
           placeholder={t("loginFormFields.email.placeholder")}
@@ -61,16 +65,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           onChange={handleChange}
           errMess={t("loginFormFields.email.errMessage")}
         />
-        <CustomInputField
-          label={t("loginFormFields.password.label")}
-          name="password"
-          type="password"
-          placeholder={t("loginFormFields.password.placeholder")}
-          classNameInput={styles["form-control"]}
-          classNameInvalid={styles["invalid-feedback"]}
-          onChange={handleChange}
-          errMess={t("loginFormFields.password.errorMessage")}
-        />
+        {/* <h6 style={{ textAlign: "center" }}>or</h6>
         <CustomInputField
           label={t("loginFormFields.mobile.label")}
           name="mobile"
@@ -80,6 +75,17 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           classNameInvalid={styles["invalid-feedback"]}
           onChange={handleChange}
           errMess={t("loginFormFields.mobile.errorMessage")}
+        /> */}
+
+        <CustomInputField
+          label={t("loginFormFields.password.label")}
+          name="password"
+          type="password"
+          placeholder={t("loginFormFields.password.placeholder")}
+          classNameInput={styles["form-control"]}
+          classNameInvalid={styles["invalid-feedback"]}
+          onChange={handleChange}
+          errMess={t("loginFormFields.password.errorMessage")}
         />
 
         <div

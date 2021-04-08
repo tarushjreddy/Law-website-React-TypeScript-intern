@@ -8,9 +8,9 @@ function Trust() {
       style={{
         backgroundColor: "#C9C9C9",
         display: "flex",
-        marginTop: "30px",
-        width: "100vw",
-        height: "280px",
+        margin: "30px",
+
+        height: "250px",
       }}
     >
       <div
@@ -20,19 +20,19 @@ function Trust() {
           flexDirection: "column",
         }}
       >
-        <div style={{ width: "100vw", height: "100%" }}>
+        <div style={{ height: "100%" }}>
           <h6
             style={{
               fontSize: "30px",
               color: "#242f40",
-              margin: "10px",
               marginTop: "30px",
+              marginLeft: "20px",
             }}
           >
             Trusted Partners
           </h6>
 
-          <Carousel style={{ margin: "0px", color: "red" }}>
+          <Carousel style={{ marginLeft: "20px", color: "red" }}>
             <Carousel.Item interval={1000}>
               <div
                 style={{
@@ -40,55 +40,79 @@ function Trust() {
                   display: "flex",
                   alignItems: "center",
                   flexDirection: "column",
-                  justifyContent: "space-around",
-                  width: "100vw",
+                  justifyContent: "center",
                 }}
               >
                 <div
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    width: "100vw",
+                    width: "100%",
                     flexDirection: "row",
-                    justifyContent: "space-evenly",
+
+                    justifyContent: "center",
                   }}
                 >
                   <div
-                    className="image_holder"
                     style={{
-                      backgroundImage: `url(${download})`,
+                      display: "flex",
+                      alignItems: "center",
+
+                      flexDirection: "row",
+                      justifyContent: "space-evenly",
                     }}
-                  ></div>
-                  <div
-                    className="image_holder"
-                    style={{
-                      backgroundImage: `url(${download})`,
-                    }}
-                  ></div>
-                  <div
-                    className="image_holder"
-                    style={{
-                      backgroundImage: `url(${download})`,
-                    }}
-                  ></div>
-                  <div
-                    className="image_holder"
-                    style={{
-                      backgroundImage: `url(${download})`,
-                    }}
-                  ></div>
-                  <div
-                    className="image_holder"
-                    style={{
-                      backgroundImage: `url(${download})`,
-                    }}
-                  ></div>
-                  <div
-                    className="image_holder"
-                    style={{
-                      backgroundImage: `url(${download})`,
-                    }}
-                  ></div>
+                  >
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+                    <div
+                      className="image_holder"
+                      style={{
+                        backgroundImage: `url(${download})`,
+                      }}
+                    ></div>
+                  </div>
                 </div>
               </div>
             </Carousel.Item>

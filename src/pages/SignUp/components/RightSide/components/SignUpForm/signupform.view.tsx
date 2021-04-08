@@ -118,13 +118,31 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           placeholder={t("signUpFormFields.mobile.placeholder")}
           errMess={t("signUpFormFields.mobile.errMessage")}
         />
-        <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label>Type of User</Form.Label>
-          <Form.Control as="select">
-            <option>Lawer</option>
-            <option>Client</option>
-          </Form.Control>
-        </Form.Group>
+        <label> Sign Up as</label>
+        <div style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
+          <div className="radio" style={{ marginRight: "20px" }}>
+            <label>
+              <input
+                type="radio"
+                value="option2"
+                style={{ marginRight: "5px" }}
+                // checked={this.state.selectedOption === "option1"}
+              />
+              Lawyer
+            </label>
+          </div>
+          <div className="radio" style={{ marginRight: "20px" }}>
+            <label>
+              <input
+                type="radio"
+                value="option3"
+                style={{ marginRight: "5px" }}
+                // checked={this.state.selectedOption === "option"}
+              />
+              Client
+            </label>
+          </div>
+        </div>
         <div className={styles["login-btn"]}>
           <div>
             <button type="submit">{t("singUpButtonText")}</button>
