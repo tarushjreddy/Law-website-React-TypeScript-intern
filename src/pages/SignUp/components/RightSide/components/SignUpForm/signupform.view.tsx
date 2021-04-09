@@ -9,6 +9,7 @@ import { SignUpValues } from "../../../../../../services/models";
 import { SignUpResponseStatus } from "../../../../signup.model";
 
 import styles from "./signupform.module.scss";
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 
 interface SignUpFormViewProps {
   validated: boolean;
@@ -118,41 +119,45 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           placeholder={t("signUpFormFields.mobile.placeholder")}
           errMess={t("signUpFormFields.mobile.errMessage")}
         />
-        <label> Sign Up as</label>
-        <div style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-          <div className="radio" style={{ marginRight: "20px" }}>
-            <label>
-              <input
-                type="radio"
-                value="option2"
-                style={{ marginRight: "5px" }}
-                // checked={this.state.selectedOption === "option1"}
-              />
-              Lawyer
-            </label>
-          </div>
-          <div className="radio" style={{ marginRight: "20px" }}>
-            <label>
-              <input
-                type="radio"
-                value="option3"
-                style={{ marginRight: "5px" }}
-                // checked={this.state.selectedOption === "option"}
-              />
-              Client
-            </label>
-          </div>
-        </div>
-        <div className={styles["login-btn"]}>
-          <div>
-            <button type="submit">{t("singUpButtonText")}</button>
-          </div>
-        </div>
       </Form>
+      <label> Sign Up as</label>
+      <form style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            marginRight: "20px",
+            alignItems: "baseline",
+          }}
+        >
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            style={{ marginRight: "20px" }}
+          />
+          <label>Lawyer</label>
+        </div>
+        <br />
+        <div style={{ display: "flex" }}>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            style={{ marginRight: "20px" }}
+          />
+          <label>Client</label>
+        </div>
+      </form>{" "}
+      <div className={styles["login-btn"]}>
+        <div>
+          <button type="submit">{t("singUpButtonText")}</button>
+        </div>
+      </div>
       <Button variant="primary" onClick={handleShow}>
         Verify OTP
       </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>One Time Password Verification</Modal.Title>

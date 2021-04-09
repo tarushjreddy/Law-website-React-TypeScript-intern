@@ -1,5 +1,5 @@
 import React from "react";
-
+import whatsApp from "./whatsapp-icon 1.png";
 const Contact = () => {
   //l-0,ml-19
   return (
@@ -7,7 +7,23 @@ const Contact = () => {
       <div className="container">
         <div className="my-contact-content">
           <div className="row">
-            <div className="col-sm-12 col-md-5">
+            <div
+              className="col-sm-12 col-md-5"
+              style={{
+                display: "flex",
+                alignItems: "center",
+
+                justifyContent: "space-between",
+              }}
+            >
+              <div style={{ marginLeft: "30px" }}>
+                <label>Chat with us.</label>
+                <img
+                  src={whatsApp}
+                  alt=""
+                  style={{ marginLeft: "3px", height: "30px", width: "30px" }}
+                />
+              </div>
               <div className="contact-text text-end">
                 <h1>Get Helpful Tips and Info</h1>
                 <p>from our newletters!</p>

@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
-
+import "./main_one.scss";
 interface CustomInputFieldProps {
   label: string;
   type: string;
@@ -44,7 +44,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
         {label}
       </label>
       <Form.Control
-        className={classNameInput}
+        className="this"
         // size={size}
         style={
           localStorage.getItem("lang") === "ar"

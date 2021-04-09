@@ -28,7 +28,7 @@ const HomeView = () => {
 
       <Advertisement />
       <CallUs />
-
+      <AddonView />
       <Portfolio />
       <Trust />
       <ContactUs />

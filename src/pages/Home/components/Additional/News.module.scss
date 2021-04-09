@@ -1,6 +1,8 @@
 .News_portal {
   margin-bottom: 50px;
   margin-top: 50px;
+  height: 100%;
+
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -38,11 +40,40 @@
   justify-content: space-evenly;
   flex-direction: row;
 }
+
 .news_body1 {
+  background-image: url("./download.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #cccccc;
   min-width: "500px" !important;
   min-height: "500px";
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
   background-color: red;
 }
 Card {
   margin: 0px;
+}
+.address {
+  display: flex;
+  margin: 15px;
+
+  align-items: baseline;
+  flex-direction: row;
+}
+.address_pro {
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+}
+.fotter_part {
+  opacity: 0.5;
+  color: white;
+  font-weight: 500;
+
+  background-color: black;
 }

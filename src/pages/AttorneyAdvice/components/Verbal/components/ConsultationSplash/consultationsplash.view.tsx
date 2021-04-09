@@ -9,7 +9,7 @@ const ConsultationSplash = () => {
         <img src={consultationImage} alt="consultationMode" />
       </div> */}
       <h1 style={{ textAlign: "center", padding: "5px", fontSize: "1.2rem" }}>
-        Which mode of consultation would you prefer ?
+        What kind of consultation are you looking for
       </h1>
     </div>
   );

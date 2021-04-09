@@ -15,8 +15,7 @@ const DocumentSplash = () => {
           fontSize: "1.9rem",
         }}
       >
-        Please enter the additional documents related to the <br />
-        scenario for us to refer to
+        Upload related documents
       </h1>
     </div>
   );

@@ -12,9 +12,9 @@ const TimeDateSplash = () => {
         </div>
       </div> */}
       <h1 style={{ textAlign: "center", padding: "5px", fontSize: "1.3rem" }}>
-        Please choose the time and date to continue
+        Please choose date and time
       </h1>
-      <p>Thank you</p>
+      {/* <p>Thank you</p> */}
     </div>
   );
 };

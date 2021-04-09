@@ -18,8 +18,8 @@ const Welcome = () => {
         </h4>
       </div> */}
 
-      <h1 style={{ textAlign: "center" }}>Welcome</h1>
-      <h6>Plase enter your details to continue</h6>
+      <h1 style={{ textAlign: "center" }}>About You</h1>
+      {/* <h6>About You</h6> */}
     </div>
   );
 };
