@@ -36,7 +36,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
     name: entityFormData.name,
     phone: entityFormData.phone,
     id: entityFormData.id,
-    address: entityFormData.address,
+    address1: entityFormData.address,
+    address2: entityFormData.address,
+    address3: entityFormData.address,
     city: entityFormData.city,
     entity: entityFormData.entity,
     type: entityFormData.type,
@@ -135,13 +137,31 @@ const EntityForm: React.FC<EntityFormProps> = ({
 
             <Form.Group controlId="formBasicAddress">
               <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Address"
+                type="text"
+                placeholder="Address Line 1"
                 onChange={handleChange}
-                name="address"
-                value={formValues.address}
-                style={{ resize: "none" }}
+                name="address1"
+                value={formValues.address1}
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId="formBasicAddress">
+              <Form.Control
+                type="text"
+                placeholder="Address Line 2"
+                onChange={handleChange}
+                name="address2"
+                value={formValues.address2}
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId="formBasicAddress">
+              <Form.Control
+                type="text"
+                placeholder="Address Line 3"
+                onChange={handleChange}
+                name="address3"
+                value={formValues.address3}
                 required
               />
             </Form.Group>

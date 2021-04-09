@@ -91,8 +91,8 @@ const DateTimePick: React.FC<DateTimePickProps> = ({
               />
             </div>
           </div>
-          <div className="col-6">
-            <div>
+          <div>
+            <div className="row" style={{ marginRight: "0px" }}>
               <Form.Label style={{ fontSize: "17px" }}>
                 Select Duration
               </Form.Label>

@@ -41,7 +41,7 @@ const PlatformPicker: React.FC<PlatformPickerProps> = ({
         <Button
           variant="secondary"
           onClick={clearOnlineOffline}
-          style={{ backgroundColor: "#4a226e", border: "none", color: "#fff" }}
+          style={{ backgroundColor: "#242f40", border: "none", color: "#fff" }}
         >
           Back
         </Button>

@@ -89,7 +89,11 @@ const OnlinePlatform: React.FC<ConsultionTypeProps> = ({
           </button>
         </div>
         <div style={{ width: "auto" }}>
-          <button className="btn btn-custom" onClick={handleSubmit}>
+          <button
+            className="btn btn-custom"
+            style={{ backgroundColor: "#242f40" }}
+            onClick={handleSubmit}
+          >
             Next
           </button>
         </div>

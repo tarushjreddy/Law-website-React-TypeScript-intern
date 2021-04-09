@@ -8,7 +8,7 @@ function Trust() {
       style={{
         backgroundColor: "#C9C9C9",
         display: "flex",
-        margin: "30px",
+        marginTop: "15px",
 
         height: "250px",
       }}
@@ -34,7 +34,7 @@ function Trust() {
           <div
             style={{
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "space-between",
               alignItems: "center",
               width: "100vw",
             }}
@@ -60,71 +60,6 @@ function Trust() {
                       flexDirection: "row",
 
                       justifyContent: "space-evenly",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-
-                        flexDirection: "row",
-                        justifyContent: "space-evenly",
-                      }}
-                    >
-                      <div
-                        className="image_holder"
-                        style={{
-                          backgroundImage: `url(${download})`,
-                        }}
-                      ></div>
-
-                      <div
-                        className="image_holder"
-                        style={{
-                          backgroundImage: `url(${download})`,
-                        }}
-                      ></div>
-                      <div
-                        className="image_holder"
-                        style={{
-                          backgroundImage: `url(${download})`,
-                        }}
-                      ></div>
-                      <div
-                        className="image_holder"
-                        style={{
-                          backgroundImage: `url(${download})`,
-                        }}
-                      ></div>
-                      <div
-                        className="image_holder"
-                        style={{
-                          backgroundImage: `url(${download})`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item interval={40000}>
-                <div
-                  style={{
-                    height: "150px",
-
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "column",
-                    justifyContent: "space-evenly",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      width: "100%",
-                      flexDirection: "row",
-
-                      justifyContent: "center",
                     }}
                   >
                     <div

@@ -9,19 +9,18 @@ const TellUsMore = () => {
         <img src={moreImage} alt="TellUsMoreImage" />
       </div> */}
       <div className={styles["containerr_text"]}>
-        <h1 style={{ fontSize: "1.7em" }}>Tell us more</h1>
         <h1
           style={{
             textAlign: "center",
             padding: "2px",
-            fontSize: "0.9em",
+            fontSize: "1.9em",
             fontWeight: 500,
           }}
         >
           What kind of consultation are you looking for?
         </h1>
       </div>
-      <h1
+      {/* <h1
         style={{
           textAlign: "center",
           padding: "2px",
@@ -31,7 +30,7 @@ const TellUsMore = () => {
       >
         You can write us and let us know <br /> what you are looking for in
         particular
-      </h1>
+      </h1> */}
     </div>
   );
 };
