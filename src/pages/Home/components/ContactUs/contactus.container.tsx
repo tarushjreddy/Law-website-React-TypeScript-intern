@@ -16,12 +16,20 @@ const Contact = () => {
                 justifyContent: "space-between",
               }}
             >
-              <div style={{ marginLeft: "30px" }}>
-                <label>Chat with us.</label>
+              <div
+                style={{
+                  marginLeft: "30px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <h6 style={{ fontWeight: "bold", marginTop: "15px" }}>
+                  Chat with us.
+                </h6>
                 <img
                   src={whatsApp}
                   alt=""
-                  style={{ marginLeft: "3px", height: "30px", width: "30px" }}
+                  style={{ marginLeft: "5px", height: "2rem", width: "2rem" }}
                 />
               </div>
               <div className="contact-text text-end">

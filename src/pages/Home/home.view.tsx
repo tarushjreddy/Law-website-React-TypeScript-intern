@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import Quality from "./components/Quality";
 import Trust from "./components/Trust";
 import AddonView from "./components/Additional";
+import Modified from "./components/Modified";
 import Advertisement from "./components/Advertisement";
 import Services from "./components/Services";
 import Counter from "./components/Counter";
@@ -22,10 +23,12 @@ const HomeView = () => {
       </div>
       <div className="quality-spacer" />
       <Quality />
-      <Services />
 
+      {/* loop array of json */}
+      {/* if condition id if %2 == 0 */}
+      <Modified styling="row" />
+      <Modified styling="row-reverse" />
       <Counter />
-
       <Advertisement />
       <CallUs />
       <AddonView />

@@ -54,7 +54,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
         <CustomInputField
           label={
             t("loginFormFields.email.label") +
-            "or" +
+            "    or   " +
             t("loginFormFields.mobile.label")
           }
           name="email"

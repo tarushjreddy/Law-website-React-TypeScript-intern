@@ -7,7 +7,7 @@ import BackgroundImage from "../../../../Zytcode Assets/PNG files/Attorney Advic
 const HeaderView = () => {
   const { t } = useTranslation("attorneyadvice");
   return (
-    <div className={`${styles["clip-image-container"]} w-100`}>
+    <div className={`${styles["clip-image-container"]} `}>
       <img
         className={styles["clip-image"]}
         src={BackgroundImage}
