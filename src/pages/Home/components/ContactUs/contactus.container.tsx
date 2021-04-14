@@ -1,14 +1,15 @@
 import React from "react";
 import whatsApp from "./whatsapp-icon 1.png";
+import "./con.scss";
+
 const Contact = () => {
   //l-0,ml-19
   return (
     <div className="my-contact">
       <div className="container">
         <div className="my-contact-content">
-          <div className="row">
+          <div>
             <div
-              className="col-sm-12 col-md-5"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -26,18 +27,14 @@ const Contact = () => {
                 <h6 style={{ fontWeight: "bold", marginTop: "15px" }}>
                   Chat with us.
                 </h6>
-                <img
-                  src={whatsApp}
-                  alt=""
-                  style={{ marginLeft: "5px", height: "2rem", width: "2rem" }}
-                />
+                <img src={whatsApp} className="pro_image" alt="" />
               </div>
               <div className="contact-text text-end">
                 <h1>Get Helpful Tips and Info</h1>
                 <p>from our newletters!</p>
               </div>
             </div>
-            <div className="col-sm-12 col-md-7">
+            <div>
               <div className="contact-input">
                 <form>
                   <img src="media/images/email-icon.png" alt="email" />

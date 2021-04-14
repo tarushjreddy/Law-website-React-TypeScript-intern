@@ -96,3 +96,8 @@
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .contactUsContainer {
+    flex-direction: column;
+  }
+}

@@ -1,13 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import "./quality.scss";
 
 const Quality = () => {
   const { t, i18n } = useTranslation("home");
   return (
-    <div className="my-quality">
-      <div className="container">
-        <div className="my-quality-content">
-          <div className="quality-topup">
+    <div className="my-quality ">
+      <div className="container" id="container_pro">
+        <div className="yellow_border">
+          <div className="top-up">
             <div className="qtopuo-head">
               <img src="media/images/topup-icon.png" alt="Quality" />
               <h1>

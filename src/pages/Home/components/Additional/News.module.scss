@@ -40,15 +40,20 @@
   justify-content: space-evenly;
   flex-direction: row;
 }
-
+@media only screen and (max-width: 600px) {
+  .news_body {
+    height: 100%;
+    flex-direction: column;
+  }
+}
 .news_body1 {
   background-image: url("./download.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #cccccc;
-  min-width: "500px" !important;
-  min-height: "500px";
+  min-width: "550px" !important;
+  min-height: "600px";
   display: flex;
 
   flex-direction: column;

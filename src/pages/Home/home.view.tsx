@@ -17,7 +17,11 @@ import Footer from "../../components/Footer";
 const HomeView = () => {
   return (
     <div>
-      <Header />
+      <div style={{ height: "100vh" }}>
+        <Header />
+      </div>
+      <AddonView />
+
       <div id="AboutUs">
         <AboutUs />
       </div>
@@ -31,7 +35,7 @@ const HomeView = () => {
       <Counter />
       <Advertisement />
       <CallUs />
-      <AddonView />
+
       <Portfolio />
       <Trust />
       <ContactUs />

@@ -3,6 +3,7 @@ import axios from "axios";
 import { API_BASE_URL } from "../constants";
 import {
   GetAllApplicationsResponse,
+  GetAllSliderDetails,
   LoginValues,
   SignUpResponseFail,
   SignUpResponseSuccess,
@@ -58,6 +59,16 @@ export const getAllApplicationsRequests = async (): Promise<
     const response = await axios.get<GetAllApplicationsResponse>(
       "/service/all"
     );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return { data: [], message: "", status: "" };
+  }
+};
+
+export const getAllSliderDetails = async (): Promise<GetAllSliderDetails> => {
+  try {
+    const response = await axios.get<GetAllSliderDetails>("/slider/all");
     return response.data;
   } catch (error) {
     console.log(error);

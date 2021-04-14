@@ -1,0 +1,25 @@
+@media only screen and (max-width: 600px) {
+  .my-contact {
+    flex-direction: column;
+  }
+  .contact-text p {
+    font-size: 10px;
+  }
+  .contact-text h1 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  .pro_image {
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-left: 5px;
+  }
+}
+
+.pro_image {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 5px;
+}

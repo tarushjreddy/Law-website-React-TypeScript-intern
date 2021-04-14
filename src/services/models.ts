@@ -150,6 +150,9 @@ interface LayerDetail {
   name: string;
   email: string;
 }
+interface Slider{
+  image: String
+}
 
 interface CustomerProfile {
   _id: string;
@@ -234,6 +237,12 @@ export interface GetAllApplicationsResponse {
   status: string;
   message: string;
   data: Applications[];
+}
+
+export interface GetAllSliderDetails {
+  status: string;
+  message: string;
+  data: Slider[];
 }
 
 // FOR Update Profile

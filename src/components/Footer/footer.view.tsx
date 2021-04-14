@@ -198,7 +198,7 @@
 // export default FooterView;
 
 import React from "react";
-
+import "./fotter.scss";
 const FooterView = () => {
   return (
     <footer>
@@ -245,7 +245,7 @@ const FooterView = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container" id="footer_pro-1">
         <div className="my-footer">
           <div className="row">
             <div className="col-sm-12 col-md-3">

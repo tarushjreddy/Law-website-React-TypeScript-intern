@@ -94,7 +94,7 @@ const ContactUsView = () => {
           <ContactForm />
         </div>
       </div>
-      <div className="row" style={{ padding: "0px 6vw", marginTop: "3em" }}>
+      <div style={{ padding: "0px 6vw", marginTop: "3em" }}>
         <div className="col-sm-6">
           <h1 style={{ fontSize: "2em" }}>{t("description.heading")}</h1>
           <p>{t("description.text")}</p>
