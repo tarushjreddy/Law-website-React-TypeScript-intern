@@ -10,8 +10,7 @@ function AddonView() {
       <div className={styles["header"]}>Recent News</div>
       <hr style={{ color: "#b8a046" }} className={styles["divider"]} />
       <h6 className={styles["secod_header"]}>
-        We offer our clients fresh prespective and breakthrough business
-        insights.
+        Are they going to have a new Bussiness Relationship? insights.
       </h6>
       <div className={styles["news_body"]}>
         <div className={styles["news_body1"]} id="newspro1">
@@ -36,7 +35,7 @@ function AddonView() {
           <div className={styles["fotter_part"]} id="footer-pro1">
             <div>
               <h1 style={{ textAlign: "left" }}>
-                Are they going to have a new Bussness Realtionship?
+                Are they going to have a new Bussiness Relationship?
               </h1>
               <hr style={{ margin: "0px" }} />
             </div>
@@ -68,7 +67,7 @@ function AddonView() {
           <div className={styles["fotter_part"]} id="footer-pro2">
             <div>
               <h1 style={{ textAlign: "left" }}>
-                Are they going to have a new Busniess Realtionship?
+                Are they going to have a new Bussiness Relationship?
               </h1>
               <hr style={{ margin: "0px" }} />
             </div>
@@ -100,7 +99,7 @@ function AddonView() {
           <div className={styles["fotter_part"]} id="footer-pro3" style={{}}>
             <div>
               <h1 style={{ textAlign: "left" }}>
-                Are they going to have a new Busniess Realtionship?
+                Are they going to have a new Bussiness Relationship?
               </h1>
               <hr style={{ margin: "0px" }} />
             </div>

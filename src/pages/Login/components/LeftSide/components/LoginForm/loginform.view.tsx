@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import CustomInputField from "../../../../../../components/CustomInputField";
 import { LoginResponseStatus, LoginValues } from "../../../../login.model";
-
+import OTPInput from "./components/OTPInput";
 import styles from "./loginform.module.scss";
 
 interface LoginFormViewProps {
@@ -29,10 +29,12 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
 }) => {
   const { t } = useTranslation("login");
   const [show, setShow] = useState(false);
-
+  const [otp, setOpt] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  // state = { otp: "" };
 
+  handleChange = (otp) => setOpt(true);
   return (
     <div className={styles["loginContainer"]}>
       <p>{t("loginFormHeading")}</p>
@@ -121,16 +123,23 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           <Modal.Title>One Time Password Verification</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <CustomInputField
-            label={t("loginFormFields.otp.label")}
-            name="mobile"
-            type="tel"
-            placeholder={t("loginFormFields.otp.placeholder")}
-            classNameInput={styles["form-control"]}
-            classNameInvalid={styles["invalid-feedback"]}
-            onChange={handleChange}
-            errMess={t("loginFormFields.otp.errorMessage")}
-          />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
+            <OTPInput
+              autoFocus
+              isNumberInput
+              length={6}
+              className={styles["otpContainer"]}
+              inputClassName={styles["otpInput"]}
+              onChangeOTP={(otp) => console.log("Number OTP: ", otp)}
+            />
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>

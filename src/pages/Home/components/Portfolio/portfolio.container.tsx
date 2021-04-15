@@ -24,7 +24,7 @@ const Portfolio = () => {
         className="spacer-120"
         style={{ backgroundColor: "white", height: "90px" }}
       />
-      <div className="container">
+      <div className="container" style={{ paddingTop: "90px" }}>
         <div className="row">
           <div className="col-sm-12 col-md-6">
             <div className="my-portfolio-con" dir="ltr">

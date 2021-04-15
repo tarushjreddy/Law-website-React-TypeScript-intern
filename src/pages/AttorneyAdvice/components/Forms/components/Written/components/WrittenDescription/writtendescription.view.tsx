@@ -88,9 +88,17 @@ const WrittenDescription: React.FC<WrittenDescriptionProps> = ({
 
       {formValues.sector && (
         <div className={styles["form"]} style={{ textAlign: "center" }}>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            {/* align */}
             <Form
-              style={{ marginLeft: "1em" }}
+              style={{ marginLeft: "1em", width: "50%" }}
               noValidate
               validated={validated}
               onSubmit={handleSubmit}
@@ -107,6 +115,9 @@ const WrittenDescription: React.FC<WrittenDescriptionProps> = ({
                   value={formValues.subject}
                   required={required}
                 />
+                <Form.Control.Feedback type="invalid">
+                  Please enter your Subject
+                </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formBasicDescription">
                 <Form.Control
@@ -118,6 +129,9 @@ const WrittenDescription: React.FC<WrittenDescriptionProps> = ({
                   required={required}
                   style={{ height: "200px", resize: "none" }}
                 />
+                <Form.Control.Feedback type="invalid">
+                  Please enter your Details
+                </Form.Control.Feedback>
               </Form.Group>
               <div
                 style={{

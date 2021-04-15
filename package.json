@@ -41,6 +41,7 @@
     "react-jss": "^10.6.0",
     "react-mic": "^12.4.6",
     "react-multi-date-picker": "^1.8.0",
+    "react-otp-input": "^2.3.0",
     "react-owl-carousel": "^2.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",

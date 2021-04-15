@@ -13,3 +13,41 @@
 .carousel-control-prev-icon {
   color: red;
 }
+.main {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #b8a046, #876f18);
+  padding: 10px 30px;
+  transition: 0.3s;
+  display: inline-block;
+}
+.trust_main_container {
+  margin: 2rem;
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 80%;
+
+  text-align: center;
+  color: #242f40;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f7f5f5;
+}
+.carousel_css {
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+}

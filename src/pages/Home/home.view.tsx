@@ -20,11 +20,9 @@ const HomeView = () => {
       <div style={{ height: "100vh" }}>
         <Header />
       </div>
-      <AddonView />
+      <AboutUs />
 
-      <div id="AboutUs">
-        <AboutUs />
-      </div>
+      <div id="AboutUs"></div>
       <div className="quality-spacer" />
       <Quality />
 
@@ -38,6 +36,7 @@ const HomeView = () => {
 
       <Portfolio />
       <Trust />
+      <AddonView />
       <ContactUs />
       <Footer />
     </div>

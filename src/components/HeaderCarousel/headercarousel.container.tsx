@@ -61,8 +61,8 @@ const HeaderCarousel = () => {
                     <h1>We Are The Voice Of Justice</h1>
                   </div>
 
-                  <div className="my-head-btn" style={{ margin: "10px" }}>
-                    <div className="my-button" style={{ margin: "10px" }}>
+                  <div className="my-head-btn">
+                    <div className="my-button">
                       <a href="/contact">Get In Touch</a>
                     </div>
                   </div>

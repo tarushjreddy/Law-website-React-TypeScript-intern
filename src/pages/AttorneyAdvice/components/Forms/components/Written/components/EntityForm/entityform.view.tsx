@@ -95,7 +95,10 @@ const EntityForm: React.FC<EntityFormProps> = ({
           <Form
             style={{
               flexDirection: "column",
+              width: "50%",
               alignContent: "center",
+              alignItems: "center",
+              justifyContent: "center",
             }}
             noValidate
             validated={validated}
@@ -110,6 +113,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 value={formValues.name}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your name
+              </Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group controlId="formBasicPhone">
@@ -122,6 +128,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 required
                 value={formValues.phone}
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your Mobile Number
+              </Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group controlId="formBasicID">
@@ -133,6 +142,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 name="id"
                 required
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your ID Number
+              </Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group controlId="formBasicAddress">
@@ -144,6 +156,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 value={formValues.address1}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your Address Line 1
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="formBasicAddress">
               <Form.Control
@@ -154,6 +169,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 value={formValues.address2}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your Address Line 2
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="formBasicAddress">
               <Form.Control
@@ -164,6 +182,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 value={formValues.address3}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your Address Line 3
+              </Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group controlId="formBasicCity">
@@ -175,6 +196,9 @@ const EntityForm: React.FC<EntityFormProps> = ({
                 value={formValues.city}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+                Please enter your City
+              </Form.Control.Feedback>
             </Form.Group>
 
             <div className={styles["button"]}>

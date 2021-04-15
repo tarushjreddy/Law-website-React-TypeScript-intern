@@ -37,6 +37,7 @@ const Modified: React.FC<CustomInputFieldProps> = ({ styling }) => {
           where we get the paragraph content this is the place where we get the
           paragraph content this is the place where we get the paragraph content
         </p>
+        <p className={`${styles["divider_text"]}`}>Main benefits:</p>
         <hr className={`${styles["divider"]}`} />
         <div className={`${styles["logo_option"]}`}>
           <div className={`${styles["logo_parts"]}`}>

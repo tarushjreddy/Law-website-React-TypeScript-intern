@@ -47,9 +47,18 @@ const LocationPicker: React.FC<LocationPickerProps> = ({
   };
 
   return (
-    <div className={styles["container"]}>
+    <div
+      className={styles["container"]}
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <h1>External Location</h1>
-      <div className={styles["form"]}>
+      <div className={styles["form"]} style={{ width: "50%" }}>
         <TextField
           label="Address Line 1"
           onChange={(event) => firstHandler(event, 1)}
