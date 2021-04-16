@@ -66,6 +66,7 @@ export const getAllApplicationsRequests = async (): Promise<
   }
 };
 
+
 export const getAllSliderDetails = async (): Promise<GetAllSliderDetails> => {
   try {
     const response = await axios.get<GetAllSliderDetails>("/slider/all");
@@ -75,6 +76,7 @@ export const getAllSliderDetails = async (): Promise<GetAllSliderDetails> => {
     return { data: [], message: "", status: "" };
   }
 };
+
 
 export const getAllSectors = async (): Promise<GetAllSectorsResponseType> => {
   try {

@@ -114,7 +114,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           <button type="submit">{t("loginButtonText")}</button>
         </div>
       </Form>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="secondary" onClick={handleShow}>
         Verify OTP
       </Button>
 

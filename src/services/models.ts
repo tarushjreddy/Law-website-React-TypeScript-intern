@@ -150,8 +150,22 @@ interface LayerDetail {
   name: string;
   email: string;
 }
-interface Slider{
-  image: String
+interface Slider {
+
+  data: [];
+  button: {
+    title: String;
+    title_arb: String;
+    link: String;
+  };
+  createdAt: String;
+  heading: String;
+  heading_arb: String;
+  image: String;
+  subheading: String;
+  subheading_arb: String;
+  updatedAt: String;
+
 }
 
 interface CustomerProfile {

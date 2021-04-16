@@ -28,7 +28,11 @@ const NavView: React.FC<NavViewProps> = ({
           className="top-nav-info container-fluid"
           style={{ marginTop: "0.09%", height: "6em" }}
         >
-          <div className="top-nav-info-left float-start" id="nav_mainprt">
+          <div
+            className="top-nav-info-left float-start"
+            style={{ marginLeft: "25px" }}
+            id="nav_mainprt"
+          >
             <p>
               King Abdullah Road, Riyadh <span>|</span>{" "}
               <a href="mailto:info@almuehi.com">info@almuehi.com</a>
@@ -90,10 +94,7 @@ const NavView: React.FC<NavViewProps> = ({
                       alt="Al-Muehi"
                     />
                   </div>
-                  <div
-                    className="text-pro"
-                    style={{ marginLeft: "10px", marginTop: "10px" }}
-                  >
+                  <div className="text-pro">
                     <h2 className="top-head">
                       Dr. Abdullah Bin Sudan Almuehi Group
                     </h2>
