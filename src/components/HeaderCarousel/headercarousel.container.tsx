@@ -10,6 +10,8 @@ const HeaderCarousel = () => {
   const [Image, setImage] = useState("");
   const [Image1, setImage1] = useState("");
   const [Image2, setImage2] = useState("");
+  const [Image3, setImage3] = useState("");
+  const [post, setPost] = useState([]);
 
   const [Headding, setHeadding] = useState("");
   const [subHeadding, setsubHeadding] = useState("");
@@ -34,7 +36,12 @@ const HeaderCarousel = () => {
       setHeadding(`${abc1}`);
 
       let abci = data.data[0].image;
-      setImage(`${abci}`);
+      setImage3(`${abci}`);
+      let abcii = data.data[1].image;
+      setImage2(`${abcii}`);
+      let abciii = data.data[2].image;
+      setImage(`${abciii}`);
+
       console.log(data.data[1].heading);
       console.log(data.data[1].subheading);
       let abc2 = data.data[1].subheading;
@@ -48,7 +55,7 @@ const HeaderCarousel = () => {
       console.log(data.data[2].subheading);
       let abc4 = data.data[2].subheading;
       setsubHeadding2(`${abc4}`);
-      let abc5 = data.data[2].heading;
+      let abc5 = data.data[0].image;
 
       console.log("harish");
       console.log(data.data[0].subheading);
@@ -91,7 +98,7 @@ const HeaderCarousel = () => {
             <div
               className="header-carousel hc-1"
               style={{
-                background: `red`,
+                background: `url(${Image1})`,
                 height: "100vh",
                 width: "100%",
               }}
@@ -132,11 +139,11 @@ const HeaderCarousel = () => {
           </div>
           <div className="item" style={{ height: "100vh" }}>
             <div
-              className="header-carousel hc-1"
+              className="header-carousel hc-2"
               style={{
                 height: "100vh",
                 width: "100%",
-                backgroundColor: "blue",
+                background: `url(${Image2})`,
               }}
             >
               <div
@@ -175,11 +182,11 @@ const HeaderCarousel = () => {
           </div>
           <div className="item" style={{ height: "100vh" }}>
             <div
-              className="header-carousel hc-1"
+              className="header-carousel hc-3"
               style={{
                 height: "100vh",
                 width: "100%",
-                backgroundColor: "green",
+                background: `url(${Image1})`,
               }}
             >
               <div

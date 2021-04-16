@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import whatsApp from "./whatsapp-icon 1.png";
 import "./con.scss";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const Contact = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   //l-0,ml-19
   return (
     <div className="my-contact">
@@ -27,7 +33,25 @@ const Contact = () => {
                 <h6 style={{ fontWeight: "bold", marginTop: "15px" }}>
                   Chat with us.
                 </h6>
-                <img src={whatsApp} className="pro_image" alt="" />
+                <img
+                  src={whatsApp}
+                  className="pro_image"
+                  alt=""
+                  onClick={handleShow}
+                />
+                <Modal show={show} onHide={handleClose} className="modal_css">
+                  <Modal.Header closeButton>
+                    <Modal.Title>Contact through WhatsApp </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    Woohoo, you're reading this text in a modal!
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Open Whats App web
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
               <div className="contact-text text-end">
                 <h1>Get Helpful Tips and Info</h1>
@@ -43,6 +67,7 @@ const Contact = () => {
                     className="con-email"
                     placeholder="example@email.com"
                   />
+
                   <button
                     type="submit"
                     style={

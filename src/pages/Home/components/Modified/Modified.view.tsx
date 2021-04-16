@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Modified.module.scss";
 import imgpro from "./pexels-eberhard-grossgasteiger-691668.jpg";
 //  className={`${styles["si\]UpContainer"]}`}
 import { createUseStyles } from "react-jss";
-
+import { TravelInsurance } from "../../../../services/apis";
 interface CustomInputFieldProps {
   styling: String;
 }
 
 const Modified: React.FC<CustomInputFieldProps> = ({ styling }) => {
+  useEffect(() => {
+    async function getData() {
+      const data = await TravelInsurance();
+      console.log("Tarush is the best boy");
+
+      console.log(data.data[0]);
+      console.log("harish is the best boy");
+    }
+    window.dispatchEvent(new Event("resize"));
+
+    getData();
+  }, []);
+
   console.log(styling);
   const useStyles = createUseStyles({
     App: {

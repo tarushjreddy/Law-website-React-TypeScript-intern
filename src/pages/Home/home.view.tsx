@@ -29,7 +29,7 @@ const HomeView = () => {
       {/* loop array of json */}
       {/* if condition id if %2 == 0 */}
       <Modified styling="row" />
-      <Modified styling="row-reverse" />
+
       <Counter />
       <Advertisement />
       <CallUs />

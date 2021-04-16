@@ -6,6 +6,7 @@ import {
   GetAllSliderDetails,
   LoginValues,
   SignUpResponseFail,
+  GetAllTravelInsurance,
   SignUpResponseSuccess,
   SignUpValues,
   LoginResponseSuccess,
@@ -114,6 +115,19 @@ export const updateUserProfile = async (
     return errorResponseData;
   }
 };
+
+export const TravelInsurance = async (): Promise<GetAllTravelInsurance> => {
+  try {
+    const response = await axios.get<GetAllTravelInsurance>(
+      "/home-service/all"
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return { data: [], message: "", status: "" };
+  }
+};
+
 
 export const changePassword = async (
   changePasswordValues: ChangePasswordValues

@@ -151,8 +151,7 @@ interface LayerDetail {
   email: string;
 }
 interface Slider {
-
-  data: [];
+  data: string[];
   button: {
     title: String;
     title_arb: String;
@@ -165,8 +164,20 @@ interface Slider {
   subheading: String;
   subheading_arb: String;
   updatedAt: String;
-
 }
+
+
+interface TravelInsurance {
+  image: String,
+  title: String,
+  subtitle: String
+}
+
+
+
+
+
+
 
 interface CustomerProfile {
   _id: string;
@@ -259,6 +270,11 @@ export interface GetAllSliderDetails {
   data: Slider[];
 }
 
+export interface GetAllTravelInsurance {
+  status: string;
+  message: string;
+  data: TravelInsurance[];
+}
 // FOR Update Profile
 
 export interface UpdateProfileValues {
