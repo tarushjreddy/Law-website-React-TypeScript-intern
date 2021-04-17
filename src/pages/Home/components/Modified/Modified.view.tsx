@@ -4,25 +4,34 @@ import imgpro from "./pexels-eberhard-grossgasteiger-691668.jpg";
 //  className={`${styles["si\]UpContainer"]}`}
 import { createUseStyles } from "react-jss";
 import { TravelInsurance } from "../../../../services/apis";
+
+// import { TravelInsurance } from "../../../../services/models";
 interface CustomInputFieldProps {
   styling: String;
 }
 
 const Modified: React.FC<CustomInputFieldProps> = ({ styling }) => {
+  const [Headding, setHeadding] = useState("");
+  const [details, setdetails] = useState<any[]>([]);
+  const [subHeadding, setsubHeadding] = useState<any[]>([]);
+
   useEffect(() => {
     async function getData() {
       const data = await TravelInsurance();
-      console.log("Tarush is the best boy");
 
-      console.log(data.data[0]);
-      console.log("harish is the best boy");
+      let abc1 = data.data[0];
+      setHeadding(`${abc1}`);
+      setdetails([data.data[0]]);
+
+      setsubHeadding([...data.data[0].benefits]);
     }
     window.dispatchEvent(new Event("resize"));
 
     getData();
   }, []);
 
-  console.log(styling);
+  console.log("anything", details);
+
   const useStyles = createUseStyles({
     App: {
       flexDirection: `${styling}`,
@@ -39,59 +48,38 @@ const Modified: React.FC<CustomInputFieldProps> = ({ styling }) => {
 
   const classes = useStyles();
   return (
-    <div className={classes.App} id={`${styles["Maincontainer"]}`}>
-      <div className={`${styles["leftContainer"]}`}>
-        <h1 className={`${styles["header"]}`}>Travel Insurance</h1>
-        <p className={`${styles["paragraph"]}`}>
-          this is the place where we get the paragraph content this is the place
-          where we get the paragraph content this is the place where we get the
-          paragraph content this is the place where we get the paragraph content
-          this is the place where we get the paragraph content this is the place
-          where we get the paragraph content this is the place where we get the
-          paragraph content this is the place where we get the paragraph content
-        </p>
-        <p className={`${styles["divider_text"]}`}>Main benefits:</p>
-        <hr className={`${styles["divider"]}`} />
-        <div className={`${styles["logo_option"]}`}>
-          <div className={`${styles["logo_parts"]}`}>
-            <div className={`${styles["info"]}`}>
-              <div className={`${styles["logo_rounded"]}`}>logo</div>
-              <div className={`${styles["logo_rounded_info"]}`}>
-                Emergency Medical Eexpenses
-              </div>
+    <>
+      {details.map((post) => (
+        <div className={classes.App} id={`${styles["Maincontainer"]}`}>
+          <div className={`${styles["leftContainer"]}`}>
+            <h1 className={`${styles["header"]}`}>{post.title}</h1>
+            <p className={`${styles["paragraph"]}`}>{post.subtitle}</p>
+            <p className={`${styles["divider_text"]}`}>Main benefits:</p>
+            <hr className={`${styles["divider"]}`} />
+            <div className={`${styles["logo_option"]}`} style={{}}>
+              {subHeadding.map((post) => (
+                <div className={`${styles["logo_parts"]}`}>
+                  <div className={`${styles["info"]}`}>
+                    <img
+                      src={post.icon}
+                      className={`${styles["logo_rounded"]}`}
+                    ></img>
+                    <div className={`${styles["logo_rounded_info"]}`}>
+                      {post.text_eng}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className={`${styles["info"]}`}>
-              <div className={`${styles["logo_rounded"]}`}>logo</div>
-              <div>Travel Delay</div>
-            </div>
-            <div className={`${styles["info"]}`}>
-              <div className={`${styles["logo_rounded"]}`}>logo</div>
-              <div>Personal Liability</div>
-            </div>
+            <hr className={`${styles["divider"]}`} />
+            <button className={`${styles["Button_part"]}`}>Lets do it</button>
           </div>
-          <hr style={{ width: "20px" }} />
-          <div className={`${styles["logo_parts"]}`}>
-            <div className={`${styles["info"]}`}>
-              <div className={`${styles["logo_rounded"]}`}>logo</div>
-              <div>Delayed Baggage</div>
-            </div>
-            <div className={`${styles["info"]}`}>
-              <div className={`${styles["logo_rounded"]}`}>logo</div>
-              <div>Cancelling Your Trip</div>
-            </div>
-            <div className={`${styles["info"]}`}>
-              <div className={`${styles["logo_rounded"]}`}>logo</div>
-              <div>Legal Expenses</div>
-            </div>
+          <div className={`${styles["rightConatiner"]}`}>
+            <img src={post.image} alt="" />
           </div>
         </div>
-        <hr className={`${styles["divider"]}`} />
-        <button className={`${styles["Button_part"]}`}>Lets do it</button>
-      </div>
-      <div className={`${styles["rightConatiner"]}`}>
-        <img src={imgpro} alt="" />
-      </div>
-    </div>
+      ))}
+    </>
   );
 };
 

@@ -186,7 +186,7 @@ const HeaderCarousel = () => {
               style={{
                 height: "100vh",
                 width: "100%",
-                background: `url(${Image1})`,
+                background: `url(${Image3})`,
               }}
             >
               <div

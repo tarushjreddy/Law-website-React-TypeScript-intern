@@ -12,7 +12,10 @@
 }
 .logo_option {
   display: flex;
-  width: 95%;
+  width: 50%;
+
+  flex-wrap: wrap;
+
   padding-left: "20px";
   padding-right: "20px";
   background-color: transparent;
@@ -118,6 +121,9 @@
   }
   .logo_option {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
   .leftContainer {
     height: 100%;

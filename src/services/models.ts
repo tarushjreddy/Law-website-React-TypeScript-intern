@@ -168,9 +168,18 @@ interface Slider {
 
 
 interface TravelInsurance {
-  image: String,
-  title: String,
-  subtitle: String
+  image: String;
+  benefits:[
+icon: String,
+text_arb: String,
+text_eng: String,
+_id: String
+
+
+  ];
+ 
+  subtitle: String;
+  description: String;
 }
 
 
