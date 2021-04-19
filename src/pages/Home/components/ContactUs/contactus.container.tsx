@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import whatsApp from "./whatsapp-icon 1.png";
 import "./con.scss";
+import { Link, NavLink } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import { WhatsAppDetails } from "../../../../services/apis";
 
 const Contact = () => {
+  const [posts, setposts] = useState("966500460082");
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   //l-0,ml-19
+  // useEffect(() => {
+  //   async function getData() {
+  //     const data = await WhatsAppDetails();
+
+  //     console.log(data.data.phone_number);
+  //     setposts(data.data);
+  //   }
+  //   window.dispatchEvent(new Event("resize"));
+
+  //   getData();
+  // }, []);
+  console.log(posts);
   return (
     <div className="my-contact">
       <div className="container">
@@ -39,17 +55,20 @@ const Contact = () => {
                   alt=""
                   onClick={handleShow}
                 />
+                {/* {posts.map((data, i) => (
+                  <div>{data.phone_number}</div>
+                ))} */}
                 <Modal show={show} onHide={handleClose} className="modal_css">
                   <Modal.Header closeButton>
                     <Modal.Title>Contact through WhatsApp </Modal.Title>
                   </Modal.Header>
-                  <Modal.Body>
-                    Woohoo, you're reading this text in a modal!
-                  </Modal.Body>
+                  <Modal.Body>Connect To us via WhatsApp!!!</Modal.Body>
                   <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                      Open Whats App web
-                    </Button>
+                    <a href={`https://wa.me/${posts}`} target="_blank">
+                      <Button variant="secondary" onClick={handleClose}>
+                        Open Whats App web
+                      </Button>
+                    </a>
                   </Modal.Footer>
                 </Modal>
               </div>

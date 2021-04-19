@@ -29,12 +29,14 @@ const Modified: React.FC<CustomInputFieldProps> = ({ styling }) => {
 
     getData();
   }, []);
+  let abc = 2;
 
   console.log("anything", details);
 
   const useStyles = createUseStyles({
     App: {
-      flexDirection: `${styling}`,
+      flexDirection: `(${abc === 1}? 'row' : 'row-reverse')`,
+
       color: "red",
       height: "100%",
       marginTop: "40px",

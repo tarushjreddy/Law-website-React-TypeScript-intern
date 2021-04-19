@@ -1,0 +1,26 @@
+#Maincontainer {
+  flex-direction: row-reverse;
+  color: red;
+  height: 100%;
+  margin-top: 40px;
+  margin-right: 6.6rem;
+  margin-left: 6.6rem;
+
+  display: flex;
+  flex-wrap: inherit;
+
+  justify-content: space-between;
+}
+#Maincontainerone {
+  flex-direction: row;
+  color: red;
+  height: 100%;
+  margin-top: 40px;
+  margin-right: 6.6rem;
+  margin-left: 6.6rem;
+
+  display: flex;
+  flex-wrap: inherit;
+
+  justify-content: space-between;
+}

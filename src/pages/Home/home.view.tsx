@@ -6,6 +6,7 @@ import Quality from "./components/Quality";
 import Trust from "./components/Trust";
 import AddonView from "./components/Additional";
 import Modified from "./components/Modified";
+import Retrival from "./components/Modified/DataRetreval";
 import Advertisement from "./components/Advertisement";
 import Services from "./components/Services";
 import Counter from "./components/Counter";
@@ -28,7 +29,8 @@ const HomeView = () => {
 
       {/* loop array of json */}
       {/* if condition id if %2 == 0 */}
-      <Modified styling="row" />
+
+      <Retrival />
 
       <Counter />
       <Advertisement />

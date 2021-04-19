@@ -1,21 +1,35 @@
-#Maincontainer {
-  color: red;
-  height: 100%;
-  margin-top: 40px;
-  margin-right: 6.6rem;
-  margin-left: 6.6rem;
+// #Maincontainer {
+//   flex-direction: row-reverse;
+//   color: red;
+//   height: 100%;
+//   margin-top: 40px;
+//   margin-right: 6.6rem;
+//   margin-left: 6.6rem;
 
-  display: flex;
-  flex-wrap: inherit;
+//   display: flex;
+//   flex-wrap: inherit;
 
-  justify-content: space-between;
-}
+//   justify-content: space-between;
+// }
+// #Maincontainerone {
+//   flex-direction: row;
+//   color: red;
+//   height: 100%;
+//   margin-top: 40px;
+//   margin-right: 6.6rem;
+//   margin-left: 6.6rem;
+
+//   display: flex;
+//   flex-wrap: inherit;
+
+//   justify-content: space-between;
+// }
 .logo_option {
   display: flex;
-  width: 50%;
+  width: 100%;
 
   flex-wrap: wrap;
-
+  flex-direction: column;
   padding-left: "20px";
   padding-right: "20px";
   background-color: transparent;
@@ -31,12 +45,19 @@
 }
 .logo_parts {
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: space-between;
 }
 .info {
   display: flex;
   background-color: transparent;
   width: 100%;
   padding: 10px;
+  justify-content: start;
   align-items: center;
 }
 .divider_text {
@@ -123,7 +144,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+
+    flex-direction: column;
   }
   .leftContainer {
     height: 100%;

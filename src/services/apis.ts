@@ -3,6 +3,7 @@ import axios from "axios";
 import { API_BASE_URL } from "../constants";
 import {
   GetAllApplicationsResponse,
+  GetWhatsAppDetails,
   GetAllSliderDetails,
   LoginValues,
   SignUpResponseFail,
@@ -53,6 +54,16 @@ export const signUp = async (
   }
 };
 
+
+
+
+
+
+
+
+
+
+
 export const getAllApplicationsRequests = async (): Promise<
   GetAllApplicationsResponse
 > => {
@@ -77,6 +88,23 @@ export const getAllSliderDetails = async (): Promise<GetAllSliderDetails> => {
     return { data: [], message: "", status: "" };
   }
 };
+
+
+
+
+
+export const WhatsAppDetails = async (): Promise<GetWhatsAppDetails> => {
+  try {
+    const response = await axios.get<GetWhatsAppDetails>("/whatsapp");
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return { data: [], message: "", status: "" };
+
+  }
+};
+
+
 
 
 export const getAllSectors = async (): Promise<GetAllSectorsResponseType> => {

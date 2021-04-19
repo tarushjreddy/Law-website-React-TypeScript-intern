@@ -186,6 +186,17 @@ _id: String
 
 
 
+interface WhatsApp {
+  data: [
+    {
+      createdAt: String;
+      phone_number: String;
+      updatedAt: String;
+    }
+  ];
+}
+
+
 
 
 interface CustomerProfile {
@@ -271,6 +282,12 @@ export interface GetAllApplicationsResponse {
   status: string;
   message: string;
   data: Applications[];
+}
+
+export interface GetWhatsAppDetails {
+  status: string;
+  message: string;
+  data:WhatsApp[];
 }
 
 export interface GetAllSliderDetails {

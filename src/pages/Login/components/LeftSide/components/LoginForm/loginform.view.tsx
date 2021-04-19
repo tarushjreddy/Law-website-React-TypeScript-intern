@@ -110,13 +110,13 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           </a>
         </div>
 
-        <div className={styles["login-btn"]}>
-          <button type="submit">{t("loginButtonText")}</button>
+        <div className={styles["login-btn"]} onClick={handleShow}>
+          <button>{t("loginButtonText")}</button>
         </div>
       </Form>
-      <Button variant="secondary" onClick={handleShow}>
+      {/* <Button variant="secondary" onClick={handleShow}>
         Verify OTP
-      </Button>
+      </Button> */}
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

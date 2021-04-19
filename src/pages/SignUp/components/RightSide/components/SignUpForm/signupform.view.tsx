@@ -150,14 +150,13 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           <label>Client</label>
         </div>
       </form>{" "}
-      <div className={styles["login-btn"]}>
+      <div className={styles["login-btn"]} onClick={handleShow}>
         <div>
-          <button type="submit">{t("singUpButtonText")}</button>
+          <button>{t("singUpButtonText")}</button>
+          {/* type="submit" */}
         </div>
       </div>
-      <Button variant="primary" onClick={handleShow}>
-        Verify OTP
-      </Button>
+      {/* <Button variant="primary">Verify OTP</Button> */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>One Time Password Verification</Modal.Title>
