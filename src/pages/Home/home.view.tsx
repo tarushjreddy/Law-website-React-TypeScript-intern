@@ -32,7 +32,7 @@ const HomeView = () => {
 
       <Retrival />
 
-      <Counter />
+      {/* <Counter /> */}
       <Advertisement />
       <CallUs />
 

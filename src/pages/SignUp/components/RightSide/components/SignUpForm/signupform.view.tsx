@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import CustomInputField from "../../../../../../components/CustomInputField";
 import { SignUpValues } from "../../../../../../services/models";
 import { SignUpResponseStatus } from "../../../../signup.model";
+import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
 import styles from "./signupform.module.scss";
 // import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
@@ -126,28 +127,14 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           style={{
             display: "flex",
             marginRight: "20px",
-            alignItems: "baseline",
+            textAlign: "center",
+            alignItems: "center",
+
+            flexDirection: "row",
           }}
         >
-          <input
-            type="radio"
-            id="male"
-            name="gender"
-            value="male"
-            style={{ marginRight: "20px" }}
-          />
-          <label>Lawyer</label>
-        </div>
-        <br />
-        <div style={{ display: "flex" }}>
-          <input
-            type="radio"
-            id="female"
-            name="gender"
-            value="female"
-            style={{ marginRight: "20px" }}
-          />
-          <label>Client</label>
+          <BootstrapSwitchButton checked={true} size="xs" />
+          Lawyer
         </div>
       </form>{" "}
       <div className={styles["login-btn"]} onClick={handleShow}>
@@ -158,7 +145,7 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
       </div>
       {/* <Button variant="primary">Verify OTP</Button> */}
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>One Time Password Verification</Modal.Title>
         </Modal.Header>
         <Modal.Body>

@@ -47,7 +47,7 @@ const NavView: React.FC<NavViewProps> = ({
           </div>
           <div
             className="top-nav-info-left right float-end"
-            style={{ position: "relative", zIndex: 100, marginRight: "1em" }}
+            style={{ position: "relative", zIndex: 100, marginRight: "1.6em" }}
           >
             <p>
               {isLoginned ? (
@@ -85,22 +85,22 @@ const NavView: React.FC<NavViewProps> = ({
                     marginTop: "20px",
                     display: "flex",
                     alignItems: "center",
+                    flexDirection: "row",
                   }}
                 >
                   <div>
                     <img
                       src="/media/images/almuehi-logo.png"
-                      className="pro_image"
+                      className="pro_image_one"
                       alt="Al-Muehi"
                     />
                   </div>
-                  <div className="text-pro">
+                  <div className="text-pro" style={{ marginLeft: "10px" }}>
                     <h2 className="top-head">
                       Dr. Abdullah Bin Sudan Almuehi Group
+                      <br /> Law firm, consulting &amp; Legal Legitimacy
                     </h2>
-                    <p className="top-head">
-                      Law firm, consulting &amp; Legal Legitimacy
-                    </p>
+                    <p className="top-head"></p>
                   </div>
                 </div>
               </Link>
@@ -116,25 +116,8 @@ const NavView: React.FC<NavViewProps> = ({
                   id="nav_pro_max"
                   style={{
                     height: "50%",
-
-                    padding: "40px",
                   }}
                 >
-                  <li className="nav-item">
-                    {lang === "en" && (
-                      <Button
-                        className="nav-link"
-                        variant="custom"
-                        style={{ padding: "10px", marginBottom: "10px" }}
-                        onClick={() => {
-                          localStorage.setItem("lang", "ar");
-                          window.location.reload();
-                        }}
-                      >
-                        Ar
-                      </Button>
-                    )}
-                  </li>
                   <li
                     className="nav-item"
 
@@ -234,7 +217,14 @@ const NavView: React.FC<NavViewProps> = ({
                       <Button
                         className="nav-link"
                         variant="custom"
-                        style={{ padding: "10px" }}
+                        style={{
+                          backgroundColor: "transparent",
+                          padding: "0px",
+                          marginBottom: "10px",
+                          paddingRight: "0.1rem",
+                          color: "#dedede",
+                          paddingLeft: "0.1rem",
+                        }}
                         onClick={() => {
                           localStorage.setItem("lang", "en");
                           window.location.reload();
@@ -244,14 +234,54 @@ const NavView: React.FC<NavViewProps> = ({
                       </Button>
                     )}
                   </li>
+                  <li className="nav-item">
+                    {lang === "en" && (
+                      <Button
+                        className="nav-link"
+                        variant="custom"
+                        style={{
+                          backgroundColor: "transparent",
+                          padding: "0px",
+                          marginBottom: "10px",
+                          height: "35px",
+                          marginRight: "10px",
+                          paddingRight: "0.39rem",
+                          paddingLeft: "0.39rem",
+                          color: "#dedede",
+                        }}
+                        onClick={() => {
+                          localStorage.setItem("lang", "ar");
+                          window.location.reload();
+                        }}
+                      >
+                        <p style={{ margin: "0px", padding: "0.1rem" }}> AR</p>
+                      </Button>
+                    )}
+                  </li>
                   <li className="nav-item position-relative active">
-                    <i
-                      className="material-icons my-search-func"
-                      aria-hidden="true"
-                      onClick={() => setShowSearch(!showSearch)}
+                    <Button
+                      variant="custom"
+                      style={{
+                        backgroundColor: "transparent",
+                        padding: "0px",
+                        marginBottom: "10px",
+                        paddingRight: "0.1rem",
+                        paddingLeft: "0.1rem",
+                        display: "flex",
+                        marginRight: "4px",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
                     >
-                      search
-                    </i>
+                      <i
+                        className="material-icons my-search-func"
+                        aria-hidden="true"
+                        style={{ margin: "0px", padding: "0px" }}
+                        onClick={() => setShowSearch(!showSearch)}
+                      >
+                        search
+                      </i>
+                    </Button>
                     <div
                       style={{
                         display: showSearch ? "flex" : "none",
@@ -283,15 +313,30 @@ const NavView: React.FC<NavViewProps> = ({
                   </li>
 
                   <Button
-                    className="nav-link"
                     variant="custom"
-                    style={{ padding: "5px" }}
+                    className="nav-link"
+                    style={{
+                      backgroundColor: "transparent",
+                      padding: "0px",
+                      marginBottom: "10px",
+                      paddingRight: "0.39rem",
+                      paddingLeft: "0.39rem",
+                      color: "#dedede",
+                    }}
                     onClick={() => {
                       localStorage.setItem("lang", "en");
                       window.location.reload();
                     }}
                   >
-                    <a className="nav-link" href="tel:920008434">
+                    <a
+                      className="nav-link"
+                      href="tel:920008434"
+                      style={{
+                        padding: "0px",
+                        margin: "0px",
+                        color: "#dedede",
+                      }}
+                    >
                       920008434
                     </a>
                   </Button>

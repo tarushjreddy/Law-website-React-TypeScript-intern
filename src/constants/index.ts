@@ -1,6 +1,7 @@
-export const API_BASE_URL = "https://service-portal-api.herokuapp.com/api";
+export const API_BASE_URL =
+  "http://ec2-3-8-136-193.eu-west-2.compute.amazonaws.com:4002/api";
 
-export const REDIRECT_TIME = 3000;
+export const REDIRECT_TIME = 300;
 
 export const SERVICES_LIST = [
   {

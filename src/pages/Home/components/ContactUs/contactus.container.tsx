@@ -46,15 +46,23 @@ const Contact = () => {
                   alignItems: "center",
                 }}
               >
-                <h6 style={{ fontWeight: "bold", marginTop: "15px" }}>
-                  Chat with us.
-                </h6>
-                <img
-                  src={whatsApp}
-                  className="pro_image"
-                  alt=""
-                  onClick={handleShow}
-                />
+                {" "}
+                <a
+                  href={`https://wa.me/${posts}`}
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <h6 style={{ fontWeight: "bold", marginTop: "15px" }}>
+                    Chat with us.
+                  </h6>
+                  <img src={whatsApp} className="pro_image" alt="" />
+                </a>
                 {/* {posts.map((data, i) => (
                   <div>{data.phone_number}</div>
                 ))} */}
@@ -64,11 +72,9 @@ const Contact = () => {
                   </Modal.Header>
                   <Modal.Body>Connect To us via WhatsApp!!!</Modal.Body>
                   <Modal.Footer>
-                    <a href={`https://wa.me/${posts}`} target="_blank">
-                      <Button variant="secondary" onClick={handleClose}>
-                        Open Whats App web
-                      </Button>
-                    </a>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Open Whats App web
+                    </Button>
                   </Modal.Footer>
                 </Modal>
               </div>

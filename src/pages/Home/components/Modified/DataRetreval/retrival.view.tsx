@@ -53,8 +53,12 @@ function Retrival() {
         <div
           //   className={`${i % 2 !== 0}? ${classes.Appone}:${classes.App}`}
           className={classes.App}
-          id={`${abc === 1 ? "#Maincontainer" : "#Maincontainerone"} `}
-
+          id="#Maincontainer"
+          style={{
+            flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+            marginRight: "6.6rem",
+            marginLeft: "6.6rem",
+          }}
           //   style={{ flexDirection: `(${abc === 1}? 'row' : 'row-reverse')` }}
         >
           <div className={`${styles["leftContainer"]}`}>
@@ -126,25 +130,35 @@ function Retrival() {
 
                 {/* {console.log("mainone", data.benefits[5]._id)} */}
                 {/* {console.log("mainone", data.benefits[4].text_eng)} */}
+                <div
+                  style={{
+                    display: "flex",
+                    backgroundColor: "transparent",
+                    width: "100%",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div className={`${styles["info"]}`}>
+                    <img
+                      src={data.benefits[4].icon}
+                      className={`${styles["logo_rounded"]}`}
+                    ></img>
+                    <div className={`${styles["logo_rounded_info"]}`}>
+                      {data.benefits[4].text_eng}
+                    </div>
+                  </div>
 
-                {/* <div className={`${styles["info"]}`}>
-                  <img
-                    src={data.benefits[4].icon}
-                    className={`${styles["logo_rounded"]}`}
-                  ></img>
-                  <div className={`${styles["logo_rounded_info"]}`}>
-                    {data.benefits[4].text_eng}
+                  <div className={`${styles["info"]}`}>
+                    <img
+                      src={data.benefits[5].icon}
+                      className={`${styles["logo_rounded"]}`}
+                    ></img>
+                    <div className={`${styles["logo_rounded_info"]}`}>
+                      {data.benefits[5].text_eng}
+                    </div>
                   </div>
-                </div> */}
-                {/* <div className={`${styles["info"]}`}>
-                  <img
-                    src={data.benefits[5].icon}
-                    className={`${styles["logo_rounded"]}`}
-                  ></img>
-                  <div className={`${styles["logo_rounded_info"]}`}>
-                    {data.benefits[5].text_eng}
-                  </div>
-                </div> */}
+                </div>
                 {/* <div className={`${styles["info"]}`}>
                   <img
                     src={data.benefits[6].icon}

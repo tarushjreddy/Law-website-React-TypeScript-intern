@@ -30,6 +30,7 @@
     "@types/react-swipeable-views": "^0.13.0",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "bootstrap-switch-button-react": "^1.2.0",
     "date-fns": "^2.16.1",
     "i18next-http-backend": "^1.0.21",
     "materialize-css": "^1.0.0",

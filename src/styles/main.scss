@@ -192,7 +192,7 @@ a:hover {
 }
 
 .navbar.navbar-expand-lg.navbar-light.bg-light.my-almuehi-logo {
-  height: 60px;
+  height: 20px;
   /*
   background-image: linear-gradient(to top, #f0e7c6, #e4e3e2) !important;
   */
@@ -258,6 +258,9 @@ li.nav-item.my-tel:hover {
   letter-spacing: normal;
   color: #dedede;
   margin: 0 5px;
+  button {
+    color: #dedede;
+  }
 }
 i.material-icons.my-search-func {
   font-size: 32px;
@@ -1479,8 +1482,15 @@ ul.footer-ul li a:hover {
   width: 100%;
   left: 0;
   transition: 0.3s;
-  background: #161922e0 !important;
-  height: 100px;
+
+  text-decoration: red;
+  color: #ff0000 !important;
+  background: white !important;
+  padding: 2rem;
+  height: 50px;
+  .nav-link {
+    color: #707070;
+  }
 }
 .my-counter {
   overflow: hidden;

@@ -7,70 +7,19 @@ import { useGetDailyPrices } from "./hooks/use-queries";
 import { getAllSliderDetails } from "../../services/apis";
 
 const HeaderCarousel = () => {
-  const [Image, setImage] = useState("");
-  const [Image1, setImage1] = useState("");
-  const [Image2, setImage2] = useState("");
-  const [Image3, setImage3] = useState("");
-  const [post, setPost] = useState([]);
-
-  const [Headding, setHeadding] = useState("");
-  const [subHeadding, setsubHeadding] = useState("");
-  const [Headding1, setHeadding1] = useState("");
-  const [subHeadding1, setsubHeadding1] = useState("");
-  const [Headding2, setHeadding2] = useState("");
-
-  const [subHeadding2, setsubHeadding2] = useState("");
+  const [posts, setposts] = useState<any[]>([]);
 
   useEffect(() => {
     async function getData() {
       const data = await getAllSliderDetails();
-      console.log(data.data[2]);
-
-      console.log(data.data[0].heading);
-      console.log(data.data[0].image);
-
-      console.log(data.data[0].subheading);
-      let abc = data.data[0].subheading;
-      setsubHeadding(`${abc}`);
-      let abc1 = data.data[0].heading;
-      setHeadding(`${abc1}`);
-
-      let abci = data.data[0].image;
-      setImage3(`${abci}`);
-      let abcii = data.data[1].image;
-      setImage2(`${abcii}`);
-      let abciii = data.data[2].image;
-      setImage(`${abciii}`);
-
-      console.log(data.data[1].heading);
-      console.log(data.data[1].subheading);
-      let abc2 = data.data[1].subheading;
-      setsubHeadding1(`${abc2}`);
-      let abc3 = data.data[1].heading;
-      setHeadding1(`${abc3}`);
-      console.log(data.data[2].heading);
-      let harish = data.data[2].heading;
-      setHeadding2(`${harish}`);
-      console.log(Headding2);
-      console.log(data.data[2].subheading);
-      let abc4 = data.data[2].subheading;
-      setsubHeadding2(`${abc4}`);
-      let abc5 = data.data[0].image;
-
-      console.log("harish");
-      console.log(data.data[0].subheading);
-      let abcc = data.data[0].subheading;
-      setImage1(`${abcc}`);
-      //  let abc = response.data[0].image;
-      //  setImage(`${abc}`);
-      //   let abc = response.data[0].image;
-      //   setImage(`${abc}`);
+      console.log(data.data);
+      setposts(data.data);
     }
     window.dispatchEvent(new Event("resize"));
 
     getData();
   }, []);
-
+  console.log(posts);
   let lineStyle = {};
   let alignment = "ltr";
   let hbcImgClass = "";
@@ -94,11 +43,11 @@ const HeaderCarousel = () => {
           animateOut="fadeOut"
           margin={10}
         >
-          <div className="item" style={{ height: "100vh" }}>
+          {/* <div className="item" style={{ height: "100vh" }}>
             <div
               className="header-carousel hc-1"
               style={{
-                background: `url(${Image1})`,
+                background: `red`,
                 height: "100vh",
                 width: "100%",
               }}
@@ -109,6 +58,7 @@ const HeaderCarousel = () => {
                   width: "100%",
                   position: "relative",
                   top: "220px",
+                  margin: "6.66rem",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -128,7 +78,7 @@ const HeaderCarousel = () => {
                     <h1>{subHeadding}</h1>
                   </div>
 
-                  <div className="my-head-btn">
+                  <div className="my-head-btn" style={{ margin: "10px" }}>
                     <div className="my-button">
                       <a href="/contact">Get In Touch</a>
                     </div>
@@ -136,8 +86,55 @@ const HeaderCarousel = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="item" style={{ height: "100vh" }}>
+          </div> */}
+          {posts.map((data, i) => (
+            <div className="item" style={{ height: "100vh" }}>
+              <div
+                className="header-carousel hc-2"
+                style={{
+                  height: "100vh",
+                  width: "100%",
+                  // backgroundColor: "blue",
+                  backgroundImage: `url(${data.image})`,
+                }}
+              >
+                <div
+                  style={{
+                    height: "30%",
+                    width: "100%",
+                    position: "relative",
+                    top: "220px",
+                    margin: "6.66rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="top_view_text">
+                    <div>
+                      <div style={{ margin: "10px" }} />
+                      <div style={{ margin: "10px" }} className="overall_text">
+                        {data.heading}
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div className="overall_text" style={{ margin: "10px" }}>
+                      <h1>{data.subheading}</h1>
+                    </div>
+
+                    <div className="my-head-btn" style={{ margin: "10px" }}>
+                      <div className="my-button">
+                        <a href="/contact">Get In Touch</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* <div className="item" style={{ height: "100vh" }}>
             <div
               className="header-carousel hc-2"
               style={{
@@ -223,7 +220,7 @@ const HeaderCarousel = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </OwlCarousel>
       </div>
 
