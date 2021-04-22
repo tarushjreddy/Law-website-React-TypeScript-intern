@@ -10821,6 +10821,11 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
+react-multi-carousel@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/react-multi-carousel/-/react-multi-carousel-2.6.2.tgz#c78d38fbfab704394a72f26ffa161b8963138a1f"
+  integrity sha512-qSrupBGazqYS/LVQAUCWiEAPhCrO0QufP5PcpDCA6Klig3egdNMwIdkkoU6Xlm9zEQ/hFp57bNr7F4sd0ANLyA==
+
 react-multi-date-picker@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-multi-date-picker/-/react-multi-date-picker-1.8.0.tgz#7c42fd3c7c7f05f854cb6b67296c002dc3c1fd1e"

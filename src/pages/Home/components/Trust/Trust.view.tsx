@@ -1,187 +1,100 @@
 import React, { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import download from "./download.jpeg";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import image from "./1.png";
+import image1 from "./2.png";
+import image2 from "./3.png";
+import image3 from "./4.png";
+import image4 from "./5.png";
+import image5 from "./6.png";
+
 import "./Trust.scss";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 6,
+    slidesToSlide: 3, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+};
 function Trust() {
   return (
     <div
       style={{
-        flexDirection: "column",
-        alignItems: "center",
         display: "flex",
+        alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <div className="trust_main_container">
+      <div className="trustpartcontainer">
         <h6
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "baseline",
-            fontSize: "30px",
-            marginLeft: "40px",
-          }}
+          // style={{
+          //   width: "100%",
+          //   display: "flex",
+          //   alignItems: "baseline",
+          //   fontSize: "30px",
+          //   marginLeft: "40px",
+          // }}
+          className="trustpartcontainer_text"
         >
           Trusted Partners
         </h6>
-        <div
-          style={{
-            display: "flex",
-
-            flexDirection: "column",
-          }}
-        >
+        <div>
           <div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <Carousel
-                style={{ marginLeft: "20px", color: "red", width: "100%" }}
-                className="carousel_css"
-              >
-                <Carousel.Item interval={40000}>
+            <div>
+              <div>
+                <Carousel
+                  swipeable={false}
+                  draggable={false}
+                  showDots={false}
+                  responsive={responsive}
+                  ssr={true} // means to render carousel on server-side.
+                  infinite={true}
+                  autoPlaySpeed={1000}
+                  keyBoardControl={true}
+                  customTransition="all .05"
+                  transitionDuration={50000}
+                  containerClass="carousel-container"
+                  removeArrowOnDeviceType={["tablet", "mobile"]}
+                  dotListClass="custom-dot-list-style"
+                  itemClass="carousel-item-padding-40-px"
+                >
                   <div
-                    style={{
-                      height: "150px",
-                      display: "flex",
-                      alignItems: "center",
-                      flexDirection: "column",
-                      justifyContent: "space-evenly",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        width: "100%",
-                        flexDirection: "row",
-
-                        justifyContent: "space-evenly",
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-
-                          flexDirection: "row",
-                          justifyContent: "space-evenly",
-                        }}
-                      >
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item interval={40000}>
+                    className="image_holder"
+                    style={{ backgroundImage: `url(${image})` }}
+                  ></div>
                   <div
-                    style={{
-                      height: "150px",
-                      display: "flex",
-                      alignItems: "center",
-                      flexDirection: "column",
-                      justifyContent: "space-evenly",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        width: "100%",
-                        flexDirection: "row",
-
-                        justifyContent: "space-evenly",
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-
-                          flexDirection: "row",
-                          justifyContent: "space-evenly",
-                        }}
-                      >
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                        <div
-                          className="image_holder"
-                          style={{
-                            backgroundImage: `url(${download})`,
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </Carousel.Item>
-
-                {/* <Carousel.Item
-              interval={500}
-              style={{ backgroundColor: "gray", height: "250px" }}
-            >
-              two
-            </Carousel.Item>
-            <Carousel.Item style={{ backgroundColor: "gray", height: "250px" }}>
-              three
-            </Carousel.Item> */}
-              </Carousel>
+                    className="image_holder"
+                    style={{ backgroundImage: `url(${image1})` }}
+                  ></div>
+                  <div
+                    className="image_holder"
+                    style={{ backgroundImage: `url(${image2})` }}
+                  ></div>
+                  <div
+                    className="image_holder"
+                    style={{ backgroundImage: `url(${image3})` }}
+                  ></div>
+                  <div
+                    className="image_holder"
+                    style={{ backgroundImage: `url(${image4})` }}
+                  ></div>
+                  <div
+                    className="image_holder"
+                    style={{ backgroundImage: `url(${image5})` }}
+                  ></div>
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>

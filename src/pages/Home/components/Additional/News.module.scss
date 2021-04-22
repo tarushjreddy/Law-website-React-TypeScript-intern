@@ -49,7 +49,35 @@
   }
 }
 .news_body1 {
+  background-image: url("./2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #cccccc;
+  min-width: "550px" !important;
+  min-height: "600px";
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: red;
+}
+.news_body3 {
   background-image: url("./download.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #cccccc;
+  min-width: "550px" !important;
+  min-height: "600px";
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: red;
+}
+.news_body2 {
+  background-image: url("./3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -3,6 +3,8 @@ import styles from "./News.module.scss";
 import "./news.scss";
 import Carousel from "react-bootstrap/Carousel";
 import imgh from "./download.jpeg";
+import imgh1 from "./3.jpg";
+import imgh2 from "./2.jpg";
 import ShareIcon from "@material-ui/icons/Share";
 function AddonView() {
   return (
@@ -13,7 +15,7 @@ function AddonView() {
         Are they going to have a new Bussiness Relationship? insights.
       </h6>
       <div className={styles["news_body"]}>
-        <div className={styles["news_body1"]} id="newspro1">
+        <div className={styles["news_body3"]} id="newspro1">
           <div className={styles["address"]}>
             <div
               style={{
@@ -77,7 +79,7 @@ function AddonView() {
             </div>
           </div>
         </div>
-        <div className={styles["news_body1"]} id="newspro3">
+        <div className={styles["news_body2"]} id="newspro3">
           <div className={styles["address"]}>
             <div
               style={{

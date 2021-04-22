@@ -4,14 +4,27 @@
   display: flex;
   margin-right: 10px;
 
-  background-color: white;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   background-size: contain;
 }
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   color: red;
+}
+.trustpartcontainer {
+  background-color: rgba(218, 218, 218, 0.5);
+  height: auto;
+
+  width: 80%;
+  padding: 30px;
+}
+.trustpartcontainer_text {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 .main {
   text-align: center;
@@ -32,19 +45,6 @@
 .trust_main_container {
   margin: 2rem;
   overflow: hidden;
-
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 80%;
-
-  text-align: center;
-  color: #242f40;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-
-  background-color: #f7f5f5;
 }
 .carousel_css {
   overflow: hidden;

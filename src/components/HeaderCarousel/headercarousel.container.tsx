@@ -90,12 +90,12 @@ const HeaderCarousel = () => {
           {posts.map((data, i) => (
             <div className="item" style={{ height: "100vh" }}>
               <div
-                className="header-carousel hc-2"
+                className={`header-carousel hc-${i + 1}`}
                 style={{
                   height: "100vh",
                   width: "100%",
-                  // backgroundColor: "blue",
-                  backgroundImage: `url(${data.image})`,
+
+                  // backgroundImage: `url(${data.image})`,
                 }}
               >
                 <div

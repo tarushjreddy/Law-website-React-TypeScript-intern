@@ -6,6 +6,9 @@ import {
   GetWhatsAppDetails,
   GetAllSliderDetails,
   LoginValues,
+  OtpValues,
+  OtpResponseSuccess,
+  OtpResponseFail,
   SignUpResponseFail,
   GetAllTravelInsurance,
   SignUpResponseSuccess,
@@ -34,6 +37,7 @@ export const login = async (
   loginValues: LoginValues
 ): Promise<LoginResponseSuccess | LoginResponseFail> => {
   try {
+    console.log("this is the request", loginValues);
     const response = await axios.post("/auth/login", loginValues);
     return response.data;
   } catch (error) {
@@ -41,6 +45,20 @@ export const login = async (
     return errorResponseData;
   }
 };
+
+export const Otp = async (
+  otpValues: OtpValues
+): Promise<OtpResponseSuccess | OtpResponseFail> => {
+  try {
+    console.log("this is the request", otpValues);
+    const response = await axios.post("/auth/login", otpValues);
+    return response.data;
+  } catch (error) {
+    const errorResponseData = error?.response?.data;
+    return errorResponseData;
+  }
+};
+
 
 export const signUp = async (
   signUpValues: SignUpValues

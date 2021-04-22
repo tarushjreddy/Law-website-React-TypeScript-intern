@@ -260,6 +260,7 @@ li.nav-item.my-tel:hover {
   margin: 0 5px;
   button {
     color: #dedede;
+    text-align: center;
   }
 }
 i.material-icons.my-search-func {
@@ -364,15 +365,15 @@ button:focus {
   background-position: center;
   background-size: cover;
 }
-// .hc-1 {
-//   background-image: url("../Zytcode\ Assets/media/images/slider-1.jpg");
-// }
-// .hc-2 {
-//   background-image: url("../Zytcode\ Assets/media/images/slider-2.jpg");
-// }
-// .hc-3 {
-//   background-image: url("../Zytcode\ Assets/media/images/slider-3.jpg");
-// }
+.hc-1 {
+  background-image: url("../Zytcode\ Assets/media/images/slider-1.jpg");
+}
+.hc-2 {
+  background-image: url("../Zytcode\ Assets/media/images/slider-2.jpg");
+}
+.hc-3 {
+  background-image: url("../Zytcode\ Assets/media/images/slider-3.jpg");
+}
 
 .hbc-icon-img img {
   width: 65px;
@@ -472,6 +473,7 @@ button:focus {
   .my-button a:hover,
   button:hover {
     text-decoration: none;
+    text-align: center;
     transform: translateY(5px);
     background-image: linear-gradient(to top, #876f18, #b8a046);
   }

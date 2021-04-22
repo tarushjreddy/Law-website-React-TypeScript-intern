@@ -254,7 +254,15 @@ const NavView: React.FC<NavViewProps> = ({
                           window.location.reload();
                         }}
                       >
-                        <p style={{ margin: "0px", padding: "0.1rem" }}> AR</p>
+                        <p
+                          style={{
+                            marginTop: "5.5px",
+                            padding: "0.1rem",
+                            color: "white",
+                          }}
+                        >
+                          AR
+                        </p>
                       </Button>
                     )}
                   </li>
@@ -276,7 +284,11 @@ const NavView: React.FC<NavViewProps> = ({
                       <i
                         className="material-icons my-search-func"
                         aria-hidden="true"
-                        style={{ margin: "0px", padding: "0px" }}
+                        style={{
+                          margin: "0px",
+                          padding: "0px",
+                          color: "white",
+                        }}
                         onClick={() => setShowSearch(!showSearch)}
                       >
                         search
@@ -333,8 +345,8 @@ const NavView: React.FC<NavViewProps> = ({
                       href="tel:920008434"
                       style={{
                         padding: "0px",
-                        margin: "0px",
-                        color: "#dedede",
+                        marginTop: "2px",
+                        color: "white",
                       }}
                     >
                       920008434

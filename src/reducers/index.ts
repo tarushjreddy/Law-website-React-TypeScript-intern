@@ -19,7 +19,7 @@ export const setUserDetailReducer = (global: any, dispatch: any) => {
     const {
       data: { user },
     } = USER_DATA;
-
+console.log("this is the user data",USER_DATA);
     userDetail.email = user.email;
     userDetail.name = user.name;
     userDetail.mobile = user.phone;

@@ -3,6 +3,10 @@ export interface LoginValues {
   email: string;
   password: string;
 }
+export interface OtpValues {
+  email: string;
+  password: string;
+}
 interface LoginUser {
   _id: string;
   name: string;
@@ -44,6 +48,22 @@ export interface LoginResponseSuccess {
   status: string;
 }
 
+export interface OtpResponseSuccess {
+  data: {
+    message: string;
+    phone: string;
+  };
+  message: string;
+  status: string;
+}
+
+export interface OtpResponseFail {
+  data: {
+    error: string;
+  };
+  message: string;
+  status: string;
+}
 // FOR SignUp
 interface SignUpUser {
   _id: string;

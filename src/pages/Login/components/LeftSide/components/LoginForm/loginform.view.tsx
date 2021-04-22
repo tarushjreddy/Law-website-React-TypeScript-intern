@@ -5,7 +5,12 @@ import { useTranslation } from "react-i18next";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import CustomInputField from "../../../../../../components/CustomInputField";
-import { LoginResponseStatus, LoginValues } from "../../../../login.model";
+import {
+  LoginResponseStatus,
+  LoginValues,
+  otpValues,
+  LoginResponseOTPStatus,
+} from "../../../../login.model";
 import OTPInput from "./components/OTPInput";
 import styles from "./loginform.module.scss";
 
@@ -16,8 +21,8 @@ interface LoginFormViewProps {
   ) => void;
 
   validated: boolean;
-  loginValue: LoginValues;
-  response: LoginResponseStatus;
+  loginValue: otpValues;
+  response: LoginResponseOTPStatus;
 }
 
 const LoginFormView: React.FC<LoginFormViewProps> = ({
@@ -52,6 +57,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
       >
         {response.msg}
       </Alert>
+
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <CustomInputField
           label={
