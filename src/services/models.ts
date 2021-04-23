@@ -1,8 +1,17 @@
 // For Login
 export interface LoginValues {
+phone: String;
+code: string;
+}
+// For Login
+export interface SignUpValues {
+  first_name: string;
+  last_name: string;
   email: string;
+  phone: string;
   password: string;
 }
+
 export interface OtpValues {
   email: string;
   password: string;
@@ -89,7 +98,6 @@ interface SignUpUser {
   };
 }
 
-export interface SignUpValues extends LoginValues {}
 
 export interface SignUpResponseFail {
   data: {

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { Form } from "react-bootstrap";
 import { Alert } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Modal from "react-bootstrap/Modal";
+
 import Button from "react-bootstrap/Button";
 import CustomInputField from "../../../../../../components/CustomInputField";
 import {
@@ -11,18 +12,26 @@ import {
   otpValues,
   LoginResponseOTPStatus,
 } from "../../../../login.model";
-import OTPInput from "./components/OTPInput";
+
 import styles from "./loginform.module.scss";
 
 interface LoginFormViewProps {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  SignIn: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  handleChangeOTP: (
+    e: React.ChangeEvent<HTMLInputElement & HTMLInputElement>
+  ) => void;
   handleChange: (
     e: React.ChangeEvent<HTMLInputElement & HTMLInputElement>
   ) => void;
 
   validated: boolean;
-  loginValue: otpValues;
-  response: LoginResponseOTPStatus;
+
+  handleShow: boolean;
+  loginValue: LoginValues;
+
+  response: LoginResponseStatus;
+  responseotp: LoginResponseOTPStatus;
 }
 
 const LoginFormView: React.FC<LoginFormViewProps> = ({
@@ -30,32 +39,45 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
   validated,
   loginValue,
   handleChange,
+  handleShow,
+  SignIn,
+
   response,
+  handleChangeOTP,
+  responseotp,
 }) => {
   const { t } = useTranslation("login");
-  const [show, setShow] = useState(false);
-  const [otp, setOpt] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  // state = { otp: "" };
 
-  handleChange = (otp) => setOpt(true);
+  // state = { otp: "" };
+  // if (responseotp.status === "Success") {
+  //   setclose(true);
+  // } else {
+  //   setclose(false);
+  // }
+  // handleChange = (otp) => setOpt(true);
   return (
     <div className={styles["loginContainer"]}>
       <p>{t("loginFormHeading")}</p>
       <Alert
-        show={response.status === "Fail"}
+        show={responseotp.status === "Fail"}
         variant="danger"
         className={styles.alert}
       >
-        {response.msg}
+        Password wrong
       </Alert>
       <Alert
-        show={response.status === "Success"}
+        show={responseotp.msg === "No Account Found!"}
+        variant="danger"
+        className={styles.alert}
+      >
+        No Account Found!
+      </Alert>
+      <Alert
+        show={responseotp.status === "Success"}
         variant="success"
         className={styles.alert}
       >
-        {response.msg}
+        Succesfull correct
       </Alert>
 
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -124,11 +146,19 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
         Verify OTP
       </Button> */}
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={handleShow} onHide={handleShow}>
         <Modal.Header>
           <Modal.Title>One Time Password Verification</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <Alert
+            show={response.status === "Wrong OTP"}
+            variant="danger"
+            style={{ width: "51%" }}
+            className={styles.alert}
+          >
+            Please enter the correct OTP.
+          </Alert>
           <div
             style={{
               display: "flex",
@@ -137,19 +167,32 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
               flexDirection: "column",
             }}
           >
-            <OTPInput
-              autoFocus
-              isNumberInput
+            {/* <OTPInput
               length={6}
               className={styles["otpContainer"]}
               inputClassName={styles["otpInput"]}
-              onChangeOTP={(otp) => console.log("Number OTP: ", otp)}
-            />
+              onChangeOTP={(otp) => {
+                setOtp(otp);
+                console.log("this is the otp val ", otpval);
+              }}
+            /> */}
+            <Form>
+              <CustomInputField
+                label="Please enter the correct OTP."
+                name="otp"
+                type="text"
+                placeholder="Enter the 6 digit OTP"
+                classNameInput={styles["form-control"]}
+                classNameInvalid={styles["invalid-feedback"]}
+                onChange={handleChangeOTP}
+                errMess={t("loginFormFields.password.errorMessage")}
+              />
+            </Form>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Verify
+          <Button variant="primary" onClick={SignIn}>
+            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>

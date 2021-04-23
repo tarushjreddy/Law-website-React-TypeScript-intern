@@ -2,7 +2,7 @@ import React, { useState, useDispatch } from "reactn";
 import { useHistory } from "react-router-dom";
 import { REDIRECT_TIME } from "../../../../../../constants";
 import { setUserDetailReducer } from "../../../../../../reducers";
-import { signUp } from "../../../../../../services/apis";
+import { signUp, Otp } from "../../../../../../services/apis";
 import { SignUpResponseStatus, SignUpValues } from "../../../../signup.model";
 import SignUpFormView from "./signupform.view";
 
@@ -15,12 +15,15 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
   const setGlobalUserDetail = useDispatch(setUserDetailReducer);
   const [validated, setValidated] = useState(false);
   const [confirmValid, setConfirmValid] = useState(false);
+  const [handleClose, setShow] = useState(false);
   const [confirmErrMess, setConfirmErrMess] = useState("Required!!");
 
   const [signUpValue, setSignUpValue] = useState<SignUpValues>({
+    first_name: "",
+    last_name: "",
     email: "",
+    phone: "",
     password: "",
-    confirmPassword: "",
   });
 
   const [response, setResponse] = useState<SignUpResponseStatus>({
@@ -30,12 +33,16 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let { name, value } = event.target;
+    console.log(name, value);
     setSignUpValue({ ...signUpValue, [name]: value });
   };
 
   const register = async () => {
     const responseData = await signUp({
+      first_name: signUpValue.first_name,
+      last_name: signUpValue.last_name,
       email: signUpValue.email,
+      phone: signUpValue.phone,
       password: signUpValue.password,
     });
     const { status, message } = responseData;
@@ -44,23 +51,50 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
       status: status,
       msg: message,
     });
-
+    console.log(status, message);
     if (status === "Success") {
-      localStorage.setItem("USER_DATA", JSON.stringify(responseData));
-      localStorage.setItem("AUTH_TOKEN", responseData.data.token);
-
-      setGlobalUserDetail();
-      if (popupFunction) {
-        popupFunction();
-      } else {
-        setTimeout(() => {
-          // redirect user to profile update page
-          history.push("/dashboard/profile");
-          // history.push("/");
-        }, REDIRECT_TIME);
-      }
+      setShow(true);
     }
+    // if (status === "Success") {
+    //   localStorage.setItem("USER_DATA", JSON.stringify(responseData));
+    //   localStorage.setItem("AUTH_TOKEN", responseData.data.token);
+
+    //   setGlobalUserDetail();
+    //   if (popupFunction) {
+    //     popupFunction();
+    //   } else {
+    //     setTimeout(() => {
+    //       // redirect user to profile update page
+    //       history.push("/dashboard/profile");
+    //       // history.push("/");
+    //     }, REDIRECT_TIME);
+    //   }
+    // }
   };
+
+  // const OtpIn = async () => {
+  //   try {
+  //     const OtpResponse = await Otp({
+  //       email: loginValue.email,
+
+  //       password: loginValue.password,
+  //     });
+  //     console.log("this is the login response", OtpResponse);
+  //     const { status, message } = OtpResponse;
+
+  //     setResponseotp({
+  //       status: status,
+
+  //       msg: message,
+  //     });
+  //     if (status === "Success") {
+  //       setShow(true);
+  //       console.log(handleClose);
+  //     }
+  //     // setShow(true);
+  //     // console.log(handleClose);
+  //   } catch (error) {}
+  // };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     console.log(signUpValue);
@@ -68,6 +102,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
     event.stopPropagation();
 
     const form = event.currentTarget;
+    console.log(form);
 
     if (form.password.value !== form.confirmPassword.value) {
       setConfirmValid(true);
@@ -75,12 +110,15 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
     } else if (form.checkValidity() === false) {
       setConfirmErrMess("Required!!");
     } else if (form.password.value === form.confirmPassword.value) {
-      setConfirmValid(false);
+      console.log("done");
+
+      console.log(signUpValue);
+      // setConfirmValid(false);
       register();
-      setConfirmErrMess("Password Matched");
+      // setConfirmErrMess("Password Matched");
     }
-    setConfirmValid(false);
-    setValidated(true);
+    // setConfirmValid(false);
+    // setValidated(true);
   };
 
   return (
@@ -89,6 +127,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
       confirmValid={confirmValid}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
+      handleShow={handleClose}
       signUpValue={signUpValue}
       response={response}
       validated={validated}

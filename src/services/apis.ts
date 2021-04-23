@@ -33,12 +33,13 @@ export const updateBearToken = () => {
 
 updateBearToken();
 
+
 export const login = async (
   loginValues: LoginValues
 ): Promise<LoginResponseSuccess | LoginResponseFail> => {
   try {
     console.log("this is the request", loginValues);
-    const response = await axios.post("/auth/login", loginValues);
+    const response = await axios.post("/auth/verify-phone-code", loginValues);
     return response.data;
   } catch (error) {
     const errorResponseData = error?.response?.data;

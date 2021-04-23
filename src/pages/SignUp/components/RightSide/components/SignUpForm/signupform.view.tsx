@@ -17,6 +17,7 @@ interface SignUpFormViewProps {
   setValidated?: React.Dispatch<React.SetStateAction<boolean>>;
   confirmErrMess: string;
   confirmValid: boolean;
+  handleShow: boolean;
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
   signUpValue: SignUpValues;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -29,13 +30,14 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
   confirmErrMess,
   confirmValid,
   signUpValue,
+  handleShow,
   handleChange,
   response,
 }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+
   const { t } = useTranslation("signup");
   return (
     <div className={`${styles["signUpContainer"]}`}>
@@ -63,18 +65,17 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
         <CustomInputField
           type="text"
           id="first_name"
-          name="First Name"
+          name="first_name"
           onChange={handleChange}
           isInvalid={confirmValid}
           label={t("signUpFormFields.firstname.label")}
           placeholder={t("signUpFormFields.firstname.placeholder")}
           errMess={confirmErrMess}
         />
-
         <CustomInputField
           type="text"
           id="last_name"
-          name="Last Name"
+          name="last_name"
           onChange={handleChange}
           label={t("signUpFormFields.lastname.label")}
           placeholder={t("signUpFormFields.lastname.placeholder")}
@@ -89,7 +90,6 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           placeholder={t("signUpFormFields.email.placeholder")}
           errMess={t("signUpFormFields.lastname.errMessage")}
         />
-
         <CustomInputField
           type="password"
           id="password"
@@ -99,11 +99,10 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           placeholder={t("signUpFormFields.password.placeholder")}
           errMess={t("signUpFormFields.password.errMessage")}
         />
-
         <CustomInputField
           type="password"
           id="confirmPassword"
-          name="confirmPassword"
+          name="cpassword"
           onChange={handleChange}
           pattern={signUpValue.password}
           isInvalid={confirmValid}
@@ -114,15 +113,22 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
         <CustomInputField
           type="tel"
           id="mobile"
-          name="mobile"
+          name="phone"
           onChange={handleChange}
           label={t("signUpFormFields.mobile.label")}
           placeholder={t("signUpFormFields.mobile.placeholder")}
           errMess={t("signUpFormFields.mobile.errMessage")}
         />
+
+        <div className={styles["login-btn"]}>
+          <div>
+            <button type="submit">{t("singUpButtonText")}</button>
+            {/* type="submit" */}
+          </div>
+        </div>
       </Form>
       <label> Sign Up as</label>
-      <form style={{ display: "flex" }}>
+      {/* <form style={{ display: "flex" }}>
         <div
           style={{
             display: "flex",
@@ -136,15 +142,10 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           <BootstrapSwitchButton checked={true} size="xs" />
           Lawyer
         </div>
-      </form>{" "}
-      <div className={styles["login-btn"]} onClick={handleShow}>
-        <div>
-          <button>{t("singUpButtonText")}</button>
-          {/* type="submit" */}
-        </div>
-      </div>
+      </form>{" "} */}
+
       {/* <Button variant="primary">Verify OTP</Button> */}
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={handleShow} onHide={handleShow}>
         <Modal.Header>
           <Modal.Title>One Time Password Verification</Modal.Title>
         </Modal.Header>

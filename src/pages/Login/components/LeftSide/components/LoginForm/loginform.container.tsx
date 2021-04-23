@@ -20,33 +20,32 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
   const history = useHistory();
   const setGlobalUserDetail = useDispatch(setUserDetailReducer);
   const [validated, setValidated] = useState(false);
-  const [result, setresult] = useState("");
+  const [phone, setphone] = useState("");
+  const [handleClose, setShow] = useState(false);
+
   const [loginValue, setLoginValue] = useState<LoginValues>({
     email: "",
     password: "",
-    mobile: "",
   });
   const [otpValue, setotpValue] = useState<otpValues>({
-    email: "",
-    password: "",
+    otp: "",
   });
   const [response, setResponse] = useState<LoginResponseStatus>({
     status: "",
+
     msg: "",
   });
   const [responseotp, setResponseotp] = useState<LoginResponseOTPStatus>({
     status: "",
+
     msg: "",
   });
 
-  console.log("tarush", loginValue);
-  const signIn = async () => {
+  const signIn = async (event: React.MouseEvent<HTMLButtonElement>) => {
     try {
-      console.log("login values message", loginValue);
       const loginResponse = await login({
-        email: loginValue.email,
-
-        password: loginValue.password,
+        phone: "9986251724",
+        code: "123456",
       });
       console.log("this is the login response", loginResponse);
 
@@ -73,54 +72,84 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
             history.push("/");
           }, REDIRECT_TIME);
         }
-      } else console.log("error");
+      } else {
+        setResponse({
+          status: "Wrong OTP",
+          msg: "Invalid user",
+        });
+      }
     } catch (error) {
       setResponse({
-        status: "Fail",
+        status: "Wrong OTP",
         msg: "Invalid user",
       });
     }
   };
+
   const OtpIn = async () => {
     try {
       const OtpResponse = await Otp({
-        email: otpValue.email,
+        email: loginValue.email,
 
-        password: otpValue.password,
+        password: loginValue.password,
       });
       console.log("this is the login response", OtpResponse);
+      const { status, message } = OtpResponse;
 
-      // setResponseotp({
-      //   status: statusone,
-      //   msg: messageone,
-      // });
+      setResponseotp({
+        status: status,
+
+        msg: message,
+      });
+      if (status === "Success") {
+        setShow(true);
+        console.log(handleClose);
+      }
+      // setShow(true);
+      // console.log(handleClose);
     } catch (error) {}
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     const form = event.currentTarget;
     console.log("login form===", form);
+    console.log(loginValue);
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
     event.preventDefault();
-    setValidated(true);
-    // signIn();
+    setValidated(false);
+    // // signIn();
     OtpIn();
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let { name, value } = event.target;
+    console.log(name, value);
     setLoginValue({ ...loginValue, [name]: value });
+  };
+
+  const handleChangeOTP = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    let { name, value } = event.target;
+    console.log(name, value);
+    setotpValue({ ...otpValue, [name]: value });
+    console.log(otpValue.otp);
   };
 
   return (
     <LoginFormView
       handleSubmit={handleSubmit}
       validated={validated}
+      SignIn={signIn}
       loginValue={loginValue}
+      handleShow={handleClose}
       handleChange={handleChange}
+      handleChangeOTP={handleChangeOTP}
+      responseotp={responseotp}
       response={response}
     />
   );
