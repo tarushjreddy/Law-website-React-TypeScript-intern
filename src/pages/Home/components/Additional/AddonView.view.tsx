@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styles from "./News.module.scss";
 import "./news.scss";
-import Carousel from "react-bootstrap/Carousel";
-import imgh from "./download.jpeg";
-import imgh1 from "./3.jpg";
-import imgh2 from "./2.jpg";
+
 import ShareIcon from "@material-ui/icons/Share";
 function AddonView() {
   return (

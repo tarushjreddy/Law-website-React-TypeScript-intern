@@ -33,26 +33,11 @@ const Modified: React.FC<CustomInputFieldProps> = ({ styling }) => {
 
   console.log("anything", details);
 
-  const useStyles = createUseStyles({
-    App: {
-      flexDirection: `(${abc === 1}? 'row' : 'row-reverse')`,
-
-      color: "red",
-      height: "100%",
-      marginTop: "40px",
-
-      display: "flex",
-      flexWrap: "inherit",
-
-      justifyContent: "space-between",
-    },
-  });
-
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <>
       {details.map((post) => (
-        <div className={classes.App} id={`${styles["Maincontainer"]}`}>
+        <div id={`${styles["Maincontainer"]}`}>
           <div className={`${styles["leftContainer"]}`}>
             <h1 className={`${styles["header"]}`}>{post.title}</h1>
             <p className={`${styles["paragraph"]}`}>{post.subtitle}</p>

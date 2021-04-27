@@ -1,29 +1,3 @@
-// #Maincontainer {
-//   flex-direction: row-reverse;
-//   color: red;
-//   height: 100%;
-//   margin-top: 40px;
-//   margin-right: 6.6rem;
-//   margin-left: 6.6rem;
-
-//   display: flex;
-//   flex-wrap: inherit;
-
-//   justify-content: space-between;
-// }
-// #Maincontainerone {
-//   flex-direction: row;
-//   color: red;
-//   height: 100%;
-//   margin-top: 40px;
-//   margin-right: 6.6rem;
-//   margin-left: 6.6rem;
-
-//   display: flex;
-//   flex-wrap: inherit;
-
-//   justify-content: space-between;
-// }
 .logo_option {
   display: flex;
   width: 100%;
@@ -41,6 +15,7 @@
   border-radius: 50%;
   background-color: transparent;
   color: white;
+
   margin-right: 10px;
 }
 .logo_parts {
@@ -129,42 +104,42 @@
     width: 100%;
   }
 }
-@media only screen and (max-width: 600px) {
-  .Button_part {
-    width: 100%;
-  }
-  #Maincontainer {
-    flex-direction: column-reverse;
-    height: 100%;
-    margin: 0px;
-    align-items: center;
-    justify-content: center;
-  }
-  .logo_option {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
 
-    flex-direction: column;
-  }
-  .leftContainer {
-    height: 100%;
-
-    color: black;
-    margin: 20px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  .rightConatiner {
-    margin: 20px;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+.Button_part {
+  width: 100%;
 }
+//   #Maincontainer {
+//     flex-direction: column-reverse;
+//     height: 100%;
+//     margin: 0px;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .logo_option {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+
+//     flex-direction: column;
+//   }
+//   .leftContainer {
+//     height: 100%;
+
+//     color: black;
+//     margin: 20px;
+//     width: 100%;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .rightConatiner {
+//     margin: 20px;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+//     width: 100%;
+//     img {
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+// }

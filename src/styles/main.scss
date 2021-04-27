@@ -381,15 +381,19 @@ button:focus {
 
 .hbc-icon-img {
   float: left;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-right: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .hbc-icon-img.hbc-ico-1 {
-  margin-left: 60px;
 }
-
+.hbc-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .hbc-content-ele h4 {
   font-size: 24px;
   font-weight: bold;
@@ -398,7 +402,7 @@ button:focus {
   line-height: normal;
   letter-spacing: normal;
   color: #b8a046;
-  margin-left: 15px;
+
   margin-bottom: 0;
 }
 .chbc-icon-text {
@@ -407,14 +411,14 @@ button:focus {
 }
 
 .chbc-icon-text h2 {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
-  margin-left: 15px;
+
   margin-bottom: 0;
 }
 .chbc-icon-text h4 {
@@ -422,9 +426,31 @@ button:focus {
 }
 .col-sm-4.col-xs-12.hbc-col {
   clear: both;
-  // width: 100%;
-  border: solid 1px rgba(255, 255, 255, 0.2);
-  height: 170px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-width: 300px !important;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  height: 120px;
+}
+@media only screen and (max-width: 1000px) {
+  .col-sm-4.col-xs-12.hbc-col {
+    height: 50px;
+    margin: 2px;
+    padding: 0 !important;
+  }
+  .chbc-icon-text h4 {
+    font-size: 10px;
+  }
+  .hbc-icon-img img {
+    width: 45px;
+  }
+  .hbc-icon-img {
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 .hcc-subcon-text {
   text-shadow: 0 0 8px #000000;
@@ -456,19 +482,25 @@ button:focus {
   a,
   button {
     text-align: center;
+    padding: 10px;
     font-size: 18px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #ffffff;
+    color: white;
+    text-align: center;
     border: 0;
     border-radius: 5px;
     background-image: linear-gradient(to top, #b8a046, #876f18);
-    padding: 10px 30px;
+    // background-color: black;
+
     transition: 0.3s;
     display: inline-block;
+    a {
+      text-align: center !important;
+    }
   }
   .my-button a:hover,
   button:hover {
@@ -1038,9 +1070,14 @@ i.material-icons.quality-start {
 
 .advertisement-sec {
   background: #f8f5ec;
+  margin: 6.6rem;
   /* padding: 50px 0px; */
 }
-
+@media screen and (min-width: 100px) and (max-width: 600px) {
+  .advertisement-sec {
+    margin: 0;
+  }
+}
 .add-con-img {
   margin-left: 50px;
 }
@@ -1488,8 +1525,8 @@ ul.footer-ul li a:hover {
   text-decoration: red;
   color: #ff0000 !important;
   background: white !important;
-  padding: 2rem;
-  height: 50px;
+  margin: 0px;
+  height: auto;
   .nav-link {
     color: #707070;
   }

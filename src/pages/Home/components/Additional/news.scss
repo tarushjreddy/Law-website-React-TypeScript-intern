@@ -58,13 +58,16 @@ h1 {
     margin: 10px;
   }
   #footer-pro {
-    height: 100px;
+    height: 70px;
+  }
+  #footer-pro2 {
+    height: 70px;
   }
   #footer-pro1 {
-    height: 100px;
+    height: 70px;
   }
   #footer-pro3 {
-    height: 100px;
+    height: 70px;
   }
   #newspro2 {
     width: 300px;
@@ -74,6 +77,40 @@ h1 {
   #newspro3 {
     width: 300px;
     height: 300px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1500px) {
+  #newspro1 {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+  #footer-pro {
+    height: 150px;
+  }
+  #footer-pro1 {
+    height: 150px;
+  }
+  #footer-pro3 {
+    height: 150px;
+  }
+  #footer-pro2 {
+    height: 150px;
+  }
+  #newspro2 {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+  #newspro3 {
+    width: 400px;
+    height: 400px;
     margin: 10px;
   }
 

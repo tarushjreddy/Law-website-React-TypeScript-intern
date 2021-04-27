@@ -39,7 +39,7 @@ const HomeView = () => {
       <Portfolio />
 
       <AddonView />
-      <Trust />
+      {/* <Trust /> */}
       <ContactUs />
       <Footer />
     </div>

@@ -127,7 +127,6 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           </div>
         </div>
       </Form>
-      <label> Sign Up as</label>
       {/* <form style={{ display: "flex" }}>
         <div
           style={{

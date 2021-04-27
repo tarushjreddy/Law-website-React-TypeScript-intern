@@ -4,7 +4,7 @@ import { Section } from "react-scroll-section";
 import writter2 from "../../../../Zytcode Assets/media/images/writter-2.jpg";
 //import writter1 from '../../../../Zytcode Assets/media/images/writter-1.jfif';
 import writter3 from "../../../../Zytcode Assets/media/images/writter-3.jpg";
-
+import writter4 from "./writter-1.jpg";
 const Portfolio = () => {
   let lineStyle = {};
   let alignment = "ltr";
@@ -74,7 +74,7 @@ const Portfolio = () => {
                     <div className="port-writter">
                       <img
                         className="float-start"
-                        src="../../../../Zytcode Assets/media/images/writter-1.jfif"
+                        src={writter4}
                         alt="Julia Samway, UI/UX Designer"
                       />{" "}
                       <span className="pw-name float-start ps-3">
