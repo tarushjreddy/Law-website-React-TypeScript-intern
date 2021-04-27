@@ -10,3 +10,8 @@ export interface SignUpResponseStatus {
   status: string;
   msg: string;
 }
+export interface LoginResponseOTPStatus {
+  status: string;
+
+  msg: string;
+}

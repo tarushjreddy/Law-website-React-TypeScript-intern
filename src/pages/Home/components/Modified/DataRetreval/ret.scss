@@ -24,6 +24,9 @@
 
   justify-content: space-between;
 }
+.Button_part {
+  width: 60%;
+}
 @media only screen and (max-width: 600px) {
   .Button_part {
     width: 100%;
@@ -83,6 +86,7 @@
       }
       #info_pro_max {
         min-width: 50px !important;
+        margin-left: 30px !important;
       }
       #logo_option_pro {
         margin: 0px;
@@ -94,7 +98,7 @@
         font-size: 18px;
       }
       #button_part_pro {
-        width: 80%;
+        width: 60%;
       }
     }
     #image_holder_pro {
@@ -104,6 +108,9 @@
       }
     }
   }
+}
+#button_part_pro {
+  width: 60%;
 }
 @media only screen and (min-width: 1250px) {
   .media_on {

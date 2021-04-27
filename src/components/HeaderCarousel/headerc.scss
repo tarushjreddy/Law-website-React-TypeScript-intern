@@ -29,11 +29,22 @@
   background-color: transparent;
   display: flex;
   align-items: center;
-  width: 100vw;
+
+  justify-content: center;
+  border-top: solid 2px rgba(255, 255, 255, 0.5);
+  // border-right: solid 2px rgba(255, 255, 255, 0.5);
+  // border-left: solid 2px rgba(255, 255, 255, 0.5);
 
   flex-direction: row;
 
   justify-content: space-between;
+}
+.hr_divider {
+  color: rgba(255, 255, 255, 0.5);
+  height: 2px;
+  top: 20;
+  position: relative;
+  width: 100vw;
 }
 @media only screen and (min-width: 100px) and (max-width: 900px) {
   // .header-bottom-con {
@@ -68,7 +79,7 @@
 @media only screen and (max-width: 900px) {
   .header-bottom-con {
     display: flex;
-
+    width: 100%;
     padding: 0;
 
     align-items: center;

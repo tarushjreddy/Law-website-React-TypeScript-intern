@@ -408,6 +408,7 @@ button:focus {
 .chbc-icon-text {
   float: left;
   margin-top: 36px;
+  margin-left: 20px;
 }
 
 .chbc-icon-text h2 {
@@ -428,14 +429,19 @@ button:focus {
   clear: both;
   width: 100%;
   display: flex;
+  margin-left: 70px;
   flex-direction: row;
-  min-width: 300px !important;
+  min-width: 500px !important;
   border-right: solid 2px rgba(255, 255, 255, 0.5);
   height: 120px;
 }
 @media only screen and (max-width: 1000px) {
+  .my-copy-right {
+    border-top: none !important;
+  }
   .col-sm-4.col-xs-12.hbc-col {
     height: 50px;
+    min-width: 300px !important;
     margin: 2px;
     border-bottom: solid 2px rgba(255, 255, 255, 0.5);
     border-right: none;
@@ -443,6 +449,7 @@ button:focus {
   }
   .chbc-icon-text h4 {
     font-size: 10px;
+    margin: 0 !important;
   }
   .hbc-icon-img img {
     width: 45px;
@@ -1078,6 +1085,9 @@ i.material-icons.quality-start {
 @media screen and (min-width: 100px) and (max-width: 600px) {
   .advertisement-sec {
     margin: 0;
+  }
+  #email_media {
+    margin-top: 30px;
   }
 }
 .add-con-img {

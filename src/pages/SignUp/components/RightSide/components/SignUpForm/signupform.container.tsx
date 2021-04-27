@@ -2,8 +2,12 @@ import React, { useState, useDispatch } from "reactn";
 import { useHistory } from "react-router-dom";
 import { REDIRECT_TIME } from "../../../../../../constants";
 import { setUserDetailReducer } from "../../../../../../reducers";
-import { signUp, Otp } from "../../../../../../services/apis";
-import { SignUpResponseStatus, SignUpValues } from "../../../../signup.model";
+import { signUp, login } from "../../../../../../services/apis";
+import {
+  SignUpResponseStatus,
+  SignUpValues,
+  LoginResponseOTPStatus,
+} from "../../../../signup.model";
 import SignUpFormView from "./signupform.view";
 
 interface SignUpFormProps {
@@ -16,6 +20,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
   const [validated, setValidated] = useState(false);
   const [confirmValid, setConfirmValid] = useState(false);
   const [handleClose, setShow] = useState(false);
+  const [phonenumber, setphonenumber] = useState("");
   const [confirmErrMess, setConfirmErrMess] = useState("Required!!");
 
   const [signUpValue, setSignUpValue] = useState<SignUpValues>({
@@ -30,7 +35,11 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
     status: "",
     msg: "",
   });
+  const [responseotp, setResponseotp] = useState<LoginResponseOTPStatus>({
+    status: "",
 
+    msg: "",
+  });
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let { name, value } = event.target;
     console.log(name, value);
@@ -51,50 +60,51 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
       status: status,
       msg: message,
     });
+
     console.log(status, message);
     if (status === "Success") {
+      const data = signUpValue.phone;
+      setphonenumber(data);
+      console.log("this is the phone number", data);
+
       setShow(true);
     }
-    // if (status === "Success") {
-    //   localStorage.setItem("USER_DATA", JSON.stringify(responseData));
-    //   localStorage.setItem("AUTH_TOKEN", responseData.data.token);
-
-    //   setGlobalUserDetail();
-    //   if (popupFunction) {
-    //     popupFunction();
-    //   } else {
-    //     setTimeout(() => {
-    //       // redirect user to profile update page
-    //       history.push("/dashboard/profile");
-    //       // history.push("/");
-    //     }, REDIRECT_TIME);
-    //   }
-    // }
   };
 
-  // const OtpIn = async () => {
-  //   try {
-  //     const OtpResponse = await Otp({
-  //       email: loginValue.email,
+  const SignUp = async () => {
+    console.log("this is harish in the house");
+    try {
+      const loginResponse = await login({
+        phone: phonenumber,
+        code: "123456",
+      });
+      console.log("this is the login response", loginResponse);
 
-  //       password: loginValue.password,
-  //     });
-  //     console.log("this is the login response", OtpResponse);
-  //     const { status, message } = OtpResponse;
+      const { status, message } = loginResponse;
 
-  //     setResponseotp({
-  //       status: status,
+      // setResponseotp({
+      //   status: status,
+      //   msg: message,
+      // });
+      if (status === "Success") {
+        localStorage.setItem("USER_DATA", JSON.stringify(loginResponse));
+        localStorage.setItem("AUTH_TOKEN", loginResponse.data.token);
 
-  //       msg: message,
-  //     });
-  //     if (status === "Success") {
-  //       setShow(true);
-  //       console.log(handleClose);
-  //     }
-  //     // setShow(true);
-  //     // console.log(handleClose);
-  //   } catch (error) {}
-  // };
+        setGlobalUserDetail();
+        if (popupFunction) {
+          popupFunction();
+        } else {
+          setTimeout(() => {
+            // redirect user to profile update page
+            history.push("/dashboard/profile");
+            // history.push("/");
+          }, REDIRECT_TIME);
+        }
+      }
+    } catch (error) {
+      console.log("yo yo honey sing harish");
+    }
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     console.log(signUpValue);
@@ -130,6 +140,8 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
       handleShow={handleClose}
       signUpValue={signUpValue}
       response={response}
+      SignUp={SignUp}
+      // responseotp={responseotp}
       validated={validated}
     />
   );

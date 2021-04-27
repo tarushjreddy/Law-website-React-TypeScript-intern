@@ -82,60 +82,63 @@ const HeaderCarousel = () => {
           </OwlCarousel>
         </div>
       )}
-
+      <hr className="hr_divider" />
       <div>
-        <div className="header-bottom-con">
-          <div>
-            <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
-              <div className="hbc-content">
-                <div className="hbc-content-ele">
-                  <div
-                    className="hbc-icon-img hbc-ico-1"
-                    style={{ marginBottom: "10px" }}
-                  >
-                    <img src="media/images/img2.png" alt="Header 2" />
-                  </div>
-                  <div className="chbc-icon-text">
-                    <h4>Get</h4>
-                    <h2>Free Consultation</h2>
+        <div className="header-bottom-con"></div>
+        <div style={{ borderTop: "2px solid yellow" }}>
+          <div className="header-bottom-con">
+            <div>
+              <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
+                <div className="hbc-content">
+                  <div className="hbc-content-ele">
+                    <div
+                      className="hbc-icon-img hbc-ico-1"
+                      style={{ marginBottom: "10px" }}
+                    >
+                      <img src="media/images/img2.png" alt="Header 2" />
+                    </div>
+                    <div className="chbc-icon-text">
+                      <h4>Get</h4>
+                      <h2>Free Consultation</h2>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
             <div>
               <div>
-                <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
+                <div>
+                  <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
+                    <div className="hbc-content">
+                      <div className="hbc-content-ele">
+                        <div className="hbc-icon-img hbc-ico-1">
+                          <img src="media/images/img1.png" alt="Header 1" />
+                        </div>
+                        <div className="chbc-icon-text">
+                          <h4>Get</h4>
+                          <h2>Legal Advice</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  className="col-sm-4 col-xs-12 hbc-col hbc-col-l"
+                  style={{ border: "none" }}
+                >
                   <div className="hbc-content">
                     <div className="hbc-content-ele">
                       <div className="hbc-icon-img hbc-ico-1">
-                        <img src="media/images/img1.png" alt="Header 1" />
+                        <img src="media/images/img3.png" alt="Header 3" />{" "}
                       </div>
                       <div className="chbc-icon-text">
-                        <h4>Get</h4>
-                        <h2>Legal Advice</h2>
+                        <h4>Instant</h4>
+                        <h2>Contracts By Al</h2>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div
-                className="col-sm-4 col-xs-12 hbc-col hbc-col-l"
-                style={{ border: "none" }}
-              >
-                <div className="hbc-content">
-                  <div className="hbc-content-ele">
-                    <div className="hbc-icon-img hbc-ico-1">
-                      <img src="media/images/img3.png" alt="Header 3" />{" "}
-                    </div>
-                    <div className="chbc-icon-text">
-                      <h4>Instant</h4>
-                      <h2>Contracts By Al</h2>
                     </div>
                   </div>
                 </div>

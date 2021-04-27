@@ -152,12 +152,18 @@ function Retrival() {
                             src={data.benefits[4].icon}
                             className={`${styles["logo_rounded"]}`}
                           ></img>
-                          <div className={`${styles["logo_rounded_info"]}`}>
+                          <div
+                            className={`${styles["logo_rounded_info"]}`}
+                            style={{ minWidth: "40px" }}
+                          >
                             {data.benefits[4].text_eng}
                           </div>
                         </div>
 
-                        <div className={`${styles["info"]}`}>
+                        <div
+                          className={`${styles["info"]}`}
+                          style={{ marginLeft: "20px" }}
+                        >
                           <img
                             src={data.benefits[5].icon}
                             className={`${styles["logo_rounded"]}`}

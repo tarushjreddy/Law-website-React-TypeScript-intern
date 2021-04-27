@@ -1,21 +1,18 @@
 
-.App_pro{
-  display: flex;
-  align-items: center;
-  overflow: auto;
+.this_btn{
 
-  justify-content: center;
- flex-direction: column;
- margin-top: 30px;
- margin:10px;
+  margin-left:10px;
+  outline: none !important;
 }
-
+.this_btn:focus{
+   outline: none !important;
+}
 .row__poster {
   object-fit: cover;
   /* max-width: 800px; */
   /* height: 900px; */
   margin-right: 20px;
-  margin-left: 0px;
+  margin-left: 20px;
   max-height: 150px;
 
   transition: transform 360ms;
@@ -27,7 +24,7 @@
 }
 .row__posters {
   display: flex;
-  margin-left: 20px;
+
   overflow-x: scroll !important;
   overflow-y: hidden;
   padding: 30px;

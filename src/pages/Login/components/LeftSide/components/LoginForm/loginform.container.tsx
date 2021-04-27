@@ -93,6 +93,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
 
         password: loginValue.password,
       });
+      // console.log(OtpResponse.data[1]);
       console.log("this is the login response", OtpResponse);
       const { status, message } = OtpResponse;
 
@@ -103,6 +104,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
       });
       if (status === "Success") {
         setShow(true);
+
+        console.log(phone);
         console.log(handleClose);
       }
       // setShow(true);

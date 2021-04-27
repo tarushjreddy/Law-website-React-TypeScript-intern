@@ -5,7 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { useTranslation } from "react-i18next";
 import CustomInputField from "../../../../../../components/CustomInputField";
-import { SignUpValues } from "../../../../../../services/models";
+import { SignUpValues, OtpValues } from "../../../../../../services/models";
 import { SignUpResponseStatus } from "../../../../signup.model";
 import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
@@ -14,10 +14,12 @@ import styles from "./signupform.module.scss";
 
 interface SignUpFormViewProps {
   validated: boolean;
+  SignUp: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setValidated?: React.Dispatch<React.SetStateAction<boolean>>;
   confirmErrMess: string;
   confirmValid: boolean;
   handleShow: boolean;
+  // responseotp: string;
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
   signUpValue: SignUpValues;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -31,8 +33,10 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
   confirmValid,
   signUpValue,
   handleShow,
+  SignUp,
   handleChange,
   response,
+  // responseotp,
 }) => {
   const [show, setShow] = useState(false);
 
@@ -47,7 +51,7 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
         show={response.status === "Fail"}
         variant="danger"
       >
-        {response.msg}
+        Account Already Registered
       </Alert>
       <Alert
         className={styles.alert}
@@ -67,10 +71,9 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           id="first_name"
           name="first_name"
           onChange={handleChange}
-          isInvalid={confirmValid}
           label={t("signUpFormFields.firstname.label")}
           placeholder={t("signUpFormFields.firstname.placeholder")}
-          errMess={confirmErrMess}
+          errMess={t("signUpFormFields.firstname.errMessage")}
         />
         <CustomInputField
           type="text"
@@ -117,7 +120,7 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           onChange={handleChange}
           label={t("signUpFormFields.mobile.label")}
           placeholder={t("signUpFormFields.mobile.placeholder")}
-          errMess={t("signUpFormFields.mobile.errMessage")}
+          errMess={confirmErrMess}
         />
 
         <div className={styles["login-btn"]}>
@@ -127,23 +130,7 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           </div>
         </div>
       </Form>
-      {/* <form style={{ display: "flex" }}>
-        <div
-          style={{
-            display: "flex",
-            marginRight: "20px",
-            textAlign: "center",
-            alignItems: "center",
 
-            flexDirection: "row",
-          }}
-        >
-          <BootstrapSwitchButton checked={true} size="xs" />
-          Lawyer
-        </div>
-      </form>{" "} */}
-
-      {/* <Button variant="primary">Verify OTP</Button> */}
       <Modal show={handleShow} onHide={handleShow}>
         <Modal.Header>
           <Modal.Title>One Time Password Verification</Modal.Title>
@@ -161,7 +148,10 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={SignUp}>
+            Resend OTP
+          </Button>
+          <Button variant="primary" onClick={SignUp}>
             Verify
           </Button>
         </Modal.Footer>

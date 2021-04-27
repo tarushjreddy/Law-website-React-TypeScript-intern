@@ -24,10 +24,7 @@ const NavView: React.FC<NavViewProps> = ({
   return (
     <div className="my-nav-section">
       <div className="my-nav-elements">
-        <div
-          className="top-nav-info container-fluid"
-          style={{ marginTop: "0.09%", height: "6em" }}
-        >
+        <div className="top-nav-info container-fluid">
           <div
             className="top-nav-info-left float-start"
             style={{ marginLeft: "25px" }}

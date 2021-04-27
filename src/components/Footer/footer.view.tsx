@@ -218,7 +218,7 @@ const FooterView = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-4 my-add-mid">
+              <div className="col-sm-12 col-md-4" id="email_media">
                 <div className="my-add-element">
                   <div className="my-add-head">
                     <img src="media/images/email-icon.png" alt="" />
@@ -230,7 +230,7 @@ const FooterView = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-4">
+              <div className="col-sm-12 col-md-4" id="email_media">
                 <div className="my-add-element">
                   <div className="my-add-head">
                     <img src="media/images/Phone-icon.png" alt="" />

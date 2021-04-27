@@ -192,7 +192,10 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={SignIn}>
-            Save Changes
+            Resend OTP
+          </Button>
+          <Button variant="primary" onClick={SignIn}>
+            Verify
           </Button>
         </Modal.Footer>
       </Modal>
