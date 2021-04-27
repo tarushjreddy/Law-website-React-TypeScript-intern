@@ -107,6 +107,7 @@ const NavView: React.FC<NavViewProps> = ({
             </div>
             <div>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
               <Navbar.Collapse
                 className="my-menu-items"
                 id="navbarTogglerDemo02"

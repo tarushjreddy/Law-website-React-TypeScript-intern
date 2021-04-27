@@ -124,7 +124,10 @@ const HeaderCarousel = () => {
           </div>
           <div>
             <div>
-              <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
+              <div
+                className="col-sm-4 col-xs-12 hbc-col hbc-col-l"
+                style={{ border: "none" }}
+              >
                 <div className="hbc-content">
                   <div className="hbc-content-ele">
                     <div className="hbc-icon-img hbc-ico-1">

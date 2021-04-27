@@ -1,0 +1,66 @@
+
+.App_pro{
+  display: flex;
+  align-items: center;
+  overflow: auto;
+
+  justify-content: center;
+ flex-direction: column;
+ margin-top: 30px;
+ margin:10px;
+}
+
+.row__poster {
+  object-fit: cover;
+  /* max-width: 800px; */
+  /* height: 900px; */
+  margin-right: 20px;
+  margin-left: 0px;
+  max-height: 150px;
+
+  transition: transform 360ms;
+  border-radius: 10px;
+  /* height: 50px;
+  width: 50px; */
+  display: flex;
+  transition: all 0.2s;
+}
+.row__posters {
+  display: flex;
+  margin-left: 20px;
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  padding: 30px;
+}
+/* @media only screen and (max-width: 1200px) {
+ .row__posters {
+ flex-direction: column;
+} 
+} */
+.row__poster:hover {
+  transform: scale(1.12);
+}
+.row__poster::-webkit-scrollbar {
+  display: none;
+}
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+.row__posterLarge {
+  max-height: 500px;
+  /* width: 100%; */
+  padding: 40px;
+  /* margin: 0; */
+}
+.row__posterLarge:hover {
+  object-fit: contain;
+
+  /* transform: scale(1.08); */
+}
+.omen {
+  margin-top: 10px;
+}

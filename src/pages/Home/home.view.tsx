@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import AboutUs from "./components/AboutUs";
 import Quality from "./components/Quality";
 import Trust from "./components/Trust";
+import Row from "./components/Trust";
 import AddonView from "./components/Additional";
 import Modified from "./components/Modified";
 import Retrival from "./components/Modified/DataRetreval";
@@ -39,7 +40,7 @@ const HomeView = () => {
       <Portfolio />
 
       <AddonView />
-      {/* <Trust /> */}
+      <Row />
       <ContactUs />
       <Footer />
     </div>

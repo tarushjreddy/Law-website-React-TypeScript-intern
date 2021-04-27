@@ -430,13 +430,15 @@ button:focus {
   display: flex;
   flex-direction: row;
   min-width: 300px !important;
-  border: solid 2px rgba(255, 255, 255, 0.5);
+  border-right: solid 2px rgba(255, 255, 255, 0.5);
   height: 120px;
 }
 @media only screen and (max-width: 1000px) {
   .col-sm-4.col-xs-12.hbc-col {
     height: 50px;
     margin: 2px;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+    border-right: none;
     padding: 0 !important;
   }
   .chbc-icon-text h4 {
