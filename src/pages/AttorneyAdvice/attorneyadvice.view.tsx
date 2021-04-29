@@ -9,7 +9,7 @@ import HighLight from "./components/HighLight";
 const AttorneyAdviceView = () => {
   return (
     <div>
-      <div className="navbar">
+      <div>
         <Nav />
       </div>
       <Header />

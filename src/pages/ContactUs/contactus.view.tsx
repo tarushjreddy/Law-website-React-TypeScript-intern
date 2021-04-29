@@ -23,7 +23,7 @@ const ContactUsView = () => {
 
   return (
     <div className={styles["contactUsContainer"]}>
-      <div className="navbar">
+      <div>
         <Nav />
       </div>
       <div

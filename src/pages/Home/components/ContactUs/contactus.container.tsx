@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import whatsApp from "./whatsapp-icon 1.png";
-import "./con.scss";
+import "./contactus.scss";
 import { Link, NavLink } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";

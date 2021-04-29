@@ -12,9 +12,8 @@ const OurServicesView: React.FC = () => {
   const { t } = useTranslation("ourservices");
   return (
     <div>
-      <div className="navbar">
-        <Nav />
-      </div>
+      <Nav />
+
       <Section id="services">
         <div
           className={`${styles["clip-image-container"]} w-100`}

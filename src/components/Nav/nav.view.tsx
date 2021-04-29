@@ -9,6 +9,8 @@ interface NavViewProps {
   scrolled: boolean;
   setShowSearch: React.Dispatch<React.SetStateAction<boolean>>;
   showSearch: boolean;
+  setShowSearch1: React.Dispatch<React.SetStateAction<boolean>>;
+  showSearch1: boolean;
   name: string;
   lang: string;
 }
@@ -18,13 +20,18 @@ const NavView: React.FC<NavViewProps> = ({
   scrolled,
   setShowSearch,
   showSearch,
+  setShowSearch1,
+  showSearch1,
   name,
   lang,
 }) => {
   return (
     <div className="my-nav-section">
       <div className="my-nav-elements">
-        <div className="top-nav-info container-fluid">
+        <div
+          className="top-nav-info container-fluid"
+          style={{ marginBottom: "20px" }}
+        >
           <div
             className="top-nav-info-left float-start"
             style={{ marginLeft: "25px" }}
@@ -44,7 +51,7 @@ const NavView: React.FC<NavViewProps> = ({
           </div>
           <div
             className="top-nav-info-left right float-end"
-            style={{ position: "relative", zIndex: 100, marginRight: "1.6em" }}
+            style={{ position: "relative", zIndex: 200, marginRight: "1.6em" }}
           >
             <p>
               {isLoginned ? (
@@ -58,300 +65,333 @@ const NavView: React.FC<NavViewProps> = ({
             </p>
           </div>
         </div>
-
         <Navbar
           collapseOnSelect
           expand="lg"
-          className={`navbar-light bg-light my-almuehi-logo ${
+          style={{ backgroundColor: "red" }}
+          className={`navbar-light bg-light my-almuehi-logo container-fluid ${
             scrolled ? "affix my-shring" : ""
           }`}
         >
-          <div
-            className="container-fluid"
-            style={{
-              display: "flex",
+          <div>
+            <Link
+              className="link_provider"
+              style={{
+                display: "inherit",
 
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            <div>
-              <Link style={{ display: "inherit" }} to="/">
-                <div
-                  style={{
-                    marginTop: "20px",
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "row",
-                  }}
-                >
-                  <div>
-                    <img
-                      src="/media/images/almuehi-logo.png"
-                      className="pro_image_one"
-                      alt="Al-Muehi"
-                    />
-                  </div>
-                  <div className="text-pro" style={{ marginLeft: "10px" }}>
-                    <h2 className="top-head">
-                      Dr. Abdullah Bin Sudan Almuehi Group
-                      <br /> Law firm, consulting &amp; Legal Legitimacy
-                    </h2>
-                    <p className="top-head"></p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
-              <Navbar.Collapse
-                className="my-menu-items"
-                id="navbarTogglerDemo02"
+                marginTop: "20px",
+              }}
+              to="/"
+            >
+              <div
+                style={{
+                  marginTop: "20px",
+                  margin: "0px",
+                  padding: "0px",
+                  display: showSearch1 ? "none" : "flex",
+                  alignItems: "center",
+                  flexDirection: "row",
+                }}
               >
-                <ul
-                  className="navbar-nav ml-auto ms-auto"
-                  id="nav_pro_max"
-                  style={{
-                    height: "50%",
-                  }}
-                >
-                  <li
-                    className="nav-item"
+                <div>
+                  <img
+                    src="/media/images/almuehi-logo.png"
+                    className="pro_image_one"
+                    alt="Al-Muehi"
+                  />
+                </div>
+                <div className="text-pro" style={{ marginLeft: "10px" }}>
+                  <h2 className="top-head">
+                    Dr. Abdullah Bin Sudan Almuehi Group
+                    <br /> Law firm, consulting &amp; Legal Legitimacy
+                  </h2>
+                  <p className="top-head"></p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <div
+              className="fluid-container"
+              style={{
+                display: "flex",
+                alignItems: "center",
 
-                    // onClick={homeSection.onClick}
-                    // className={`nav-item ${homeSection.selected ? "active" : ""}`}
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Navbar.Toggle
+                  aria-controls="responsive-navbar-nav"
+                  className="button_pro"
+                  onClick={() => setShowSearch1(!showSearch1)}
+                />
+
+                <Navbar.Collapse
+                  className="my-menu-items"
+                  id="navbarTogglerDemo02"
+                  style={{ marginTop: "10px" }}
+                >
+                  <ul
+                    className="navbar-nav ml-auto ms-auto"
+                    id="nav_pro_max"
+                    style={{}}
                   >
-                    <NavLink
-                      className="nav-link"
-                      exact
-                      to="/"
-                      activeClassName="inactive"
+                    <li
+                      className="nav-item"
+
+                      // onClick={homeSection.onClick}
+                      // className={`nav-item ${homeSection.selected ? "active" : ""}`}
                     >
-                      Home <span className="sr-only">(current)</span>
-                    </NavLink>
-                  </li>
-                  <li
-                    // className={`nav-item ${
-                    //   aboutSection.selected ? "active" : ""
-                    // }`}
-                    onClick={() => {
-                      // aboutSection.onClick();
-                    }}
-                  >
-                    <NavLink
-                      className="nav-link"
-                      exact
-                      to="/#AboutUs"
-                      activeClassName="inactive"
-                    >
-                      About Us
-                    </NavLink>
-                  </li>
-                  <li
-                    // className={`nav-item ${
-                    //   servicesSection.selected ? "active" : ""
-                    // }`}
-                    className="nav-item"
-                    // onClick={servicesSection.onClick}
-                  >
-                    <NavLink
-                      className="nav-link"
-                      exact
-                      to="/services"
-                      activeClassName="active"
-                    >
-                      Our Services
-                    </NavLink>
-                  </li>
-                  <li
-                  // className={`nav-item ${
-                  // adviceSection.selected ? "active" : ""
-                  // }`}
-                  // onClick={adviceSection.onClick}
-                  >
-                    <NavLink
-                      className="nav-link"
-                      exact
-                      to="/advice"
-                      activeClassName="active"
-                    >
-                      Attorney Advice
-                    </NavLink>
-                  </li>
-                  <li
-                  // className={`nav-item ${
-                  //   portfolioSection.selected ? "active" : ""
-                  // }`}
-                  // onClick={portfolioSection.onClick}
-                  >
-                    <NavLink
-                      className="nav-link"
-                      exact
-                      to="/#whyUsSection"
-                      activeClassName="inactive"
-                    >
-                      Why Us?
-                    </NavLink>
-                  </li>
-                  <li
-                    className="nav-item"
-                    // className={`nav-item ${
-                    //   contactSection.selected ? "active" : ""
-                    // }`}
-                    // onClick={contactSection.onClick}
-                  >
-                    <NavLink
-                      className="nav-link"
-                      exact
-                      to="/contact"
-                      activeClassName="active"
-                    >
-                      Contact Us
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    {lang === "ar" && (
-                      <Button
+                      <NavLink
                         className="nav-link"
+                        exact
+                        to="/"
+                        activeClassName="inactive"
+                      >
+                        Home <span className="sr-only">(current)</span>
+                      </NavLink>
+                    </li>
+                    <li
+                      // className={`nav-item ${
+                      //   aboutSection.selected ? "active" : ""
+                      // }`}
+                      onClick={() => {
+                        // aboutSection.onClick();
+                      }}
+                    >
+                      <NavLink
+                        className="nav-link"
+                        exact
+                        to="/#AboutUs"
+                        activeClassName="inactive"
+                      >
+                        About Us
+                      </NavLink>
+                    </li>
+                    <li
+                      // className={`nav-item ${
+                      //   servicesSection.selected ? "active" : ""
+                      // }`}
+                      className="nav-item"
+                      // onClick={servicesSection.onClick}
+                    >
+                      <NavLink
+                        className="nav-link"
+                        exact
+                        to="/services"
+                        activeClassName="active"
+                      >
+                        Our Services
+                      </NavLink>
+                    </li>
+                    <li
+                    // className={`nav-item ${
+                    // adviceSection.selected ? "active" : ""
+                    // }`}
+                    // onClick={adviceSection.onClick}
+                    >
+                      <NavLink
+                        className="nav-link"
+                        exact
+                        to="/advice"
+                        activeClassName="active"
+                      >
+                        Attorney Advice
+                      </NavLink>
+                    </li>
+                    <li
+                    // className={`nav-item ${
+                    //   portfolioSection.selected ? "active" : ""
+                    // }`}
+                    // onClick={portfolioSection.onClick}
+                    >
+                      <NavLink
+                        className="nav-link"
+                        exact
+                        to="/#whyUsSection"
+                        activeClassName="inactive"
+                      >
+                        Why Us?
+                      </NavLink>
+                    </li>
+                    <li
+                      className="nav-item"
+                      // className={`nav-item ${
+                      //   contactSection.selected ? "active" : ""
+                      // }`}
+                      // onClick={contactSection.onClick}
+                    >
+                      <NavLink
+                        className="nav-link"
+                        exact
+                        to="/contact"
+                        activeClassName="active"
+                      >
+                        Contact Us
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      {lang === "ar" && (
+                        <Button
+                          className="nav-link"
+                          variant="custom"
+                          style={{
+                            backgroundColor: "transparent",
+                            padding: "0px",
+                            marginBottom: "10px",
+                            paddingRight: "0.1rem",
+                            color: "#dedede",
+                            paddingLeft: "0.1rem",
+                          }}
+                          onClick={() => {
+                            localStorage.setItem("lang", "en");
+                            window.location.reload();
+                          }}
+                        >
+                          En
+                        </Button>
+                      )}
+                    </li>
+                    <li className="nav-item">
+                      {lang === "en" && (
+                        <Button
+                          className="nav-link"
+                          variant="custom"
+                          style={{
+                            backgroundColor: "transparent",
+                            padding: "0px",
+                            marginBottom: "10px",
+                            height: "35px",
+                            marginRight: "10px",
+                            paddingRight: "0.39rem",
+                            paddingLeft: "0.39rem",
+                            color: "#dedede",
+                          }}
+                          onClick={() => {
+                            localStorage.setItem("lang", "ar");
+                            window.location.reload();
+                          }}
+                        >
+                          <p
+                            style={{
+                              marginTop: "5.5px",
+                              padding: "0.1rem",
+                              color: "white",
+                            }}
+                          >
+                            AR
+                          </p>
+                        </Button>
+                      )}
+                    </li>
+                    <li className="nav-item position-relative active">
+                      <Button
                         variant="custom"
                         style={{
+                          display: showSearch ? "none" : "flex",
                           backgroundColor: "transparent",
                           padding: "0px",
                           marginBottom: "10px",
                           paddingRight: "0.1rem",
-                          color: "#dedede",
                           paddingLeft: "0.1rem",
+
+                          marginRight: "4px",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <i
+                          className="material-icons my-search-func"
+                          aria-hidden="true"
+                          style={{
+                            margin: "0px",
+                            padding: "0px",
+                            color: "white",
+                          }}
+                          onClick={() => setShowSearch(!showSearch)}
+                        >
+                          search
+                        </i>
+                      </Button>
+                      <li>
+                        <li
+                          className="nav-item"
+                          style={{
+                            display: showSearch ? "flex" : "none",
+                          }}
+                        >
+                          <input
+                            type="text"
+                            placeholder="Search"
+                            style={{
+                              height: "40px",
+                              width: "200px",
+                              border: "1px solid black",
+                              outline: "none",
+                              marginRight: "10px",
+                              marginLeft: "10px",
+                              padding: "10px",
+                              borderRadius: "15px",
+                            }}
+                          />
+                          <Button variant="custom" type="button">
+                            Search
+                          </Button>
+                          <Button
+                            variant="custom"
+                            type="button"
+                            style={{
+                              marginLeft: "10px",
+                              marginRight: "10px",
+                            }}
+                            onClick={() => setShowSearch(!showSearch)}
+                          >
+                            Close
+                          </Button>
+                        </li>
+                      </li>
+                    </li>
+                    <li>
+                      <Button
+                        variant="custom"
+                        className="nav-link"
+                        style={{
+                          backgroundColor: "transparent",
+                          padding: "0px",
+                          marginBottom: "10px",
+                          paddingRight: "0.39rem",
+                          paddingLeft: "0.39rem",
+                          color: "#dedede",
                         }}
                         onClick={() => {
                           localStorage.setItem("lang", "en");
                           window.location.reload();
                         }}
                       >
-                        En
-                      </Button>
-                    )}
-                  </li>
-                  <li className="nav-item">
-                    {lang === "en" && (
-                      <Button
-                        className="nav-link"
-                        variant="custom"
-                        style={{
-                          backgroundColor: "transparent",
-                          padding: "0px",
-                          marginBottom: "10px",
-                          height: "35px",
-                          marginRight: "10px",
-                          paddingRight: "0.39rem",
-                          paddingLeft: "0.39rem",
-                          color: "#dedede",
-                        }}
-                        onClick={() => {
-                          localStorage.setItem("lang", "ar");
-                          window.location.reload();
-                        }}
-                      >
-                        <p
+                        <a
+                          className="nav-link"
+                          href="tel:920008434"
                           style={{
-                            marginTop: "5.5px",
-                            padding: "0.1rem",
+                            padding: "04px",
+                            marginTop: "2px",
                             color: "white",
                           }}
                         >
-                          AR
-                        </p>
+                          920008434
+                        </a>
                       </Button>
-                    )}
-                  </li>
-                  <li className="nav-item position-relative active">
-                    <Button
-                      variant="custom"
-                      style={{
-                        backgroundColor: "transparent",
-                        padding: "0px",
-                        marginBottom: "10px",
-                        paddingRight: "0.1rem",
-                        paddingLeft: "0.1rem",
-                        display: "flex",
-                        marginRight: "4px",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <i
-                        className="material-icons my-search-func"
-                        aria-hidden="true"
-                        style={{
-                          margin: "0px",
-                          padding: "0px",
-                          color: "white",
-                        }}
-                        onClick={() => setShowSearch(!showSearch)}
-                      >
-                        search
-                      </i>
-                    </Button>
-                    <div
-                      style={{
-                        display: showSearch ? "flex" : "none",
-
-                        height: "150px",
-                        flexWrap: "wrap",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "10px",
-                      }}
-                    >
-                      <input
-                        type="text"
-                        placeholder=""
-                        style={{
-                          height: "40px",
-                          width: "200px",
-                          border: "none",
-                          outline: "none",
-                          borderRadius: "15px",
-                          marginRight: "10px",
-                          padding: "10px",
-                        }}
-                      />
-                      <Button variant="custom" type="button">
-                        Search
-                      </Button>
-                    </div>
-                  </li>
-
-                  <Button
-                    variant="custom"
-                    className="nav-link"
-                    style={{
-                      backgroundColor: "transparent",
-                      padding: "0px",
-                      marginBottom: "10px",
-                      paddingRight: "0.39rem",
-                      paddingLeft: "0.39rem",
-                      color: "#dedede",
-                    }}
-                    onClick={() => {
-                      localStorage.setItem("lang", "en");
-                      window.location.reload();
-                    }}
-                  >
-                    <a
-                      className="nav-link"
-                      href="tel:920008434"
-                      style={{
-                        padding: "0px",
-                        marginTop: "2px",
-                        color: "white",
-                      }}
-                    >
-                      920008434
-                    </a>
-                  </Button>
-                </ul>
-              </Navbar.Collapse>
+                    </li>
+                  </ul>
+                </Navbar.Collapse>
+              </div>
             </div>
           </div>
         </Navbar>

@@ -8,8 +8,12 @@ import CustomInputField from "../../../../../../components/CustomInputField";
 import { SignUpValues, OtpValues } from "../../../../../../services/models";
 import { SignUpResponseStatus } from "../../../../signup.model";
 import BootstrapSwitchButton from "bootstrap-switch-button-react";
+import Switch from "@material-ui/core/Switch";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import styles from "./signupform.module.scss";
+import { purple } from "@material-ui/core/colors";
 // import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 
 interface SignUpFormViewProps {
@@ -122,7 +126,12 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
           placeholder={t("signUpFormFields.mobile.placeholder")}
           errMess={confirmErrMess}
         />
-
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <FormControlLabel
+            control={<Switch color="primary" />}
+            label="Sign up as Lawyer"
+          />
+        </div>
         <div className={styles["login-btn"]}>
           <div>
             <button type="submit">{t("singUpButtonText")}</button>

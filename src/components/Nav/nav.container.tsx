@@ -14,6 +14,8 @@ const Nav: React.FC<NavProps> = ({ defaultScrolled = false }) => {
   // const portfolioSection = useScrollSection("portfolio");
   const [scrolled, setScrolled] = React.useState(defaultScrolled);
   const [showSearch, setShowSearch] = React.useState(false);
+  const [showSearch1, setShowSearch1] = React.useState(false);
+
   const lang = localStorage.getItem("lang") || "en";
 
   const handleScroll = () => {
@@ -42,6 +44,8 @@ const Nav: React.FC<NavProps> = ({ defaultScrolled = false }) => {
       scrolled={scrolled}
       setShowSearch={setShowSearch}
       showSearch={showSearch}
+      setShowSearch1={setShowSearch1}
+      showSearch1={showSearch1}
       name={name}
       lang={lang}
     />
