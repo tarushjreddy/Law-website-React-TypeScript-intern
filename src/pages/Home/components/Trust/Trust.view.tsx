@@ -9,72 +9,19 @@ import image2 from "./3.png";
 import image3 from "./4.png";
 import image4 from "./5.png";
 import image5 from "./6.png";
-import { makeStyles } from "@material-ui/core/styles";
-import { yellow } from "@material-ui/core/colors";
+
 import "./Trust.scss";
 import "./Row.css";
 function Row() {
   const [scrollval, setscrollval] = useState(0);
+  const elem = React.useRef(null);
+  const scrollLeft = (ref: any) => {
+    ref.current.scrollLeft += 1700;
+  };
+  const scrollRight = (ref: any) => {
+    ref.current.scrollLeft -= 1700;
+  };
 
-  const useStyles = makeStyles({
-    switchBase: {
-      color: yellow[300],
-      "&$checked": {
-        color: yellow[500],
-      },
-      "&$checked + $track": {
-        backgroundColor: yellow[500],
-      },
-    },
-    checked: {},
-    track: {},
-  });
-
-  // let test = document.getElementById("row__posters") as HTMLInputElement;
-  // const [state, setstate] = useState(initialState)
-  // (document.getElementById(
-  //   "left-button"
-  // ) as HTMLInputElement).onclick = function () {
-  //   scrollLeft(-300, 1000);
-  // };
-
-  // (document.getElementById(
-  //   "right-button"
-  // ) as HTMLInputElement).onclick = function () {
-  //   scrollLeft(300, 1000);
-  // };
-
-  // function scrollLeft(change: number, duration: number) {
-  //   var start = test.scrollLeft,
-  //     currentTime = 0,
-  //     increment = 20;
-
-  //   console.log(start);
-
-  //   var animateScroll = function () {
-  //     currentTime += increment;
-  //     var val = easeInOutQuad(currentTime, start, change, duration);
-  //     test.scrollLeft = val;
-  //     if (currentTime < duration) {
-  //       setTimeout(animateScroll, increment);
-  //     }
-  //   };
-  //   animateScroll();
-  // }
-
-  // t = current time
-  // b = start value
-  // c = change in value
-  // d = duration
-  // var easeInOutQuad = function (t: number, b: number, c: number, d: number) {
-  //   t /= d / 2;
-  //   if (t < 1) return (c / 2) * t * t + b;
-  //   t--;
-  //   return (-c / 2) * (t * (t - 2) - 1) + b;
-  // };
-  // const scroll = (scrollOffset) => {
-  //   ref.current.scrollLeft += scrollOffset;
-  // };
   return (
     <div className="App_pro">
       {/* <p>this iis an example</p> */}
@@ -96,7 +43,7 @@ function Row() {
               className="this_btn"
               id="left-button"
               onClick={() => {
-                setscrollval(-50);
+                scrollRight(elem);
               }}
             >
               &#60;
@@ -105,7 +52,7 @@ function Row() {
               className="this_btn"
               id="right-button"
               onClick={() => {
-                setscrollval(50);
+                scrollLeft(elem);
               }}
             >
               &#62;
@@ -114,7 +61,7 @@ function Row() {
         </div>
       </div>
 
-      <div className={`row__posters`}>
+      <div ref={elem} className={`row__posters`}>
         <a href="https://www.moh.gov.sa/" target="_blank">
           <img src={image} alt={"alt"} className="row__poster"></img>
         </a>
