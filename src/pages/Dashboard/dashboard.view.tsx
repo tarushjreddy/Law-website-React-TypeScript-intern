@@ -22,8 +22,9 @@ const DashboardView: React.FC<DashboardViewProps> = ({ page = "" }) => {
           className={styles["content"]}
           style={{
             paddingTop: "10em",
-            paddingRight: "7em",
-            background: "white",
+
+            background: "transparent",
+            height: "100vh",
           }}
         >
           <div>

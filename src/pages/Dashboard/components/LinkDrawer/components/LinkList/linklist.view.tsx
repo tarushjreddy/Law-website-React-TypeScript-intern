@@ -36,6 +36,10 @@ const LinkListView: React.FC<LinkListViewProps> = ({
       link: "",
     },
     {
+      name: "Sing Out",
+      link: "settings",
+    },
+    {
       name: "My Account",
       link: "profile",
     },
@@ -86,6 +90,20 @@ const LinkListView: React.FC<LinkListViewProps> = ({
           </Link>
         );
       })}
+
+      <span className="my-1">Sign Out</span>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        {!showSuccess ? (
+          <ConfirmOut confirmLogout={confirmLogout} handleClose={handleClose} />
+        ) : (
+          <SuccessOut handleClose={handleClose} />
+        )}
+      </Modal>
       <div
         className={`btn px-3 py-2 ${styles["dashLink"]}`}
         onClick={logoutHandler}

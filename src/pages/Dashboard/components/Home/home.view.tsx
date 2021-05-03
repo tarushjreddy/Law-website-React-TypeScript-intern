@@ -8,6 +8,7 @@ import { SERVICES_LIST } from "../../../../constants";
 const HomeView = () => {
   return (
     <div className={styles["dashboardHomeContainer"]}>
+      <h2 className="text-custom mb-3"> Home Page</h2>
       <Card>
         <Card.Header className={styles["links"]}>
           <Nav variant="tabs" defaultActiveKey="#first">

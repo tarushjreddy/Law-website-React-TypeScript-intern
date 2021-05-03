@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Carousel from "react-multi-carousel";
 
 // or less ideally
 import { Button } from "react-bootstrap";

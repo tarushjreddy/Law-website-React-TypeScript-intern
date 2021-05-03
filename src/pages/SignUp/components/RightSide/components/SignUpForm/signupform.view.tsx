@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import CustomInputField from "../../../../../../components/CustomInputField";
 import { SignUpValues, OtpValues } from "../../../../../../services/models";
 import { SignUpResponseStatus } from "../../../../signup.model";
-import BootstrapSwitchButton from "bootstrap-switch-button-react";
 import Switch from "@material-ui/core/Switch";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
