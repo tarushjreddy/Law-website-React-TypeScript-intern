@@ -1,7 +1,11 @@
 .top-head {
   font-size: 20px;
 }
-
+.my-nav-section {
+  hr {
+    display: none !important;
+  }
+}
 .pro_image_one {
   height: 50px;
   width: 45px;
@@ -46,7 +50,7 @@
     justify-content: space-between;
   }
   #nav_pro_max {
-    background-color: black;
+    background-color: transparent;
     opacity: 0.9;
     padding: 20px;
 
@@ -88,8 +92,11 @@
     padding: 0px;
   }
 }
+.top-head {
+  color: #b8a046 !important;
+}
 .text-pro {
-  color: #b8a046;
+  color: #b8a046 !important;
   text-decoration: none;
   font-size: 30px;
 }

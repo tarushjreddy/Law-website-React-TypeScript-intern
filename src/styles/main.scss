@@ -435,6 +435,28 @@ button:focus {
   border-right: solid 2px rgba(255, 255, 255, 0.5);
   height: 120px;
 }
+@media only screen and (max-width: 1376px) {
+  .col-sm-4.col-xs-12.hbc-col {
+    min-width: 300px !important;
+    margin: 2px;
+    height: 120px;
+    border-right: solid 2px rgba(255, 255, 255, 0.5);
+    padding: 0 !important;
+  }
+  .chbc-icon-text h4 {
+    font-size: 10px;
+    margin: 0 !important;
+  }
+  .hbc-icon-img img {
+    width: 45px;
+  }
+  .hbc-icon-img {
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .my-copy-right {
     border-top: none !important;
@@ -566,6 +588,7 @@ button.owl-dot.active {
 }
 .header-carousel {
   overflow: hidden;
+  background: no-repeat;
 }
 
 /*

@@ -6,6 +6,10 @@ export interface SignUpValues {
   password: string;
 }
 
+export interface SignUpValuesotpone {
+  otp_val: string;
+}
+
 export interface SignUpResponseStatus {
   status: string;
   msg: string;

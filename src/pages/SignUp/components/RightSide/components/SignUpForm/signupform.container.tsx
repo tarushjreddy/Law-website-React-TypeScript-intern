@@ -6,6 +6,7 @@ import { signUp, login } from "../../../../../../services/apis";
 import {
   SignUpResponseStatus,
   SignUpValues,
+  SignUpValuesotpone,
   LoginResponseOTPStatus,
 } from "../../../../signup.model";
 import SignUpFormView from "./signupform.view";
@@ -30,6 +31,9 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
     phone: "",
     password: "",
   });
+  const [signUpValueotp, setSignUpValueotp] = useState<SignUpValuesotpone>({
+    otp_val: "",
+  });
 
   const [response, setResponse] = useState<SignUpResponseStatus>({
     status: "",
@@ -40,10 +44,20 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
 
     msg: "",
   });
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let { name, value } = event.target;
     console.log(name, value);
     setSignUpValue({ ...signUpValue, [name]: value });
+  };
+
+  const handleChangeOtp = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    let { name, value } = event.target;
+    setSignUpValueotp({ ...signUpValueotp, [name]: value });
+    console.log(name, value);
+    console.log(signUpValueotp);
   };
 
   const register = async () => {
@@ -136,6 +150,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ popupFunction }) => {
       confirmErrMess={confirmErrMess}
       confirmValid={confirmValid}
       handleChange={handleChange}
+      handleChangeOtp={handleChangeOtp}
       handleSubmit={handleSubmit}
       handleShow={handleClose}
       signUpValue={signUpValue}

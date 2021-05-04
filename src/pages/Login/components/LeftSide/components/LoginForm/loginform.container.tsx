@@ -7,6 +7,7 @@ import {
   LoginValues,
   otpValues,
   LoginResponseOTPStatus,
+  LoginPhoneValues,
 } from "../../../../login.model";
 import { login, Otp } from "../../../../../../services/apis";
 import LoginFormView from "./loginform.view";
@@ -20,7 +21,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
   const history = useHistory();
   const setGlobalUserDetail = useDispatch(setUserDetailReducer);
   const [validated, setValidated] = useState(false);
-  const [phone, setphone] = useState("");
+  const [phonenumber, setphonenumber] = useState("");
   const [handleClose, setShow] = useState(false);
 
   const [loginValue, setLoginValue] = useState<LoginValues>({
@@ -44,7 +45,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
   const signIn = async (event: React.MouseEvent<HTMLButtonElement>) => {
     try {
       const loginResponse = await login({
-        phone: "9986251724",
+        phone: phonenumber,
         code: "123456",
       });
       console.log("this is the login response", loginResponse);
@@ -104,9 +105,16 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
       });
       if (status === "Success") {
         setShow(true);
+        const message = OtpResponse.data;
+        // setphonenumber({
+        //   message: message,
 
-        console.log(phone);
-        console.log(handleClose);
+        //   phone: phone,
+        // });
+        console.log("this is the phone", message);
+        let car = Object.values(message);
+        console.log(car[1]);
+        setphonenumber(car[1]);
       }
       // setShow(true);
       // console.log(handleClose);

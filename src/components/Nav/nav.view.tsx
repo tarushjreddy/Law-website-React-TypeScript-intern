@@ -51,7 +51,11 @@ const NavView: React.FC<NavViewProps> = ({
           </div>
           <div
             className="top-nav-info-left right float-end"
-            style={{ position: "relative", zIndex: 200, marginRight: "1.6em" }}
+            style={{
+              position: "relative",
+              zIndex: 200,
+              marginRight: "1.6em",
+            }}
           >
             <p>
               {isLoginned ? (
@@ -73,13 +77,12 @@ const NavView: React.FC<NavViewProps> = ({
             scrolled ? "affix my-shring" : ""
           }`}
         >
+          {/* // marginTop: "1.6em", */}
           <div>
             <Link
               className="link_provider"
               style={{
                 display: "inherit",
-
-                marginTop: "20px",
               }}
               to="/"
             >
@@ -300,6 +303,7 @@ const NavView: React.FC<NavViewProps> = ({
                           backgroundColor: "transparent",
                           padding: "0px",
                           marginBottom: "10px",
+
                           paddingRight: "0.1rem",
                           paddingLeft: "0.1rem",
 
@@ -367,6 +371,7 @@ const NavView: React.FC<NavViewProps> = ({
                           backgroundColor: "transparent",
                           padding: "0px",
                           marginBottom: "10px",
+                          marginLeft: "10px",
                           paddingRight: "0.39rem",
                           paddingLeft: "0.39rem",
                           color: "#dedede",
@@ -382,6 +387,7 @@ const NavView: React.FC<NavViewProps> = ({
                           style={{
                             padding: "04px",
                             marginTop: "2px",
+                            marginLeft: "10px",
                             color: "white",
                           }}
                         >

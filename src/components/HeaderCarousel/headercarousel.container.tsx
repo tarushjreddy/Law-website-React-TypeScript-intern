@@ -31,7 +31,11 @@ const HeaderCarousel = () => {
   }
 
   return (
-    <div className="my-header-section" dir="ltr" style={{ height: "100vh" }}>
+    <div
+      className="my-header-section"
+      dir="ltr"
+      style={{ height: "100vh", border: "none" }}
+    >
       {posts.length > 0 && (
         <div className="my-header-content">
           <OwlCarousel
@@ -85,7 +89,7 @@ const HeaderCarousel = () => {
       <hr className="hr_divider" />
       <div>
         <div className="header-bottom-con"></div>
-        <div style={{ borderTop: "2px solid yellow" }}>
+        <div>
           <div className="header-bottom-con">
             <div>
               <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">

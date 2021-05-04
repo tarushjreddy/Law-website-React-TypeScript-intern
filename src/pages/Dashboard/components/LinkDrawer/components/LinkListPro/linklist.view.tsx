@@ -1,14 +1,13 @@
 import React from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
-
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-} from "@ant-design/icons";
-import "antd/dist/antd.css";
+// import { Layout } from "antd";
+// import "antd/lib/layout/style";
+// import { Menu } from "antd";
+// import "antd/lib/menu/style";
+// import { Breadcrumb } from "antd";
+// import "antd/lib/breadcrumb/style";
+// import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 import "./linklistpro.scss";
 import { Link } from "react-router-dom";
 const { SubMenu } = Menu;

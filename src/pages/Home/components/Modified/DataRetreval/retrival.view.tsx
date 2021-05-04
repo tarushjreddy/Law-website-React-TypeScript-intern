@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
-
+import { Link } from "react-router-dom";
 import { TravelInsurance } from "../../../../../services/apis";
 import styles from "../Modified.module.scss";
 import "./ret.scss";
@@ -65,6 +65,7 @@ function Retrival() {
                 style={{
                   flexDirection: i % 2 === 0 ? "row" : "row-reverse",
                   marginRight: "6.6rem",
+                  alignItems: "center",
                   marginLeft: "6.6rem",
                 }}
                 //   style={{ flexDirection: `(${abc === 1}? 'row' : 'row-reverse')` }}
@@ -101,6 +102,7 @@ function Retrival() {
                             src={data.benefits[1].icon}
                             className={`${styles["logo_rounded"]}`}
                           ></img>
+
                           <div className={`${styles["logo_rounded_info"]}`}>
                             {data.benefits[1].text_eng}
                           </div>
@@ -186,9 +188,11 @@ function Retrival() {
                     {/*  ))}*/}
                   </div>
                   <hr className={`${styles["divider"]}`} />
-                  <button className={`${styles["Button_part"]}`}>
-                    {data.button.title}
-                  </button>
+                  <a href={`${data.button.link}`} target="_blank">
+                    <button className={`${styles["Button_part"]}`}>
+                      {data.button.title}
+                    </button>
+                  </a>
                 </div>
                 <div className={`${styles["rightConatiner"]}`}>
                   <img src={data.image} alt="" />

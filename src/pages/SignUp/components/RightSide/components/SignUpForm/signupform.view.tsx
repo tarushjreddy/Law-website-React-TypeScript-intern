@@ -10,10 +10,43 @@ import { SignUpResponseStatus } from "../../../../signup.model";
 import Switch from "@material-ui/core/Switch";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-
+import { withStyles } from "@material-ui/core/styles";
+import colors from "@material-ui/core/colors";
 import styles from "./signupform.module.scss";
-import { purple } from "@material-ui/core/colors";
-// import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
+import { yellow } from "@material-ui/core/colors";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: "#807031",
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: "#11cb5f",
+    },
+  },
+});
+const PurpleSwitch = withStyles({
+  switchBase: {
+    color: "#b8a046",
+    thumb: {
+      backgroundColor: "#b8a046",
+    },
+    track: {
+      backgroundColor: "#b8a046",
+    },
+    "&$checked": {
+      color: "#b8a046",
+    },
+    "&$checked + $track": {
+      backgroundColor: "#b8a046",
+    },
+  },
+  checked: {},
+  track: {},
+})(Switch);
 
 interface SignUpFormViewProps {
   validated: boolean;
@@ -23,6 +56,7 @@ interface SignUpFormViewProps {
   confirmValid: boolean;
   handleShow: boolean;
   // responseotp: string;
+  handleChangeOtp: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
   signUpValue: SignUpValues;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -36,6 +70,7 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
   confirmValid,
   signUpValue,
   handleShow,
+  handleChangeOtp,
   SignUp,
   handleChange,
   response,
@@ -127,8 +162,8 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
         />
         <div style={{ display: "flex", flexDirection: "column" }}>
           <FormControlLabel
-            control={<Switch color="primary" />}
-            label="Sign up as Lawyer"
+            control={<PurpleSwitch onChange={handleChange} name="checkedA" />}
+            label="Sign Up as Lawyer"
           />
         </div>
         <div className={styles["login-btn"]}>
@@ -143,26 +178,28 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
         <Modal.Header>
           <Modal.Title>One Time Password Verification</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <CustomInputField
-            label={t("signUpFormFields.otp.label")}
-            name="mobile"
-            type="tel"
-            placeholder={t("signUpFormFields.otp.placeholder")}
-            classNameInput={styles["form-control"]}
-            classNameInvalid={styles["invalid-feedback"]}
-            onChange={handleChange}
-            errMess={t("signUpFormFields.otp.errorMessage")}
-          />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={SignUp}>
-            Resend OTP
-          </Button>
-          <Button variant="primary" onClick={SignUp}>
-            Verify
-          </Button>
-        </Modal.Footer>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Modal.Body>
+            <CustomInputField
+              label={t("signUpFormFields.otp.label")}
+              name="mobile"
+              type="tel"
+              placeholder={t("signUpFormFields.otp.placeholder")}
+              classNameInput={styles["form-control"]}
+              classNameInvalid={styles["invalid-feedback"]}
+              onChange={handleChangeOtp}
+              errMess={t("signUpFormFields.otp.errorMessage")}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={SignUp}>
+              Resend OTP
+            </Button>
+            <Button variant="primary" onClick={SignUp}>
+              Verify
+            </Button>
+          </Modal.Footer>
+        </Form>
       </Modal>
     </div>
   );

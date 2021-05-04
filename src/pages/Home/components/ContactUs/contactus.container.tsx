@@ -7,24 +7,26 @@ import Button from "react-bootstrap/Button";
 import { WhatsAppDetails } from "../../../../services/apis";
 
 const Contact = () => {
-  const [posts, setposts] = useState("966500460082");
+  const [posts, setposts] = useState("");
 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   //l-0,ml-19
-  // useEffect(() => {
-  //   async function getData() {
-  //     const data = await WhatsAppDetails();
+  useEffect(() => {
+    async function getData() {
+      const data = await WhatsAppDetails();
 
-  //     console.log(data.data.phone_number);
-  //     setposts(data.data);
-  //   }
-  //   window.dispatchEvent(new Event("resize"));
+      let dataone = data.data;
+      console.log(typeof dataone);
+      let datatwo = Object.values(dataone);
+      let phonenumber = datatwo[0];
+      setposts(`${phonenumber}`);
+    }
 
-  //   getData();
-  // }, []);
+    getData();
+  }, []);
   console.log(posts);
   return (
     <div className="my-contact">
