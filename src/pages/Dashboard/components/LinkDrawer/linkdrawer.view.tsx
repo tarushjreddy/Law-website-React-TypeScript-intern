@@ -9,7 +9,7 @@ const LinkDrawerView = () => {
   return (
     <div className={styles["linkdrawContainer"]}>
       <div className={styles["drawerPaper"]}>
-        <LinkList />
+        <LinkListPro />
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const App = () => {
     }, 2000);
   }, []);
 
-  return <Router>{!isLoading ? <Routes /> : <h1>Loading...</h1>}</Router>;
+  return <Router>{!isLoading ? <Routes /> : <h1></h1>}</Router>;
 };
 
 export default App;

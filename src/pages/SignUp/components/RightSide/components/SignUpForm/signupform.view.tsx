@@ -98,12 +98,7 @@ const SignUpFormView: React.FC<SignUpFormViewProps> = ({
       >
         {response.msg}
       </Alert>
-      <Form
-        className="text-left"
-        noValidate
-        validated={validated}
-        onSubmit={handleSubmit}
-      >
+      <Form className="text-left" validated={validated} onSubmit={handleSubmit}>
         <CustomInputField
           type="text"
           id="first_name"

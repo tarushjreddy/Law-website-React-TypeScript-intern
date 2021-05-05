@@ -1,13 +1,13 @@
 import React, { useState, useDispatch, useGlobal } from "reactn";
 import { useHistory, useParams } from "react-router-dom";
-import { setUserDetailReducer } from "../../../../../../reducers";
+import { setUserDetailReducer } from "../../../../reducers";
 
-import LinkListPro from "./linklist.view";
+import SignOut from "./loading.view";
 interface Params {
   page: string;
 }
 
-const LinkListCon = () => {
+const LinkList = () => {
   const [show, setShow] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const { page = "" } = useParams<Params>();
@@ -41,7 +41,7 @@ const LinkListCon = () => {
   };
 
   return (
-    <LinkListPro
+    <SignOut
       page={page}
       logoutHandler={logoutHandler}
       confirmLogout={confirmLogout}
@@ -55,4 +55,4 @@ const LinkListCon = () => {
   );
 };
 
-export default LinkListCon;
+export default LinkList;

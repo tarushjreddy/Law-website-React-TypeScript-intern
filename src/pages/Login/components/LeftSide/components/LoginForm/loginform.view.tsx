@@ -58,12 +58,20 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
   return (
     <div className={styles["loginContainer"]}>
       <p>{t("loginFormHeading")}</p>
+
       <Alert
         show={responseotp.status === "Fail"}
         variant="danger"
         className={styles.alert}
       >
         Password wrong
+      </Alert>
+      <Alert
+        show={responseotp.status === "no cred"}
+        variant="danger"
+        className={styles.alert}
+      >
+        Please Enter the Credentials.
       </Alert>
       <Alert
         show={responseotp.msg === "No Account Found!"}
@@ -80,7 +88,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
         Succesfull correct
       </Alert>
 
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form validated={validated} onSubmit={handleSubmit}>
         <CustomInputField
           label={
             t("loginFormFields.email.label") +
@@ -95,17 +103,6 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           onChange={handleChange}
           errMess={t("loginFormFields.email.errMessage")}
         />
-        {/* <h6 style={{ textAlign: "center" }}>or</h6>
-        <CustomInputField
-          label={t("loginFormFields.mobile.label")}
-          name="mobile"
-          type="tel"
-          placeholder={t("loginFormFields.mobile.placeholder")}
-          classNameInput={styles["form-control"]}
-          classNameInvalid={styles["invalid-feedback"]}
-          onChange={handleChange}
-          errMess={t("loginFormFields.mobile.errorMessage")}
-        /> */}
 
         <CustomInputField
           label={t("loginFormFields.password.label")}
@@ -118,14 +115,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
           errMess={t("loginFormFields.password.errorMessage")}
         />
 
-        <div
-          className={`${styles["form-check"]} ${styles["my-check"]}`}
-          style={
-            localStorage.getItem("lang") === "ar"
-              ? undefined
-              : { paddingLeft: "1.3rem" }
-          }
-        >
+        <div className={`${styles["form-check"]} ${styles["my-check"]}`}>
           <input type="checkbox" className="form-check-input" />
           <label className="form-check-label" style={{ fontSize: "17px" }}>
             {t("text.remember")}
@@ -139,7 +129,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
         </div>
 
         <div className={styles["login-btn"]}>
-          <button type="submit">{t("loginButtonText")}</button>
+          <Button type="submit">{t("loginButtonText")}</Button>
         </div>
       </Form>
       {/* <Button variant="secondary" onClick={handleShow}>

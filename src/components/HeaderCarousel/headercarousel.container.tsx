@@ -5,8 +5,9 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./headerc.scss";
 import { useGetDailyPrices } from "./hooks/use-queries";
 import { getAllSliderDetails } from "../../services/apis";
-
+import { useTranslation } from "react-i18next";
 const HeaderCarousel = () => {
+  const { t, i18n } = useTranslation("home");
   const [posts, setposts] = useState<any[]>([]);
 
   useEffect(() => {
@@ -19,16 +20,9 @@ const HeaderCarousel = () => {
 
     getData();
   }, []);
-  console.log("22", posts);
-  let lineStyle = {};
-  let alignment = "ltr";
-  let hbcImgClass = "";
 
-  if (localStorage.getItem("lang") === "ar") {
-    lineStyle = {};
-    alignment = "rtl";
-    hbcImgClass = "mx-auto";
-  }
+  const lang = localStorage.getItem("lang") || "en";
+  console.log(lang, "this is the language");
 
   return (
     <div
@@ -59,23 +53,42 @@ const HeaderCarousel = () => {
                     backgroundImage: `url(${data.image})`,
                   }}
                 >
-                  <div className="formatter">
+                  <div
+                    className="formatter"
+                    style={
+                      localStorage.getItem("lang") === "ar"
+                        ? {
+                            direction: "rtl",
+                            marginBottom: "1rem",
+                            marginTop: "0.25rem",
+                          }
+                        : { direction: "ltr" }
+                    }
+                  >
                     <div className="top_view_text">
                       <div>
                         <div />
                         <div className="overall_text">
-                          {data.heading}
+                          {lang === "en" ? data.heading : data.heading_arb}
                           <p></p>
                         </div>
                       </div>
 
                       <div className="overall_text">
-                        <h1>{data.subheading}</h1>
+                        <h1>
+                          {lang === "en"
+                            ? data.subheading
+                            : data.subheading_arb}
+                        </h1>
                       </div>
 
                       <div className="my-head-btn">
                         <div className="my-button">
-                          <a href="/contact">Get In Touch</a>
+                          <a href="/contact">
+                            {lang === "en"
+                              ? data.button.title
+                              : data.button.title_arb}
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -88,11 +101,13 @@ const HeaderCarousel = () => {
       )}
       <hr className="hr_divider" />
       <div>
-        <div className="header-bottom-con"></div>
         <div>
           <div className="header-bottom-con">
             <div>
-              <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
+              <div
+                className="col-sm-4 col-xs-12 hbc-col hbc-col-l"
+                style={{ backgroundColor: "transparent" }}
+              >
                 <div className="hbc-content">
                   <div className="hbc-content-ele">
                     <div

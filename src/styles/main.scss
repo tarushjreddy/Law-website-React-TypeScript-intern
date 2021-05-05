@@ -437,10 +437,14 @@ button:focus {
 }
 @media only screen and (max-width: 1376px) {
   .col-sm-4.col-xs-12.hbc-col {
-    min-width: 300px !important;
+    // min-width: 300px !important;
+    // max-width: 300px !important;
     margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 120px;
-    border-right: solid 2px rgba(255, 255, 255, 0.5);
+    // border: solid 2px rgba(255, 255, 255, 0.5);
     padding: 0 !important;
   }
   .chbc-icon-text h4 {

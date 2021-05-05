@@ -5,13 +5,14 @@
 }
 .formatter {
   height: 30%;
-  width: 100%;
+
   position: relative;
   top: 220px;
   margin: 6.6rem;
   display: flex;
   top: 220px;
-  align-items: center;
+
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
 }
@@ -29,6 +30,7 @@
   background-color: transparent;
   display: flex;
   align-items: center;
+  width: 100%;
 
   justify-content: center;
   border-top: solid 2px rgba(255, 255, 255, 0.5);

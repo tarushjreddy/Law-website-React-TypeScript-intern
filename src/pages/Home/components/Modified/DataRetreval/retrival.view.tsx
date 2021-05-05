@@ -6,6 +6,8 @@ import styles from "../Modified.module.scss";
 import "./ret.scss";
 // import "./ret.scss";
 function Retrival() {
+  const lang = localStorage.getItem("lang") || "en";
+  console.log(lang, "this is the language");
   const [posts, setposts] = useState<any[]>([]);
 
   useEffect(() => {
@@ -71,8 +73,12 @@ function Retrival() {
                 //   style={{ flexDirection: `(${abc === 1}? 'row' : 'row-reverse')` }}
               >
                 <div className={`${styles["leftContainer"]}`}>
-                  <h1 className={`${styles["header"]}`}>{data.title}</h1>
-                  <p className={`${styles["paragraph"]}`}>{data.subtitle}</p>
+                  <h1 className={`${styles["header"]}`}>
+                    {lang === "en" ? data.title : data.title_arb}
+                  </h1>
+                  <p className={`${styles["paragraph"]}`}>
+                    {lang === "en" ? data.subtitle : data.subtitle_arb}
+                  </p>
                   <p className={`${styles["divider_text"]}`}>Main benefits:</p>
                   <hr className={`${styles["divider"]}`} />
                   <div className={`${styles["logo_option"]}`} style={{}}>
@@ -93,7 +99,9 @@ function Retrival() {
                             className={`${styles["logo_rounded"]}`}
                           ></img>
                           <div className={`${styles["logo_rounded_info"]}`}>
-                            {data.benefits[0].text_eng}
+                            {lang === "en"
+                              ? data.benefits[0].text_eng
+                              : data.benefits[0].text_arb}
                           </div>
                         </div>
 
@@ -104,7 +112,9 @@ function Retrival() {
                           ></img>
 
                           <div className={`${styles["logo_rounded_info"]}`}>
-                            {data.benefits[1].text_eng}
+                            {lang === "en"
+                              ? data.benefits[1].text_eng
+                              : data.benefits[1].text_arb}
                           </div>
                         </div>
                       </div>
@@ -123,7 +133,9 @@ function Retrival() {
                             className={`${styles["logo_rounded"]}`}
                           ></img>
                           <div className={`${styles["logo_rounded_info"]}`}>
-                            {data.benefits[2].text_eng}
+                            {lang === "en"
+                              ? data.benefits[2].text_eng
+                              : data.benefits[2].text_arb}
                           </div>
                         </div>
 
@@ -133,7 +145,9 @@ function Retrival() {
                             className={`${styles["logo_rounded"]}`}
                           ></img>
                           <div className={`${styles["logo_rounded_info"]}`}>
-                            {data.benefits[3].text_eng}
+                            {lang === "en"
+                              ? data.benefits[3].text_eng
+                              : data.benefits[3].text_arb}
                           </div>
                         </div>
                       </div>
@@ -158,7 +172,9 @@ function Retrival() {
                             className={`${styles["logo_rounded_info"]}`}
                             style={{ minWidth: "40px" }}
                           >
-                            {data.benefits[4].text_eng}
+                            {lang === "en"
+                              ? data.benefits[4].text_eng
+                              : data.benefits[4].text_arb}
                           </div>
                         </div>
 
@@ -171,7 +187,9 @@ function Retrival() {
                             className={`${styles["logo_rounded"]}`}
                           ></img>
                           <div className={`${styles["logo_rounded_info"]}`}>
-                            {data.benefits[5].text_eng}
+                            {lang === "en"
+                              ? data.benefits[5].text_eng
+                              : data.benefits[5].text_arb}
                           </div>
                         </div>
                       </div>
@@ -190,7 +208,9 @@ function Retrival() {
                   <hr className={`${styles["divider"]}`} />
                   <a href={`${data.button.link}`} target="_blank">
                     <button className={`${styles["Button_part"]}`}>
-                      {data.button.title}
+                      {lang === "en"
+                        ? data.button.title
+                        : data.button.title_arb}
                     </button>
                   </a>
                 </div>

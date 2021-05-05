@@ -97,12 +97,20 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
       // console.log(OtpResponse.data[1]);
       console.log("this is the login response", OtpResponse);
       const { status, message } = OtpResponse;
+      if (loginValue.email === "" || loginValue.password === "") {
+        setResponseotp({
+          status: "no cred",
 
-      setResponseotp({
-        status: status,
+          msg: "anoe",
+        });
+      } else {
+        setResponseotp({
+          status: status,
 
-        msg: message,
-      });
+          msg: message,
+        });
+      }
+
       if (status === "Success") {
         setShow(true);
         const message = OtpResponse.data;

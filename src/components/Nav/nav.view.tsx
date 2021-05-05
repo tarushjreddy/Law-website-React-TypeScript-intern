@@ -63,9 +63,12 @@ const NavView: React.FC<NavViewProps> = ({
               ) : (
                 <Link to="/login">Login</Link>
               )}
+
               <span> | </span>
+
               <Link to="/help">Help</Link>
-              {isLoginned && <span> | {name}</span>}
+
+              {lang === "En" && <span> | </span>}
             </p>
           </div>
         </div>
@@ -250,9 +253,11 @@ const NavView: React.FC<NavViewProps> = ({
                             backgroundColor: "transparent",
                             padding: "0px",
                             marginBottom: "10px",
-                            paddingRight: "0.1rem",
+                            height: "35px",
+                            marginRight: "10px",
+                            paddingRight: "0.39rem",
+                            paddingLeft: "0.39rem",
                             color: "#dedede",
-                            paddingLeft: "0.1rem",
                           }}
                           onClick={() => {
                             localStorage.setItem("lang", "en");
@@ -306,7 +311,7 @@ const NavView: React.FC<NavViewProps> = ({
 
                           paddingRight: "0.1rem",
                           paddingLeft: "0.1rem",
-
+                          marginLeft: "4px",
                           marginRight: "4px",
                           alignItems: "center",
                           justifyContent: "center",
@@ -387,7 +392,7 @@ const NavView: React.FC<NavViewProps> = ({
                           style={{
                             padding: "04px",
                             marginTop: "2px",
-                            marginLeft: "10px",
+
                             color: "white",
                           }}
                         >

@@ -4,6 +4,7 @@ import styles from "./dashboard.module.scss";
 import LinkDrawer from "./components/LinkDrawer";
 import ApplicationContainer from "./components/ApplicationContainer";
 import ProfileContainer from "./components/ProfileContainer";
+import SignOut from "./components/SignOut";
 import Nav from "../../components/Nav";
 import Home from "./components/Home";
 import Contracts from "./components/Contracts";
@@ -24,7 +25,7 @@ const DashboardView: React.FC<DashboardViewProps> = ({ page = "" }) => {
             paddingTop: "10em",
 
             background: "transparent",
-            height: "100vh",
+            margin: "2rem",
           }}
         >
           <div>
@@ -34,6 +35,7 @@ const DashboardView: React.FC<DashboardViewProps> = ({ page = "" }) => {
                 {page === "profile" && <ProfileContainer />}
                 {page === "services" && <ApplicationContainer />}
                 {page === "contracts" && <Contracts />}
+                {page === "signOut" && <SignOut />}
               </div>
             </div>
           </div>

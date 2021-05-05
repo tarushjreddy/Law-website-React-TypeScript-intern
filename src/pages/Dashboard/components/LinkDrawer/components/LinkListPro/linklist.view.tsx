@@ -1,18 +1,38 @@
 import React from "react";
+import { Modal, Button } from "react-bootstrap";
 import { Layout, Menu, Breadcrumb } from "antd";
-// import { Layout } from "antd";
-// import "antd/lib/layout/style";
-// import { Menu } from "antd";
-// import "antd/lib/menu/style";
-// import { Breadcrumb } from "antd";
-// import "antd/lib/breadcrumb/style";
-// import "antd/dist/antd.css";
-// import "antd/dist/antd.css";
+
+import ConfirmOut from "./components/ConfirmOut";
+import SuccessOut from "./components/SuccessOut";
+
+import "antd/dist/antd.css";
 import "./linklistpro.scss";
 import { Link } from "react-router-dom";
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
-function LinkListPro() {
+
+interface LinkListViewProps {
+  page: string;
+  logoutHandler: () => void;
+  dashboardSender: () => void;
+  profileSender: () => void;
+  handleClose: () => void;
+  show: boolean;
+  confirmLogout: () => void;
+  showSuccess: boolean;
+  isProfileUpdated: boolean;
+}
+const LinkListPro: React.FC<LinkListViewProps> = ({
+  page,
+  logoutHandler,
+  dashboardSender,
+  profileSender,
+  handleClose,
+  show,
+  confirmLogout,
+  showSuccess,
+  isProfileUpdated,
+}) => {
   const SIDE_BAR_LINKS = [
     {
       name: "Home Page",
@@ -46,6 +66,7 @@ function LinkListPro() {
       name: "Settings",
       link: "settings",
     },
+    { name: "SignOut", link: "signOut" },
   ];
 
   return (
@@ -53,7 +74,6 @@ function LinkListPro() {
       <Layout
         style={{
           width: "250px",
-          // backgroundColor: "rgb(0,22,40)",
           backgroundColor: "white",
           height: "100vh",
         }}
@@ -77,16 +97,45 @@ function LinkListPro() {
                 {posts.name}
               </Menu.Item>
             ))}
-            <Menu.Item key={8} style={{ width: "250px" }}>
-              {/* <Link to={`/dashboard/${posts.link}`} /> */}
-              Sign Out
-            </Menu.Item>
           </Menu>
         </Sider>
+        {/* <Modal
+          show={show}
+          onHide={handleClose}
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          {!showSuccess ? (
+            <ConfirmOut
+              confirmLogout={confirmLogout}
+              handleClose={handleClose}
+            />
+          ) : (
+            <SuccessOut handleClose={handleClose} />
+          )}
+        </Modal>
+        <div className={`btn px-3 py-2 `} onClick={logoutHandler}>
+          <span className="my-1">Sign Out</span>
+        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          {!showSuccess ? (
+            <ConfirmOut
+              confirmLogout={confirmLogout}
+              handleClose={handleClose}
+            />
+          ) : (
+            <SuccessOut handleClose={handleClose} />
+          )}
+        </Modal> */}
       </Layout>
+      this
     </div>
   );
-}
+};
 
 export default LinkListPro;
-//ant-layout ant-layout-has-sider
