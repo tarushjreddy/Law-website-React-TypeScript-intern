@@ -3,7 +3,7 @@ export interface LoginValues {
   password: string;
 }
 export interface otpValues {
-  otp: String;
+  otp: string;
 }
 export interface LoginResponseStatus {
   status: string;

@@ -17,7 +17,9 @@ import styles from "./loginform.module.scss";
 
 interface LoginFormViewProps {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmitOp: (e: React.FormEvent<HTMLFormElement>) => void;
   SignIn: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  signInOnep: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleChangeOTP: (
     e: React.ChangeEvent<HTMLInputElement & HTMLInputElement>
   ) => void;
@@ -41,7 +43,8 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
   handleChange,
   handleShow,
   SignIn,
-
+  signInOnep,
+  handleSubmitOp,
   response,
   handleChangeOTP,
   responseotp,
@@ -140,24 +143,25 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
         <Modal.Header>
           <Modal.Title>One Time Password Verification</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <Alert
-            show={response.status === "Wrong OTP"}
-            variant="danger"
-            style={{ width: "51%" }}
-            className={styles.alert}
-          >
-            Please enter the correct OTP.
-          </Alert>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
-            {/* <OTPInput
+        <Form>
+          <Modal.Body>
+            <Alert
+              show={response.status === "Wrong OTP"}
+              variant="danger"
+              style={{ width: "51%" }}
+              className={styles.alert}
+            >
+              Please enter the OTP.
+            </Alert>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+              }}
+            >
+              {/* <OTPInput
               length={6}
               className={styles["otpContainer"]}
               inputClassName={styles["otpInput"]}
@@ -166,7 +170,7 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
                 console.log("this is the otp val ", otpval);
               }}
             /> */}
-            <Form>
+
               <CustomInputField
                 label="Please enter the correct OTP."
                 name="otp"
@@ -177,17 +181,17 @@ const LoginFormView: React.FC<LoginFormViewProps> = ({
                 onChange={handleChangeOTP}
                 errMess={t("loginFormFields.password.errorMessage")}
               />
-            </Form>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={SignIn}>
-            Resend OTP
-          </Button>
-          <Button variant="primary" onClick={SignIn}>
-            Verify
-          </Button>
-        </Modal.Footer>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={signInOnep}>
+              Resend OTP
+            </Button>
+            <Button variant="primary" onClick={SignIn}>
+              Verify
+            </Button>
+          </Modal.Footer>
+        </Form>
       </Modal>
     </div>
   );

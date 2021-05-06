@@ -90,7 +90,6 @@ const LinkListPro: React.FC<LinkListViewProps> = ({
             defaultSelectedKeys={["1"]}
             style={{ width: "250px", backgroundColor: "white" }}
           >
-            {" "}
             {SIDE_BAR_LINKS.map((posts, Key) => (
               <Menu.Item key={Key} style={{ width: "250px" }}>
                 <Link to={`/dashboard/${posts.link}`} />

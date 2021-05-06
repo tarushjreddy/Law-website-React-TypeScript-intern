@@ -23,7 +23,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
   const [validated, setValidated] = useState(false);
   const [phonenumber, setphonenumber] = useState("");
   const [handleClose, setShow] = useState(false);
-
+  const [opt, setopt] = useState(0);
   const [loginValue, setLoginValue] = useState<LoginValues>({
     email: "",
     password: "",
@@ -46,7 +46,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
     try {
       const loginResponse = await login({
         phone: phonenumber,
-        code: "123456",
+        code: otpValue.otp,
       });
       console.log("this is the login response", loginResponse);
 
@@ -85,6 +85,10 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
         msg: "Invalid user",
       });
     }
+  };
+  const signInOne = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log(otpValue);
+    console.log("this is for Test");
   };
 
   const OtpIn = async () => {
@@ -144,6 +148,10 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
     OtpIn();
   };
 
+  const handleSubmitOtp = (event: React.FormEvent<HTMLFormElement>): void => {
+    const formone = event.currentTarget;
+    console.log("login form===", formone);
+  };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let { name, value } = event.target;
     console.log(name, value);
@@ -156,7 +164,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
     let { name, value } = event.target;
     console.log(name, value);
     setotpValue({ ...otpValue, [name]: value });
-    console.log(otpValue.otp);
   };
 
   return (
@@ -165,9 +172,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ popupFunction }) => {
       validated={validated}
       SignIn={signIn}
       loginValue={loginValue}
+      signInOnep={signInOne}
       handleShow={handleClose}
       handleChange={handleChange}
       handleChangeOTP={handleChangeOTP}
+      handleSubmitOp={handleSubmitOtp}
       responseotp={responseotp}
       response={response}
     />

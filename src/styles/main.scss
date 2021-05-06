@@ -425,14 +425,20 @@ button:focus {
 .chbc-icon-text h4 {
   font-size: 18px;
 }
+.vl {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  height: 120px;
+}
 .col-sm-4.col-xs-12.hbc-col {
   clear: both;
   width: 100%;
   display: flex;
-  margin-left: 70px;
-  flex-direction: row;
-  min-width: 500px !important;
-  border-right: solid 2px rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  flex-direction: row !important;
+  min-width: 290px !important;
+  align-items: center;
+  justify-content: center;
+  // border-right: solid 2px rgba(255, 255, 255, 0.5) !important;
   height: 120px;
 }
 @media only screen and (max-width: 1376px) {
@@ -455,10 +461,11 @@ button:focus {
     width: 45px;
   }
   .hbc-icon-img {
-    float: left;
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .vl {
+    display: none;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -1795,3 +1802,8 @@ ul.footer-ul li a:hover {
     (+880) 1724-78 66 59
     tarikhasan.info@gmail.com
 */
+h1 {
+  color: white !important;
+  font-weight: bold;
+  font-size: 20px;
+}

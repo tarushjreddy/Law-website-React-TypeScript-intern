@@ -69,7 +69,7 @@
   }
 }
 .overall_text {
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 .link_provider {
   margin-top: 20px !important;
@@ -124,4 +124,19 @@
   .hbc-content-ele div {
     margin: 0px;
   }
+}
+.hbc-content-ele div {
+  margin: 0px;
+  display: flex;
+  align-items: baseline;
+}
+.chbc-icon-text h2 {
+  margin-top: 5px;
+}
+.chbc-icon-text {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  margin-left: 10px !important;
+  background-color: transparent;
 }

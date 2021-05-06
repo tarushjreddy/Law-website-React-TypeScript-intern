@@ -51,6 +51,7 @@ const HeaderCarousel = () => {
                     width: "100%",
 
                     backgroundImage: `url(${data.image})`,
+                    // backgroundColor: "red",
                   }}
                 >
                   <div
@@ -104,10 +105,7 @@ const HeaderCarousel = () => {
         <div>
           <div className="header-bottom-con">
             <div>
-              <div
-                className="col-sm-4 col-xs-12 hbc-col hbc-col-l"
-                style={{ backgroundColor: "transparent" }}
-              >
+              <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
                 <div className="hbc-content">
                   <div className="hbc-content-ele">
                     <div
@@ -124,25 +122,25 @@ const HeaderCarousel = () => {
                 </div>
               </div>
             </div>
+            <div className="vl"></div>{" "}
             <div>
               <div>
-                <div>
-                  <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
-                    <div className="hbc-content">
-                      <div className="hbc-content-ele">
-                        <div className="hbc-icon-img hbc-ico-1">
-                          <img src="media/images/img1.png" alt="Header 1" />
-                        </div>
-                        <div className="chbc-icon-text">
-                          <h4>Get</h4>
-                          <h2>Legal Advice</h2>
-                        </div>
+                <div className="col-sm-4 col-xs-12 hbc-col hbc-col-l">
+                  <div className="hbc-content">
+                    <div className="hbc-content-ele">
+                      <div className="hbc-icon-img hbc-ico-1">
+                        <img src="media/images/img1.png" alt="Header 1" />
+                      </div>
+                      <div className="chbc-icon-text">
+                        <h4>Get</h4>
+                        <h2>Legal Advice</h2>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="vl"></div>{" "}
             <div>
               <div>
                 <div

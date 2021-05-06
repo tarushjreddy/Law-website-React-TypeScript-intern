@@ -43,7 +43,7 @@ if (link) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<h1></h1>}>
       <App />
     </Suspense>
   </React.StrictMode>,

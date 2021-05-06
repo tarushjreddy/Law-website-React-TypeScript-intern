@@ -10,7 +10,7 @@ const App = () => {
   const setGlobalUserDetail = useDispatch(setUserDetailReducer);
   setGlobalUserDetail();
   const { i18n } = useTranslation();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     i18n.changeLanguage(localStorage.getItem("lang") || "en");

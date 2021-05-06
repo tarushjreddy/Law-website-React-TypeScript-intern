@@ -7,7 +7,7 @@ const root = {
   padding: "0%",
 };
 
-const LoadingView = ({ text = "Loading..." }) => {
+const LoadingView = ({ text = "Hekkk..." }) => {
   return (
     <div style={root}>
       <div className="shadow p-3 mb-2 bg-white rounded">{text}</div>

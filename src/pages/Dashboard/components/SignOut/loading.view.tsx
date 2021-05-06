@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import ConfirmOut from "./components/ConfirmOut";
 import SuccessOut from "./components/SuccessOut";
@@ -31,6 +31,7 @@ const SignOut: React.FC<SignOutProps> = ({
   showSuccess,
   isProfileUpdated,
 }) => {
+  const [open, setopen] = useState(false);
   return (
     <div style={root}>
       <Modal
@@ -45,13 +46,9 @@ const SignOut: React.FC<SignOutProps> = ({
           <SuccessOut handleClose={handleClose} />
         )}
       </Modal>
-      <div className={`btn px-3 py-2 `} onClick={logoutHandler}>
-        <div className="shadow p-3 mb-2 bg-white rounded">
-          Confim SignOut from
-        </div>
-      </div>
+      <div className={`btn px-3 py-2 `} onClick={logoutHandler}></div>
       <Modal
-        show={show}
+        show={true}
         onHide={handleClose}
         aria-labelledby="contained-modal-title-vcenter"
         centered
