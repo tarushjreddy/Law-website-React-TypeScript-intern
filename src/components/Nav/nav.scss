@@ -1,9 +1,11 @@
 .top-head {
   font-size: 20px;
 }
+
 .my-nav-section {
   hr {
     display: none !important;
+    font-weight: lighter;
   }
 }
 .pro_image_one {
@@ -50,12 +52,19 @@
     justify-content: space-between;
   }
   #nav_pro_max {
-    background-color: transparent;
+    background-color: black !important;
     opacity: 0.9;
     padding: 20px;
 
     width: 90vw;
   }
+  #main_button {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}
+#main_button {
+  margin-left: 10px !important;
 }
 @media only screen and (max-width: 1450px) {
   .top-head {

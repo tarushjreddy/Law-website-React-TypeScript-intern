@@ -44,8 +44,8 @@ html {
 }
 
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+  background: #b3d4fc !important;
+  text-shadow: none !important;
 }
 
 /*
@@ -105,9 +105,14 @@ textarea {
 ===============================================
 */
 
-body {
-  font-family: "Tajawal", sans-serif;
-  position: relative;
+body,
+p,
+h1,
+h2,
+h6,
+h5,
+div {
+  font-family: "Tajawal", sans-serif !important;
 }
 a:hover {
   text-decoration: none;
@@ -250,8 +255,8 @@ li.nav-item.my-tel:hover {
   padding: 10px 34px;
 }
 .navbar-light .navbar-nav .nav-link {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 18px !important;
+  font-weight: bold !important;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -468,13 +473,19 @@ button:focus {
     display: none;
   }
 }
+@media only screen and (max-width: 768px) {
+  .col-sm-4.col-xs-12.hbc-col {
+    min-width: 120vh !important;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .my-copy-right {
     border-top: none !important;
   }
   .col-sm-4.col-xs-12.hbc-col {
     height: 50px;
-    min-width: 300px !important;
+    // min-width: 300px !important;
     margin: 2px;
     border-bottom: solid 2px rgba(255, 255, 255, 0.5);
     border-right: none;
@@ -496,7 +507,7 @@ button:focus {
 }
 .hcc-subcon-text {
   text-shadow: 0 0 8px #000000;
-  font-family: Tajawal;
+  font-family: Tajawal !important;
   font-size: 16px;
   font-weight: 500;
   font-stretch: normal;
@@ -624,13 +635,13 @@ button.owl-dot.active {
 }
 
 .my-hwr-row p {
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: normal;
-  color: #727272;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.6 !important;
+  letter-spacing: normal !important;
+  color: #727272 !important;
 }
 .my-hwr-row h1 {
   font-size: 38px;
@@ -1069,14 +1080,14 @@ i.material-icons.quality-start {
   margin-left: 12px;
 }
 .add-content p {
-  font-size: 18px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4d4d4d;
-  float: left;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  color: #4d4d4d !important;
+  float: left !important;
 }
 
 /*
@@ -1098,9 +1109,9 @@ i.material-icons.quality-start {
   margin-top: 23px;
 }
 .add-content p {
-  float: left;
-  width: 215px;
-  margin-top: 14px;
+  float: left !important;
+  width: 215px !important;
+  margin-top: 14px !important;
 }
 
 .add-con-img {
@@ -1802,8 +1813,8 @@ ul.footer-ul li a:hover {
     (+880) 1724-78 66 59
     tarikhasan.info@gmail.com
 */
-h1 {
-  color: white !important;
-  font-weight: bold;
-  font-size: 20px;
-}
+// h1 {
+//   color: white !important;
+//   font-weight: bold;
+//   font-size: 20px;
+// }

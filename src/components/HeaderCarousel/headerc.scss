@@ -9,7 +9,7 @@
   position: relative;
   top: 220px;
   margin: 6.6rem;
-  display: flex;
+  display: flex; // this is to
   top: 220px;
 
   align-items: flex-end;
@@ -23,8 +23,9 @@
   display: block;
 }
 .overall_text {
-  color: white;
-  font-weight: bold;
+  color: white !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
 }
 .header-bottom-con {
   background-color: transparent;
@@ -39,7 +40,7 @@
 
   flex-direction: row;
 
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .hr_divider {
   color: rgba(255, 255, 255, 0.5);
@@ -69,14 +70,14 @@
   }
 }
 .overall_text {
-  font-size: 20px !important;
+  font-size: 30px !important;
 }
 .link_provider {
   margin-top: 20px !important;
 }
 @media only screen and (min-width: 1250px) and (max-width: 1400px) {
   .overall_text {
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
   .link_provider {
     margin-top: 50px !important;

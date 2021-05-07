@@ -87,7 +87,7 @@ const LinkListPro: React.FC<LinkListViewProps> = ({
           <Menu
             theme="light"
             mode="inline"
-            defaultSelectedKeys={["1"]}
+            defaultSelectedKeys={[""]}
             style={{ width: "250px", backgroundColor: "white" }}
           >
             {SIDE_BAR_LINKS.map((posts, Key) => (

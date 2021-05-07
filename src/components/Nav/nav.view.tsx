@@ -340,13 +340,14 @@ const NavView: React.FC<NavViewProps> = ({
                           <input
                             type="text"
                             placeholder="Search"
+                            id="main_button"
                             style={{
                               height: "40px",
                               width: "200px",
                               border: "1px solid black",
                               outline: "none",
                               marginRight: "10px",
-                              marginLeft: "10px",
+
                               padding: "10px",
                               borderRadius: "15px",
                             }}
@@ -357,8 +358,8 @@ const NavView: React.FC<NavViewProps> = ({
                           <Button
                             variant="custom"
                             type="button"
+                            id="main_button"
                             style={{
-                              marginLeft: "10px",
                               marginRight: "10px",
                             }}
                             onClick={() => setShowSearch(!showSearch)}
@@ -372,11 +373,12 @@ const NavView: React.FC<NavViewProps> = ({
                       <Button
                         variant="custom"
                         className="nav-link"
+                        id="main_button"
                         style={{
                           backgroundColor: "transparent",
                           padding: "0px",
                           marginBottom: "10px",
-                          marginLeft: "10px",
+
                           paddingRight: "0.39rem",
                           paddingLeft: "0.39rem",
                           color: "#dedede",

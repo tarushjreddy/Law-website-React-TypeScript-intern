@@ -52,13 +52,7 @@ const Contact = () => {
                 <a
                   href={`https://wa.me/${posts}`}
                   target="_blank"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  className="class_Link"
                 >
                   <h6 style={{ fontWeight: "bold", marginTop: "15px" }}>
                     Chat with us.
@@ -81,7 +75,9 @@ const Contact = () => {
                 </Modal>
               </div>
               <div className="contact-text text-end">
-                <h1>Get Helpful Tips and Info</h1>
+                <div style={{ fontWeight: "bold" }}>
+                  Get Helpful Tips and Info
+                </div>
                 <p>from our newletters!</p>
               </div>
             </div>

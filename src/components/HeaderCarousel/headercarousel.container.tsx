@@ -75,12 +75,15 @@ const HeaderCarousel = () => {
                         </div>
                       </div>
 
-                      <div className="overall_text">
-                        <h1>
+                      <div
+                        className="overall_text"
+                        style={{ fontWeight: "lighter" }}
+                      >
+                        <div>
                           {lang === "en"
                             ? data.subheading
                             : data.subheading_arb}
-                        </h1>
+                        </div>
                       </div>
 
                       <div className="my-head-btn">
