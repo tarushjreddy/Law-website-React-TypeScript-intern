@@ -173,7 +173,7 @@ function Retrival() {
                           ></img>
                           <div
                             className={`${styles["logo_rounded_info"]}`}
-                            style={{ minWidth: "40px" }}
+                            // style={{ minWidth: "40px" }}
                           >
                             {lang === "en"
                               ? data.benefits[4].text_eng
@@ -182,16 +182,17 @@ function Retrival() {
                         </div>
 
                         <div
-                          className={`${styles["info"]} "last-logo-fix"`}
+                          className={`${styles["info"]} `}
                           // style={{ marginLeft: "10px" }}
                         >
                           <img
                             src={data.benefits[5].icon}
-                            className={`${styles["logo_rounded"]}`}
-                          ></img>
-                          <div
-                            className={`${styles["logo_rounded_info"]} "last-logo-fix"`}
+                            className={`${styles["last_logo_fix"]}`}
                             style={{ marginLeft: "10px" }}
+                          />
+                          <div
+                            className={`${styles["logo_rounded_info"]} `}
+                            style={{ marginLeft: "22px" }}
                           >
                             {lang === "en"
                               ? data.benefits[5].text_eng
@@ -339,6 +340,7 @@ function Retrival() {
                         <img
                           src={data.benefits[4].icon}
                           className={`${styles["logo_rounded"]}`}
+                          style={{ marginLeft: "20px" }}
                         ></img>
                         <div className={`${styles["logo_rounded_info"]}`}>
                           {data.benefits[4].text_eng}
@@ -349,8 +351,12 @@ function Retrival() {
                         <img
                           src={data.benefits[5].icon}
                           className={`${styles["logo_rounded"]}`}
+                          style={{ marginLeft: "12px" }}
                         ></img>
-                        <div className={`${styles["logo_rounded_info"]}`}>
+                        <div
+                          className={`${styles["logo_rounded_info"]}`}
+                          style={{ marginLeft: "28px" }}
+                        >
                           {data.benefits[5].text_eng}
                         </div>
                       </div>
