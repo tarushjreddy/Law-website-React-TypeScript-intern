@@ -255,7 +255,7 @@ li.nav-item.my-tel:hover {
   padding: 10px 34px;
 }
 .navbar-light .navbar-nav .nav-link {
-  font-size: 18px !important;
+  font-size: 90% !important;
   font-weight: bold !important;
   font-stretch: normal;
   font-style: normal;
@@ -473,11 +473,11 @@ button:focus {
     display: none;
   }
 }
-@media only screen and (max-width: 768px) {
-  .col-sm-4.col-xs-12.hbc-col {
-    min-width: 120vh !important;
-  }
-}
+// @media only screen and (max-width: 1024px) {
+//   .col-sm-4.col-xs-12.hbc-col {
+//     min-width: 120vh !important;
+//   }
+// }
 
 @media only screen and (max-width: 1000px) {
   .my-copy-right {
@@ -485,7 +485,7 @@ button:focus {
   }
   .col-sm-4.col-xs-12.hbc-col {
     height: 50px;
-    // min-width: 300px !important;
+    min-width: 120vh !important;
     margin: 2px;
     border-bottom: solid 2px rgba(255, 255, 255, 0.5);
     border-right: none;
@@ -536,7 +536,7 @@ button:focus {
   button {
     text-align: center;
     padding: 10px;
-    font-size: 18px;
+    font-size: 0.88rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;

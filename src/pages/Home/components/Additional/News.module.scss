@@ -48,24 +48,24 @@
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1023px) {
   .news_body {
     height: 100%;
     flex-direction: column;
   }
   .news_body1 {
-    min-width: "500px" !important;
-    min-height: "600px";
+    min-width: 50% !important;
+    min-height: 30% !important;
     margin: 10px;
   }
   .news_body3 {
-    min-width: "500px" !important;
-    min-height: "600px";
+    min-width: 30% !important;
+    min-height: 30% !important;
     margin: 10px;
   }
   .news_body2 {
-    min-width: "500px" !important;
-    min-height: "600px";
+    min-width: 30% !important;
+    min-height: 30% !important;
     margin: 10px;
   }
 }
@@ -75,8 +75,8 @@
   background-position: center;
   background-size: cover;
   background-color: #cccccc;
-  min-width: "550px" !important;
-  min-height: "600px";
+  min-width: 30% !important;
+  min-height: 30% !important;
   display: flex;
 
   flex-direction: column;
@@ -89,8 +89,8 @@
   background-position: center;
   background-size: cover;
   background-color: #cccccc;
-  min-width: "550px" !important;
-  min-height: "600px";
+  min-width: 30% !important;
+  min-height: 30% !important;
   display: flex;
 
   flex-direction: column;
@@ -103,8 +103,8 @@
   background-position: center;
   background-size: cover;
   background-color: #cccccc;
-  min-width: "550px" !important;
-  min-height: "600px";
+  min-width: 30% !important;
+  min-height: 30% !important;
   display: flex;
 
   flex-direction: column;
@@ -132,4 +132,9 @@ Card {
   font-weight: 500;
 
   background-color: black;
+}
+@media only screen and (min-width: 600px) and (max-width: 1500px) {
+  .news_body {
+    margin: 0px;
+  }
 }

@@ -1,5 +1,5 @@
 .top-head {
-  font-size: 20px;
+  font-size: 50%;
 }
 
 .my-nav-section {
@@ -82,7 +82,7 @@
 }
 @media only screen and (max-width: 1450px) {
   .top-head {
-    font-size: 15px;
+    font-size: 50% !important;
   }
   .pro_image {
     height: 40px;
@@ -92,7 +92,7 @@
 }
 @media only screen and (max-width: 600px) {
   .top-head {
-    font-size: 10px;
+    font-size: 30% !important;
   }
   .header-logo,
   .text-pro {

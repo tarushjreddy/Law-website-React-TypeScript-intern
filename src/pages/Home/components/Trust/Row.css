@@ -72,3 +72,9 @@
 .omen {
   margin-top: 10px;
 }
+@media only screen and (min-width: 100px) and (max-width: 10124px) {
+  .row__posters {
+    margin-left: 0px !important;
+    margin-right: 2px !important;
+  }
+}

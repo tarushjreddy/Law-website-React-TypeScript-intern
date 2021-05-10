@@ -2,6 +2,7 @@ import React from "react";
 import "./nav.scss";
 import { Link, NavLink } from "react-router-dom";
 import { Button, Navbar } from "react-bootstrap";
+import SearchIcon from "@material-ui/icons/Search";
 // import { useScrollSection } from "react-scroll-section";
 
 interface NavViewProps {
@@ -253,7 +254,7 @@ const NavView: React.FC<NavViewProps> = ({
                             backgroundColor: "transparent",
                             padding: "0px",
                             marginBottom: "10px",
-                            height: "35px",
+                            height: "30px",
                             marginRight: "10px",
                             paddingRight: "0.39rem",
                             paddingLeft: "0.39rem",
@@ -277,7 +278,7 @@ const NavView: React.FC<NavViewProps> = ({
                             backgroundColor: "transparent",
                             padding: "0px",
                             marginBottom: "10px",
-                            height: "35px",
+                            height: "30px",
                             marginRight: "10px",
                             paddingRight: "0.39rem",
                             paddingLeft: "0.39rem",
@@ -290,7 +291,7 @@ const NavView: React.FC<NavViewProps> = ({
                         >
                           <p
                             style={{
-                              marginTop: "5.5px",
+                              marginTop: "7.5px",
                               padding: "0.1rem",
                               color: "white",
                             }}
@@ -308,7 +309,7 @@ const NavView: React.FC<NavViewProps> = ({
                           backgroundColor: "transparent",
                           padding: "0px",
                           marginBottom: "10px",
-
+                          height: "30px",
                           paddingRight: "0.1rem",
                           paddingLeft: "0.1rem",
                           marginLeft: "4px",
@@ -317,7 +318,8 @@ const NavView: React.FC<NavViewProps> = ({
                           justifyContent: "center",
                         }}
                       >
-                        <i
+                        <SearchIcon />
+                        {/* <i
                           className="material-icons my-search-func"
                           aria-hidden="true"
                           style={{
@@ -328,7 +330,7 @@ const NavView: React.FC<NavViewProps> = ({
                           onClick={() => setShowSearch(!showSearch)}
                         >
                           search
-                        </i>
+                        </i> */}
                       </Button>
                       <li>
                         <li
@@ -344,15 +346,19 @@ const NavView: React.FC<NavViewProps> = ({
                             style={{
                               height: "40px",
                               width: "200px",
-                              border: "1px solid black",
+
                               outline: "none",
                               marginRight: "10px",
-
+                              border: "none",
                               padding: "10px",
                               borderRadius: "15px",
                             }}
                           />
-                          <Button variant="custom" type="button">
+                          <Button
+                            variant="custom"
+                            style={{ height: "30px" }}
+                            type="button"
+                          >
                             Search
                           </Button>
                           <Button
@@ -361,6 +367,7 @@ const NavView: React.FC<NavViewProps> = ({
                             id="main_button"
                             style={{
                               marginRight: "10px",
+                              height: "30px",
                             }}
                             onClick={() => setShowSearch(!showSearch)}
                           >
@@ -377,10 +384,7 @@ const NavView: React.FC<NavViewProps> = ({
                         style={{
                           backgroundColor: "transparent",
                           padding: "0px",
-                          marginBottom: "10px",
-
-                          paddingRight: "0.39rem",
-                          paddingLeft: "0.39rem",
+                          height: "30px",
                           color: "#dedede",
                         }}
                         onClick={() => {
@@ -392,9 +396,6 @@ const NavView: React.FC<NavViewProps> = ({
                           className="nav-link"
                           href="tel:920008434"
                           style={{
-                            padding: "04px",
-                            marginTop: "2px",
-
                             color: "white",
                           }}
                         >

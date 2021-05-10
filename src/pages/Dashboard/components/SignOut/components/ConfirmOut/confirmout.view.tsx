@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
 import { Button, Modal } from "react-bootstrap";
 
 interface ConfirmOutProps {
@@ -19,9 +21,12 @@ const ConfirmOut: React.FC<ConfirmOutProps> = ({
         <Button variant="secondary" onClick={confirmLogout}>
           Yes
         </Button>
-        <Button variant="secondary" onClick={handleClose}>
-          No
-        </Button>
+
+        <Link to="/dashboard">
+          <Button variant="secondary" onClick={handleClose}>
+            No
+          </Button>
+        </Link>
       </Modal.Footer>
     </>
   );

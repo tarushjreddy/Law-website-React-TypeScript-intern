@@ -33,9 +33,9 @@ function AddonView() {
           </div>
           <div className={styles["fotter_part"]} id="footer-pro1">
             <div>
-              <h1 style={{ textAlign: "left" }}>
+              <div style={{ textAlign: "left" }}>
                 Are they going to have a new Bussiness Relationship?
-              </h1>
+              </div>
               <hr style={{ margin: "0px" }} />
             </div>
             <div className={styles["address_pro"]}>
@@ -65,9 +65,9 @@ function AddonView() {
           </div>
           <div className={styles["fotter_part"]} id="footer-pro2">
             <div>
-              <h1 style={{ textAlign: "left" }}>
+              <div style={{ textAlign: "left" }}>
                 Are they going to have a new Bussiness Relationship?
-              </h1>
+              </div>
               <hr style={{ margin: "0px" }} />
             </div>
             <div className={styles["address_pro"]}>
@@ -97,9 +97,9 @@ function AddonView() {
           </div>
           <div className={styles["fotter_part"]} id="footer-pro3" style={{}}>
             <div>
-              <h1 style={{ textAlign: "left" }}>
+              <div style={{ textAlign: "left" }}>
                 Are they going to have a new Bussiness Relationship?
-              </h1>
+              </div>
               <hr style={{ margin: "0px" }} />
             </div>
             <div className={styles["address_pro"]}>
