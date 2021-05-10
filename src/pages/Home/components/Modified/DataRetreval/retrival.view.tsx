@@ -73,9 +73,12 @@ function Retrival() {
                 //   style={{ flexDirection: `(${abc === 1}? 'row' : 'row-reverse')` }}
               >
                 <div className={`${styles["leftContainer"]}`}>
-                  <h1 className={`${styles["header"]}`}>
+                  <div
+                    className={`${styles["header"]}`}
+                    id="header_text_desktop"
+                  >
                     {lang === "en" ? data.title : data.title_arb}
-                  </h1>
+                  </div>
                   <p className={`${styles["paragraph"]}`}>
                     {lang === "en" ? data.subtitle : data.subtitle_arb}
                   </p>
@@ -179,15 +182,15 @@ function Retrival() {
                         </div>
 
                         <div
-                          className={`${styles["info"]}`}
-                          style={{ marginLeft: "10px" }}
+                          className={`${styles["info"]} "last-logo-fix"`}
+                          // style={{ marginLeft: "10px" }}
                         >
                           <img
                             src={data.benefits[5].icon}
                             className={`${styles["logo_rounded"]}`}
                           ></img>
                           <div
-                            className={`${styles["logo_rounded_info"]}`}
+                            className={`${styles["logo_rounded_info"]} "last-logo-fix"`}
                             style={{ marginLeft: "10px" }}
                           >
                             {lang === "en"
@@ -250,9 +253,9 @@ function Retrival() {
                 // className={`${styles["leftContainer"]}`}
                 id="leftContainer_pro"
               >
-                <h1 className={`${styles["header"]}`} id="header_text">
+                <h2 className={`${styles["header"]}`} id="header_text">
                   {data.title}
-                </h1>
+                </h2>
                 <p className={`${styles["paragraph"]}`} id="paragraph_pro">
                   {data.subtitle}
                 </p>
