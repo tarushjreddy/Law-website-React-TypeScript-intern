@@ -32,3 +32,9 @@
     justify-content: center;
   }
 }
+@media only screen and (min-width: 1023px) and (max-width: 1025px) {
+  #container_pro {
+    padding-left: 7%;
+    padding-right: 10%;
+  }
+}
