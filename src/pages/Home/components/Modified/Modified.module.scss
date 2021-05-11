@@ -11,12 +11,12 @@
   align-items: center;
 }
 .logo_rounded {
-  padding: 10px;
+  padding: 2%;
   border-radius: 50%;
   background-color: transparent;
   color: white;
-
-  margin-right: 10px;
+  width: 32%;
+  margin-right: 15px;
 }
 .logo_parts {
   width: 100%;
@@ -31,7 +31,8 @@
   display: flex;
   background-color: transparent;
   width: 100%;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 1%;
   justify-content: start;
   align-items: center;
 }
@@ -83,7 +84,7 @@
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   .paragraph {
-    font-size: 15px !important;
+    font-size: 1rem !important;
     font-weight: 300 !important;
     width: 95% !important;
 
@@ -104,6 +105,11 @@
     width: 100%;
   }
 }
+
+.last-logo-fix {
+  margin-left: 10px !important;
+}
+
 @media only screen and (min-width: 1250px) and (max-width: 1400px) {
   .rightConatiner {
     margin: 20px;
@@ -120,6 +126,15 @@
       height: 80%;
       width: 80%;
     }
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .leftContainer {
+    width: 65% !important;
+  }
+  .info {
+    font-size: 1rem;
   }
 }
 

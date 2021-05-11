@@ -47,9 +47,8 @@
   }
   .leftContainer {
     height: 100%;
-
     color: black;
-    margin: 20px;
+    margin: 20%;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -77,6 +76,9 @@
   }
 
   .media_on {
+    .last-logo-fix {
+      margin-left: 10px !important;
+    }
     #leftContainer_pro {
       display: flex;
       color: black;
@@ -87,20 +89,23 @@
       background-color: transparent;
       #paragraph_pro {
         padding: 5%;
+
+        padding: 1%;
+
         text-align: center;
+        font-size: 1.1rem;
       }
       #info_pro_max {
-        min-width: 50px !important;
-        margin-left: 30px !important;
+        min-width: 5% !important;
+        margin-left: 3% !important;
       }
       #logo_option_pro {
         margin: 0px;
       }
-
       #header_text {
         color: black;
         text-align: center;
-        font-size: 18px;
+        font-size: 2.2rem !important;
       }
       #button_part_pro {
         width: 60%;
@@ -120,5 +125,11 @@
 @media only screen and (min-width: 1024px) {
   .media_on {
     display: none;
+  }
+  .media_off {
+    #header_text_desktop {
+      color: black;
+      font-size: 2.7rem !important;
+    }
   }
 }
