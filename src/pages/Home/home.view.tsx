@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import AboutUs from "./components/AboutUs";
 import Quality from "./components/Quality";
 import Trust from "./components/Trust";
-import Abi from "./components/Abishek";
+
 import Row from "./components/Trust";
 import AddonView from "./components/Additional";
 import Modified from "./components/Modified";

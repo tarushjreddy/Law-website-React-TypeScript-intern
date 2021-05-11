@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { TravelInsurance } from "../../../../../services/apis";
 import styles from "../Modified.module.scss";
 import "./ret.scss";
@@ -87,7 +90,99 @@ function Retrival() {
                   <div className={`${styles["logo_option"]}`} style={{}}>
                     {/* {subHeadding.map((post) => ( */}
                     <div className={`${styles["logo_parts"]}`}>
-                      <div
+                      <Container
+                      // style={{
+                      //   display: "flex",
+                      //   backgroundColor: "transparent",
+                      //   width: "100%",
+                      //   flexDirection: "row",
+                      //   justifyContent: "space-between",
+                      // }}
+                      >
+                        <Row xs={1} md={2}>
+                          <Col className={`${styles["info"]}`}>
+                            <img
+                              src={data.benefits[0].icon}
+                              className={`${styles["logo_rounded"]}`}
+                            ></img>
+                            <div className={`${styles["logo_rounded_info"]}`}>
+                              {lang === "en"
+                                ? data.benefits[0].text_eng
+                                : data.benefits[0].text_arb}
+                            </div>
+                          </Col>
+
+                          <Col className={`${styles["info"]}`}>
+                            <img
+                              src={data.benefits[1].icon}
+                              className={`${styles["logo_rounded"]}`}
+                            ></img>
+
+                            <div className={`${styles["logo_rounded_info"]}`}>
+                              {lang === "en"
+                                ? data.benefits[1].text_eng
+                                : data.benefits[1].text_arb}
+                            </div>
+                          </Col>
+                          {/* </Row>
+                        <Row> */}
+                          <Col className={`${styles["info"]}`}>
+                            <img
+                              src={data.benefits[2].icon}
+                              className={`${styles["logo_rounded"]}`}
+                            ></img>
+                            <div className={`${styles["logo_rounded_info"]}`}>
+                              {lang === "en"
+                                ? data.benefits[2].text_eng
+                                : data.benefits[2].text_arb}
+                            </div>
+                          </Col>
+                          <Col className={`${styles["info"]}`}>
+                            <img
+                              src={data.benefits[3].icon}
+                              className={`${styles["logo_rounded"]}`}
+                            ></img>
+                            <div className={`${styles["logo_rounded_info"]}`}>
+                              {lang === "en"
+                                ? data.benefits[3].text_eng
+                                : data.benefits[3].text_arb}
+                            </div>
+                          </Col>
+                          <Col className={`${styles["info"]}`}>
+                            <img
+                              src={data.benefits[4].icon}
+                              className={`${styles["logo_rounded"]}`}
+                            ></img>
+                            <div
+                              className={`${styles["logo_rounded_info"]}`}
+                              // style={{ minWidth: "40px" }}
+                            >
+                              {lang === "en"
+                                ? data.benefits[4].text_eng
+                                : data.benefits[4].text_arb}
+                            </div>
+                          </Col>
+                          <Col
+                            className={`${styles["info"]} `}
+                            // style={{ marginLeft: "10px" }}
+                          >
+                            <img
+                              src={data.benefits[5].icon}
+                              className={`${styles["logo_rounded"]}`}
+                              // style={{ marginRight: "15px" }}
+                            />
+                            <div
+                              className={`${styles["last-info-fix"]} `}
+                              // style={{ marginLeft: "15px" }}
+                            >
+                              {lang === "en"
+                                ? data.benefits[5].text_eng
+                                : data.benefits[5].text_arb}
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      {/* <div
                         style={{
                           display: "flex",
                           backgroundColor: "transparent",
@@ -96,68 +191,12 @@ function Retrival() {
                           justifyContent: "space-between",
                         }}
                       >
-                        <div className={`${styles["info"]}`}>
-                          <img
-                            src={data.benefits[0].icon}
-                            className={`${styles["logo_rounded"]}`}
-                          ></img>
-                          <div className={`${styles["logo_rounded_info"]}`}>
-                            {lang === "en"
-                              ? data.benefits[0].text_eng
-                              : data.benefits[0].text_arb}
-                          </div>
-                        </div>
-
-                        <div className={`${styles["info"]}`}>
-                          <img
-                            src={data.benefits[1].icon}
-                            className={`${styles["logo_rounded"]}`}
-                          ></img>
-
-                          <div className={`${styles["logo_rounded_info"]}`}>
-                            {lang === "en"
-                              ? data.benefits[1].text_eng
-                              : data.benefits[1].text_arb}
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          backgroundColor: "transparent",
-                          width: "100%",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <div className={`${styles["info"]}`}>
-                          <img
-                            src={data.benefits[2].icon}
-                            className={`${styles["logo_rounded"]}`}
-                          ></img>
-                          <div className={`${styles["logo_rounded_info"]}`}>
-                            {lang === "en"
-                              ? data.benefits[2].text_eng
-                              : data.benefits[2].text_arb}
-                          </div>
-                        </div>
-
-                        <div className={`${styles["info"]}`}>
-                          <img
-                            src={data.benefits[3].icon}
-                            className={`${styles["logo_rounded"]}`}
-                          ></img>
-                          <div className={`${styles["logo_rounded_info"]}`}>
-                            {lang === "en"
-                              ? data.benefits[3].text_eng
-                              : data.benefits[3].text_arb}
-                          </div>
-                        </div>
-                      </div>
+                        
+                      </div> */}
 
                       {/* {console.log("mainone", data.benefits[5]._id)} */}
                       {/* {console.log("mainone", data.benefits[4].text_eng)} */}
-                      <div
+                      {/* <div
                         style={{
                           display: "flex",
                           backgroundColor: "transparent",
@@ -165,41 +204,7 @@ function Retrival() {
                           flexDirection: "row",
                           justifyContent: "space-between",
                         }}
-                      >
-                        <div className={`${styles["info"]}`}>
-                          <img
-                            src={data.benefits[4].icon}
-                            className={`${styles["logo_rounded"]}`}
-                          ></img>
-                          <div
-                            className={`${styles["logo_rounded_info"]}`}
-                            // style={{ minWidth: "40px" }}
-                          >
-                            {lang === "en"
-                              ? data.benefits[4].text_eng
-                              : data.benefits[4].text_arb}
-                          </div>
-                        </div>
-
-                        <div
-                          className={`${styles["info"]} `}
-                          // style={{ marginLeft: "10px" }}
-                        >
-                          <img
-                            src={data.benefits[5].icon}
-                            className={`${styles["last_logo_fix"]}`}
-                            style={{ marginLeft: "10px" }}
-                          />
-                          <div
-                            className={`${styles["logo_rounded_info"]} `}
-                            style={{ marginLeft: "22px" }}
-                          >
-                            {lang === "en"
-                              ? data.benefits[5].text_eng
-                              : data.benefits[5].text_arb}
-                          </div>
-                        </div>
-                      </div>
+                      ></div> */}
                       {/* <div className={`${styles["info"]}`}>
                   <img
                     src={data.benefits[6].icon}
@@ -265,7 +270,78 @@ function Retrival() {
                 <div id="logo_option_pro" style={{}}>
                   {/* {subHeadding.map((post) => ( */}
                   <div className={`${styles["logo_parts"]}`}>
-                    <div
+                    <Container
+                    // style={{
+                    //   display: "flex",
+                    //   backgroundColor: "transparent",
+                    //   width: "100%",
+                    //   flexDirection: "row",
+                    //   justifyContent: "space-between",
+                    // }}
+                    >
+                      <Row xs={2} md={2}>
+                        <Col className={`${styles["info"]}`}>
+                          <img
+                            src={data.benefits[0].icon}
+                            className={`${styles["logo_rounded"]}`}
+                          ></img>
+                          <div className={`${styles["logo_rounded_info"]}`}>
+                            {data.benefits[0].text_eng}
+                          </div>
+                        </Col>
+
+                        <Col className={`${styles["info"]}`}>
+                          <img
+                            src={data.benefits[1].icon}
+                            className={`${styles["logo_rounded"]}`}
+                          ></img>
+                          <div className={`${styles["logo_rounded_info"]}`}>
+                            {data.benefits[1].text_eng}
+                          </div>
+                        </Col>
+
+                        <Col className={`${styles["info"]}`}>
+                          <img
+                            src={data.benefits[2].icon}
+                            className={`${styles["logo_rounded"]}`}
+                          ></img>
+                          <div className={`${styles["logo_rounded_info"]}`}>
+                            {data.benefits[2].text_eng}
+                          </div>
+                        </Col>
+
+                        <Col className={`${styles["info"]}`}>
+                          <img
+                            src={data.benefits[3].icon}
+                            className={`${styles["logo_rounded"]}`}
+                          ></img>
+                          <div className={`${styles["logo_rounded_info"]}`}>
+                            {data.benefits[3].text_eng}
+                          </div>
+                        </Col>
+
+                        <Col className={`${styles["info"]}`}>
+                          <img
+                            src={data.benefits[4].icon}
+                            className={`${styles["logo_rounded"]}`}
+                          ></img>
+                          <div className={`${styles["logo_rounded_info"]}`}>
+                            {data.benefits[4].text_eng}
+                          </div>
+                        </Col>
+
+                        <Col className={`${styles["info"]}`}>
+                          <img
+                            src={data.benefits[5].icon}
+                            className={`${styles["logo_rounded"]}`}
+                          ></img>
+                          <div className={`${styles["last-info-fix"]}`}>
+                            {data.benefits[5].text_eng}
+                          </div>
+                        </Col>
+                      </Row>
+                    </Container>
+                    {/* <div
                       style={{
                         display: "flex",
                         backgroundColor: "transparent",
@@ -274,60 +350,11 @@ function Retrival() {
                         justifyContent: "space-between",
                       }}
                     >
-                      <div className={`${styles["info"]}`}>
-                        <img
-                          src={data.benefits[0].icon}
-                          className={`${styles["logo_rounded"]}`}
-                        ></img>
-                        <div className={`${styles["logo_rounded_info"]}`}>
-                          {data.benefits[0].text_eng}
-                        </div>
-                      </div>
-
-                      <div className={`${styles["info"]}`}>
-                        <img
-                          src={data.benefits[1].icon}
-                          className={`${styles["logo_rounded"]}`}
-                        ></img>
-                        <div className={`${styles["logo_rounded_info"]}`}>
-                          {data.benefits[1].text_eng}
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        backgroundColor: "transparent",
-                        width: "100%",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <div className={`${styles["info"]}`}>
-                        <img
-                          src={data.benefits[2].icon}
-                          className={`${styles["logo_rounded"]}`}
-                        ></img>
-                        <div className={`${styles["logo_rounded_info"]}`}>
-                          {data.benefits[2].text_eng}
-                        </div>
-                      </div>
-
-                      <div className={`${styles["info"]}`}>
-                        <img
-                          src={data.benefits[3].icon}
-                          className={`${styles["logo_rounded"]}`}
-                          id="info_pro_max"
-                        ></img>
-                        <div className={`${styles["logo_rounded_info"]}`}>
-                          {data.benefits[3].text_eng}
-                        </div>
-                      </div>
-                    </div>
+                    </div> */}
 
                     {/* {console.log("mainone", data.benefits[5]._id)} */}
                     {/* {console.log("mainone", data.benefits[4].text_eng)} */}
-                    <div
+                    {/* <div
                       style={{
                         display: "flex",
                         backgroundColor: "transparent",
@@ -335,32 +362,8 @@ function Retrival() {
                         flexDirection: "row",
                         justifyContent: "space-between",
                       }}
-                    >
-                      <div className={`${styles["info"]}`}>
-                        <img
-                          src={data.benefits[4].icon}
-                          className={`${styles["logo_rounded"]}`}
-                          style={{ marginLeft: "20px" }}
-                        ></img>
-                        <div className={`${styles["logo_rounded_info"]}`}>
-                          {data.benefits[4].text_eng}
-                        </div>
-                      </div>
-
-                      <div className={`${styles["info"]}`}>
-                        <img
-                          src={data.benefits[5].icon}
-                          className={`${styles["logo_rounded"]}`}
-                          style={{ marginLeft: "12px" }}
-                        ></img>
-                        <div
-                          className={`${styles["logo_rounded_info"]}`}
-                          style={{ marginLeft: "28px" }}
-                        >
-                          {data.benefits[5].text_eng}
-                        </div>
-                      </div>
-                    </div>
+                    >                      
+                    </div> */}
                     {/* <div className={`${styles["info"]}`}>
                   <img
                     src={data.benefits[6].icon}
