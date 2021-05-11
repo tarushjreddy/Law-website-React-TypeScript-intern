@@ -254,8 +254,13 @@ li.nav-item.my-tel:hover {
   color: #ffffff !important;
   padding: 10px 34px;
 }
+.my-whoweare {
+  margin-right: 6.6rem;
+  margin-left: 6.6rem;
+}
+
 .navbar-light .navbar-nav .nav-link {
-  font-size: 90% !important;
+  font-size: 16px !important;
   font-weight: bold !important;
   font-stretch: normal;
   font-style: normal;
@@ -350,14 +355,36 @@ button:focus {
   outline: none;
   cursor: pointer;
 }
+.media_off {
+  margin-right: 6.6rem !important;
 
+  margin-left: 6.6rem !important;
+}
 @media screen and (max-width: 768px) {
   .top-nav-info.container-fluid {
     padding-bottom: 0px;
     /*! color: #ffffff; */
   }
 }
+@media screen and (min-width: 100px) and (max-width: 1050px) {
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 99% !important;
+  }
+}
+@media screen and (max-width: 980px) {
+  .my-whoweare {
+    margin-right: 2rem !important;
 
+    margin-left: 2rem !important;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+  .media_off {
+    margin-right: 2rem !important;
+
+    margin-left: 2rem !important;
+  }
+}
 /*
 ================================================
 05 Header Content
@@ -1110,6 +1137,7 @@ i.material-icons.quality-start {
 }
 .add-content p {
   float: left !important;
+
   width: 215px !important;
   margin-top: 14px !important;
 }
@@ -1125,6 +1153,12 @@ i.material-icons.quality-start {
 .advertisement-sec {
   background: #f8f5ec;
   margin: 6.6rem;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   /* padding: 50px 0px; */
 }
 @media screen and (min-width: 100px) and (max-width: 600px) {
@@ -1135,6 +1169,20 @@ i.material-icons.quality-start {
     margin-top: 30px;
   }
 }
+@media screen and (min-width: 100px) and (max-width: 1023px) {
+  .advertisement-sec {
+    // background: #f8f5ec;
+
+    display: flex;
+    margin: 0rem !important ;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    /* padding: 50px 0px; */
+  }
+}
+
 .add-con-img {
   margin-left: 50px;
 }
@@ -1578,12 +1626,24 @@ ul.footer-ul li a:hover {
   width: 100%;
   left: 0;
   transition: 0.3s;
+  height: 60px !important;
 
-  text-decoration: red;
-  color: #ff0000 !important;
   background: white !important;
   margin: 0px;
   height: auto;
+  .pro_image_one {
+    height: 30px;
+    width: 30px;
+  }
+  .fluid-container {
+    margin: 0 !important;
+  }
+  .link_provider {
+    margin-top: 10px !important;
+  }
+  .top-head {
+    font-size: 10px !important;
+  }
   .nav-link {
     color: #707070;
   }

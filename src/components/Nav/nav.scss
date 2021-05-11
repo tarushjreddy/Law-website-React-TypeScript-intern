@@ -8,12 +8,12 @@
     font-weight: lighter;
   }
 }
+
 .pro_image_one {
   height: 50px;
-  width: 45px;
-  margin-bottom: 30px;
+  width: 50px;
+  margin-bottom: 15px;
 }
-
 .fluid-container {
   margin-top: 10px;
   padding: 0;
@@ -22,6 +22,7 @@
   justify-content: center;
   margin-right: 20px;
   background-color: transparent;
+
   top: 10;
   left: 0;
 }
@@ -33,11 +34,23 @@
 .link_provider {
   margin-left: 20px;
 }
+.link_provider img {
+  height: 50px;
+  width: 50px;
+}
+#main_button {
+  margin-left: 10px !important;
+}
+#main_buttonone {
+  margin-left: 4px !important;
+}
 @media only screen and (max-width: 950px) {
   .navbar-toggler {
-    width: 80px !important;
-    margin-top: 20px;
-    margin-bottom: 36px;
+    width: 30px !important;
+    display: flex !important;
+    margin-bottom: 15px;
+    height: 30px;
+    padding: 0 !important;
   }
   .navbar-toggler-icon {
     text-align: center;
@@ -58,14 +71,14 @@
 
     width: 90vw;
   }
-  #main_button {
+  #main_button,
+  #main_buttonone {
     margin: 0px !important;
+    margin-bottom: 10px !important;
     padding: 0px !important;
   }
 }
-#main_button {
-  margin-left: 10px !important;
-}
+
 @media only screen and (max-width: 1450px) {
   .top-head {
     font-size: 15px;
@@ -80,14 +93,12 @@
     margin-bottom: 10px;
   }
 }
-@media only screen and (max-width: 1450px) {
-  .top-head {
-    font-size: 50% !important;
-  }
-  .pro_image {
-    height: 40px;
-    width: 40px;
-    margin-bottom: 10px;
+@media only screen and (min-width: 1450px) {
+  .top-nav-info {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    width: 100% !important;
+    // border: 2px solid black;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -107,7 +118,8 @@
 .text-pro {
   color: #b8a046 !important;
   text-decoration: none;
-  font-size: 30px;
+
+  font-size: 25px;
 }
 #nav_mainprt1 {
   display: none;

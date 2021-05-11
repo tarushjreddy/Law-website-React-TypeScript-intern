@@ -69,7 +69,7 @@
 //           <div className="row">
 //             <div className="col-sm-12 col-md-3">
 //               <div className="footer-link-section">
-//                 <h1>Company</h1>
+//                 <div>Company</div>
 //                 <ul className="footer-ul">
 //                   <li className="foot-link">
 //                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -100,7 +100,7 @@
 //             </div>
 //             <div className="col-sm-12 col-md-3">
 //               <div className="footer-link-section">
-//                 <h1>Support</h1>
+//                 <div>Support</div>
 //                 <ul className="footer-ul">
 //                   <li className="foot-link">
 //                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -131,7 +131,7 @@
 //             </div>
 //             <div className="col-sm-12 col-md-3">
 //               <div className="footer-link-section">
-//                 <h1>Quick Links</h1>
+//                 <div>Quick Links</div>
 //                 <ul className="footer-ul">
 //                   <li className="foot-link">
 //                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -162,7 +162,7 @@
 //             </div>
 //             <div className="col-sm-12 col-md-3">
 //               <div className="footer-link-section social-lnk">
-//                 <h1>About Al-Muehi</h1>
+//                 <div>About Al-Muehi</div>
 //                 <p>
 //                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 //                   Quisquam veritatis esse magni cumque quae recusandae
@@ -250,7 +250,7 @@ const FooterView = () => {
           <div className="row">
             <div className="col-sm-12 col-md-3">
               <div className="footer-link-section">
-                <h1>Company</h1>
+                <div>Company</div>
                 <ul className="footer-ul">
                   <li className="foot-link">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -281,7 +281,7 @@ const FooterView = () => {
             </div>
             <div className="col-sm-12 col-md-3">
               <div className="footer-link-section">
-                <h1>Support</h1>
+                <div>Support</div>
                 <ul className="footer-ul">
                   <li className="foot-link">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -312,7 +312,7 @@ const FooterView = () => {
             </div>
             <div className="col-sm-12 col-md-3">
               <div className="footer-link-section">
-                <h1>Quick Links</h1>
+                <div>Quick Links</div>
                 <ul className="footer-ul">
                   <li className="foot-link">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -343,7 +343,7 @@ const FooterView = () => {
             </div>
             <div className="col-sm-12 col-md-3">
               <div className="footer-link-section social-lnk">
-                <h1>About Al-Muehi</h1>
+                <div>About Al-Muehi</div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Quisquam veritatis esse magni cumque quae recusandae

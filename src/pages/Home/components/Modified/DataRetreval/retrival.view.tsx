@@ -69,9 +69,9 @@ function Retrival() {
                 // }
                 style={{
                   flexDirection: i % 2 === 0 ? "row" : "row-reverse",
-                  marginRight: "6.6rem",
+                  // marginRight: "6.6rem",
                   alignItems: "center",
-                  marginLeft: "6.6rem",
+                  // marginLeft: "6.6rem",
                 }}
                 //   style={{ flexDirection: `(${abc === 1}? 'row' : 'row-reverse')` }}
               >

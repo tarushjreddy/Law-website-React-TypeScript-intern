@@ -29,15 +29,8 @@ const NavView: React.FC<NavViewProps> = ({
   return (
     <div className="my-nav-section">
       <div className="my-nav-elements">
-        <div
-          className="top-nav-info container-fluid"
-          style={{ marginBottom: "20px" }}
-        >
-          <div
-            className="top-nav-info-left float-start"
-            style={{ marginLeft: "25px" }}
-            id="nav_mainprt"
-          >
+        <div className="top-nav-info container-fluid">
+          <div className="top-nav-info-left float-start" id="nav_mainprt">
             <p>
               King Abdullah Road, Riyadh <span>|</span>{" "}
               <a href="mailto:info@almuehi.com">info@almuehi.com</a>
@@ -55,7 +48,7 @@ const NavView: React.FC<NavViewProps> = ({
             style={{
               position: "relative",
               zIndex: 200,
-              marginRight: "1.6em",
+              marginRight: "20px",
             }}
           >
             <p>
@@ -76,7 +69,6 @@ const NavView: React.FC<NavViewProps> = ({
         <Navbar
           collapseOnSelect
           expand="lg"
-          style={{ backgroundColor: "red" }}
           className={`navbar-light bg-light my-almuehi-logo container-fluid ${
             scrolled ? "affix my-shring" : ""
           }`}
@@ -137,7 +129,6 @@ const NavView: React.FC<NavViewProps> = ({
               >
                 <Navbar.Toggle
                   aria-controls="responsive-navbar-nav"
-                  className="button_pro"
                   onClick={() => setShowSearch1(!showSearch1)}
                 />
 
@@ -304,6 +295,7 @@ const NavView: React.FC<NavViewProps> = ({
                     <li className="nav-item position-relative active">
                       <Button
                         variant="custom"
+                        id="main_buttonone"
                         style={{
                           display: showSearch ? "none" : "flex",
                           backgroundColor: "transparent",
@@ -312,7 +304,7 @@ const NavView: React.FC<NavViewProps> = ({
                           height: "30px",
                           paddingRight: "0.1rem",
                           paddingLeft: "0.1rem",
-                          marginLeft: "4px",
+
                           marginRight: "4px",
                           alignItems: "center",
                           justifyContent: "center",
