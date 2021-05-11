@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import "./aboutus.scss";
 // import { Section } from "react-scroll-section";
 
 const AboutUs = () => {
@@ -12,7 +13,7 @@ const AboutUs = () => {
           <div className="my-hwr-content">
             <div className="my-hwr-row">
               <div className="row justify-content-start">
-                <div className="col-md-7 col-xs-12">
+                <div className="col-md-7 col-xs-12 ">
                   <h3>{t("Who we are")}</h3>
                   <h1>
                     We’re in this together. <br /> Your team and ours.

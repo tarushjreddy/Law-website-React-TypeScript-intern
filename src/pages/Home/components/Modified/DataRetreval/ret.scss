@@ -70,15 +70,12 @@
   .rightConatiner {
   }
 }
-@media only screen and (min-width: 100px) and (max-width: 1250px) {
+@media only screen and (min-width: 100px) and (max-width: 1023px) {
   .media_off {
     display: none;
   }
 
   .media_on {
-    .last-logo-fix {
-      margin-left: 10px !important;
-    }
     #leftContainer_pro {
       display: flex;
       color: black;
@@ -93,8 +90,9 @@
         font-size: 1.1rem;
       }
       #info_pro_max {
-        min-width: 5% !important;
-        margin-left: 3% !important;
+        // min-width: 5% !important;
+
+        // margin-left: 3% !important;
       }
       #logo_option_pro {
         margin: 0px;
@@ -119,14 +117,20 @@
 #button_part_pro {
   width: 60%;
 }
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1024px) {
   .media_on {
     display: none;
   }
   .media_off {
     #header_text_desktop {
       color: black;
-      font-size: 2.7rem !important;
+      font-size: 2.5rem !important;
     }
   }
 }
+
+// @media only screen and (min-width: 768px) and (max-width: 1024px) {
+//   .last-info-fix {
+//     margin-left: 30px;
+//   }
+// }
